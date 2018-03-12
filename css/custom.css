@@ -1635,8 +1635,8 @@ a.bg-dark:focus, a.bg-dark:hover {background-color: #231942 !important; }
 .font-weight-bold {font-weight: bold; }
 .font-italic {font-style: italic; }
 .text-white {color: #fff !important; }
-.text-primary {color: #eada3e !important; }
-a.text-primary:focus, a.text-primary:hover {color: #eada3e !important; }
+.text-primary {color: #E57300 !important; }
+a.text-primary:focus, a.text-primary:hover {color: #E57300 !important; }
 .text-secondary {color: #5E548E !important; }
 a.text-secondary:focus, a.text-secondary:hover {color: #6c757d !important; }
 .text-success {color: #1B998B !important; }
