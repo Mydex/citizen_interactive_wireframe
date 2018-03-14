@@ -60,50 +60,88 @@
 
     <main>
       <div class="container">
-        <h5>Permissions for Citizen app</h5>
-        <div class="accordion">
-          <div class="card">
-            <div class="card-header bg-warning" id="headingOne">
+        <div class="container col-lg-6 col-md-12 col-sm-12">
+          <h5>Permissions for Citizen app</h5>
+          <div class="accordion">
+            <div class="card">
+              <div class="card-header bg-warning" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    Personal Details
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                <table class="table table-striped table-condensed permissions-table">
+                  <thead>
+                    <tr>
+                      <th>Field name</th>
+                      <th>Permission</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Surname</td>
+                      <td>read/write</td>
+                    </tr>
+                    <tr>
+                      <td>Forename</td>
+                      <td>read/write</td>
+                    </tr>
+                    <tr>
+                      <td>Date of Birth</td>
+                      <td>read/write</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header bg-warning" id="headingTwo">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Home details
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+               <table class="table table-striped table-condensed permissions-table">
+                 <thead>
+                   <tr>
+                     <th>Field name</th>
+                     <th>Permission</th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                   <tr>
+                     <td>Address</td>
+                     <td>read/write</td>
+                   </tr>
+                   <tr>
+                     <td>Postcode</td>
+                     <td>read/write</td>
+                   </tr>
+                   <tr>
+                     <td>Property type</td>
+                     <td>read/write</td>
+                   </tr>
+                   <tr>
+                     <td>Number of bedrooms</td>
+                     <td>read/write</td>
+                   </tr>
+                 </tbody>
+               </table>
+             </div>
+           </div>
+           <div class="card">
+            <div class="card-header bg-warning" id="headingThree">
               <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                  Personal Details
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Family Information
                 </button>
               </h5>
             </div>
-            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-              <table class="table table-striped table-condensed permissions-table">
-                <thead>
-                  <tr>
-                    <th>Field name</th>
-                    <th>Permission</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Surname</td>
-                    <td>read/write</td>
-                  </tr>
-                  <tr>
-                    <td>Forename</td>
-                    <td>read/write</td>
-                  </tr>
-                  <tr>
-                    <td>Date of Birth</td>
-                    <td>read/write</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header bg-warning" id="headingTwo">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Home details
-                </button>
-              </h5>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
              <table class="table table-striped table-condensed permissions-table">
                <thead>
                  <tr>
@@ -113,19 +151,15 @@
                </thead>
                <tbody>
                  <tr>
-                   <td>Address</td>
+                   <td>No of adults at property</td>
                    <td>read/write</td>
                  </tr>
                  <tr>
-                   <td>Postcode</td>
+                   <td>No of children at property</td>
                    <td>read/write</td>
                  </tr>
                  <tr>
-                   <td>Property type</td>
-                   <td>read/write</td>
-                 </tr>
-                 <tr>
-                   <td>Number of bedrooms</td>
+                   <td>Children under 5</td>
                    <td>read/write</td>
                  </tr>
                </tbody>
@@ -133,14 +167,14 @@
            </div>
          </div>
          <div class="card">
-          <div class="card-header bg-warning" id="headingThree">
+          <div class="card-header bg-warning" id="headingFour">
             <h5 class="mb-0">
-              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Family Information
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Fuel Information
               </button>
             </h5>
           </div>
-          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
            <table class="table table-striped table-condensed permissions-table">
              <thead>
                <tr>
@@ -150,30 +184,67 @@
              </thead>
              <tbody>
                <tr>
-                 <td>No of adults at property</td>
+                 <td colspan="2">Electrcity</td>
+               </tr>
+               <tr>
+                 <td>Meter point number</td>
                  <td>read/write</td>
                </tr>
                <tr>
-                 <td>No of children at property</td>
-                 <td>read/write</td>
-               </tr>
-               <tr>
-                 <td>Children under 5</td>
+                 <td>Supplier</td>
                  <td>read/write</td>
                </tr>
              </tbody>
            </table>
          </div>
        </div>
-       <div class="card">
-        <div class="card-header bg-warning" id="headingFour">
+     </div>
+   </div>
+   <div class="container col-lg-6 col-md-12 col-sm-12">
+     <h5>Permissions for Energy Advocate app</h5>
+     <div class="accordion">
+      <div class="card">
+        <div class="card-header bg-warning" id="headingOne">
           <h5 class="mb-0">
-            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-              Fuel Information
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              Personal Details
             </button>
           </h5>
         </div>
-        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+          <table class="table table-striped table-condensed permissions-table">
+            <thead>
+              <tr>
+                <th>Field name</th>
+                <th>Permission</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Surname</td>
+                <td>read/write</td>
+              </tr>
+              <tr>
+                <td>Forename</td>
+                <td>read/write</td>
+              </tr>
+              <tr>
+                <td>Date of Birth</td>
+                <td>read/write</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header bg-warning" id="headingTwo">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Home details
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
          <table class="table table-striped table-condensed permissions-table">
            <thead>
              <tr>
@@ -183,67 +254,34 @@
            </thead>
            <tbody>
              <tr>
-               <td colspan="2">Electrcity</td>
-             </tr>
-             <tr>
-               <td>Meter point number</td>
+               <td>Address</td>
                <td>read/write</td>
              </tr>
              <tr>
-               <td>Supplier</td>
+               <td>Postcode</td>
+               <td>read/write</td>
+             </tr>
+             <tr>
+               <td>Property type</td>
+               <td>read/write</td>
+             </tr>
+             <tr>
+               <td>Number of bedrooms</td>
                <td>read/write</td>
              </tr>
            </tbody>
          </table>
        </div>
      </div>
-   </div>
- </div>
- <div class="container col-lg-6 col-md-12 col-sm-12">
-   <h5>Permissions for Energy Advocate app</h5>
-   <div class="accordion">
-    <div class="card">
-      <div class="card-header bg-warning" id="headingOne">
+     <div class="card">
+      <div class="card-header bg-warning" id="headingThree">
         <h5 class="mb-0">
-          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-            Personal Details
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Family Information
           </button>
         </h5>
       </div>
-      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-        <table class="table table-striped table-condensed permissions-table">
-          <thead>
-            <tr>
-              <th>Field name</th>
-              <th>Permission</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Surname</td>
-              <td>read/write</td>
-            </tr>
-            <tr>
-              <td>Forename</td>
-              <td>read/write</td>
-            </tr>
-            <tr>
-              <td>Date of Birth</td>
-              <td>read/write</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header bg-warning" id="headingTwo">
-        <h5 class="mb-0">
-          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            Home details
-          </button>
-        </h5>
-      </div>
-      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
        <table class="table table-striped table-condensed permissions-table">
          <thead>
            <tr>
@@ -253,19 +291,15 @@
          </thead>
          <tbody>
            <tr>
-             <td>Address</td>
+             <td>No of adults at property</td>
              <td>read/write</td>
            </tr>
            <tr>
-             <td>Postcode</td>
+             <td>No of children at property</td>
              <td>read/write</td>
            </tr>
            <tr>
-             <td>Property type</td>
-             <td>read/write</td>
-           </tr>
-           <tr>
-             <td>Number of bedrooms</td>
+             <td>Children under 5</td>
              <td>read/write</td>
            </tr>
          </tbody>
@@ -273,14 +307,14 @@
      </div>
    </div>
    <div class="card">
-    <div class="card-header bg-warning" id="headingThree">
+    <div class="card-header bg-warning" id="headingFour">
       <h5 class="mb-0">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Family Information
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Fuel Information
         </button>
       </h5>
     </div>
-    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
      <table class="table table-striped table-condensed permissions-table">
        <thead>
          <tr>
@@ -290,52 +324,19 @@
        </thead>
        <tbody>
          <tr>
-           <td>No of adults at property</td>
-           <td>read/write</td>
-         </tr>
-         <tr>
-           <td>No of children at property</td>
-           <td>read/write</td>
-         </tr>
-         <tr>
-           <td>Children under 5</td>
-           <td>read/write</td>
-         </tr>
-       </tbody>
-     </table>
-   </div>
- </div>
- <div class="card">
-  <div class="card-header bg-warning" id="headingFour">
-    <h5 class="mb-0">
-      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-        Fuel Information
-      </button>
-    </h5>
-  </div>
-  <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-   <table class="table table-striped table-condensed permissions-table">
-     <thead>
-       <tr>
-         <th>Field name</th>
-         <th>Permission</th>
+          <td class="bg-info" colspan="2">Electrcity</td>
+        </tr>
+        <tr>
+         <td>Meter point number</td>
+         <td>read/write</td>
        </tr>
-     </thead>
-     <tbody>
        <tr>
-        <td class="bg-info" colspan="2">Electrcity</td>
-      </tr>
-      <tr>
-       <td>Meter point number</td>
-       <td>read/write</td>
-     </tr>
-     <tr>
-       <td>Supplier</td>
-       <td>read/write</td>
-     </tr>
-   </tbody>
- </table>
-</div>
+         <td>Supplier</td>
+         <td>read/write</td>
+       </tr>
+     </tbody>
+   </table>
+ </div>
 </div>
 </div>
 </div>
@@ -376,6 +377,7 @@
       </div>
     </div>
   </div>
+</div>
 </div>
 
 <div>
