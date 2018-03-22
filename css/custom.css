@@ -511,15 +511,15 @@ tbody.collapse.show {display: table-row-group; }
 .nav-justified .nav-item {flex-basis: 0;flex-grow: 1;text-align: center; }
 .tab-content > .tab-pane {display: none; }
 .tab-content > .active {display: block; }
-.navbar {position: relative;display: flex;flex-wrap: wrap;align-items: center;justify-content: space-between;padding: 0.5rem 1rem; }
-.navbar > .container,.navbar > .container-fluid {display: flex;flex-wrap: wrap;align-items: center;justify-content: space-between; }
+.navbar {position: relative;display: flex;flex-wrap: wrap;align-items: space-between;padding: 0.5rem 1rem; }
+.navbar > .container,.navbar > .container-fluid {display: flex;flex-wrap: wrap;align-items: space-between; }
 .navbar-brand {display: inline-block;padding-top: 0.3125rem;padding-bottom: 0.3125rem;margin-right: 1rem;font-size: 1.25rem;line-height: inherit;white-space: nowrap; }
 .navbar-brand:focus, .navbar-brand:hover {text-decoration: none; }
 .navbar-nav {display: flex;flex-direction: column;padding-left: 0;margin-bottom: 0;list-style: none; }
 .navbar-nav .nav-link {padding-right: 0;padding-left: 0; }
 .navbar-nav .dropdown-menu {position: static;float: none; }
 .navbar-text {display: inline-block;padding-top: 0.5rem;padding-bottom: 0.5rem; }
-.navbar-collapse {flex-basis: 100%;align-items: center; }
+.navbar-collapse {flex-basis: 100%; }
 .navbar-toggler {padding: 0.25rem 0.75rem;font-size: 1.25rem;line-height: 1;background: transparent;border: 1px solid transparent;border-radius: 0.25rem; }
 .navbar-toggler:focus, .navbar-toggler:hover {text-decoration: none; }
 .navbar-toggler-icon {display: inline-block;width: 1.5em;height: 1.5em;vertical-align: middle;content: "";background: no-repeat center center;background-size: 100% 100%; }
