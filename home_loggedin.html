@@ -57,15 +57,23 @@
       <h3>Your information</h3>
       <div class="row justify-content-center align-items-center">
         <div class="container col-xs-12 col-sm-9 col-md-9">
-         <ul id="information-nav" class="nav nav-tabs" role="tablist">
+          <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown button</button>
+              <div class="dropdown-menu" aria-labelldby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#personal" id="personal-tab" data-toggle="tab" aria-controls="personal" >Personal</a>
+                  <a class="dropdown-item" href="#" >Another action</a>
+                  <a class="dropdown-item" href="#" >Something else</a>
+              </div>
+          </div>
+        <!--  <ul id="information-nav" class="nav nav-tabs" role="tablist">
            <li class="nav-item"><a class="nav-link active" href="#personal" role="tab" id="personal-tab" data-toggle="tab" aria-controls="personal" >Personal</a></li>
            <!-- family -->
-           <li class="nav-item"><a class="nav-link" href="#family" role="tab" id="family-tab" data-toggle="tab" aria-controls="family" >Family</a></li>
+           <!-- <li class="nav-item"><a class="nav-link" href="#family" role="tab" id="family-tab" data-toggle="tab" aria-controls="family" >Family</a></li> -->
            <!-- property -->
-           <li class="nav-item"><a class="nav-link " href="#property" role="tab" id="property-tab" data-toggle="tab" aria-controls="property">Property</a></li>
+           <!-- <li class="nav-item"><a class="nav-link " href="#property" role="tab" id="property-tab" data-toggle="tab" aria-controls="property">Property</a></li> -->
            <!-- fuel -->
-           <li class="nav-item"><a class="nav-link " href="#fuel" role="tab" id="fuel-tab" data-toggle="tab" aria-controls="fuel">Fuel</a></li>
-         </ul>
+           <!-- <li class="nav-item"><a class="nav-link " href="#fuel" role="tab" id="fuel-tab" data-toggle="tab" aria-controls="fuel">Fuel</a></li>
+         </ul> --> 
          <!-- table content -->
          <div id="information-nav-content" class="tab-content">
            <!-- personal informaiton table -->
