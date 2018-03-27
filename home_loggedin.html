@@ -57,154 +57,172 @@
       <h3>Your information</h3>
       <div class="row justify-content-center align-items-center">
         <div class="container col-xs-12 col-sm-9 col-md-9">
-          <ul id="information-nav" class="nav nav-tabs" role="tablist">
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="active"><a href="#hometab" role="tab" data-toggle="tab">Home</a></li>
+            <li><a href="#javatab" role="tab" data-toggle="tab">Java</a></li>
+            <li><a href="#csharptab" role="tab" data-toggle="tab">C#</a></li>
+            <li><a href="#mysqltab" role="tab" data-toggle="tab">MySQL</a></li>
+
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Web <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#jquerytab" role="tab" data-toggle="tab">jQuery</a></li>
+                <li><a href="#bootstab" role="tab" data-toggle="tab">Bootstrap</a></li>
+                <li><a href="#htmltab" role="tab" data-toggle="tab">HTML</a></li>
+              </ul>
+            </li>  
+            
+          </ul>
+
+
+          <!-- <ul id="information-nav" class="nav nav-tabs" role="tablist">
             <li class="nav-item"><a class="nav-link active" href="#personal" role="tab" id="personal-tab" data-toggle="tab" aria-controls="personal" >Personal</a></li>
             <!-- family -->
-            <li class="nav-item"><a class="nav-link" href="#family" role="tab" id="family-tab" data-toggle="tab" aria-controls="family" >Family</a></li>
+            <!-- <li class="nav-item"><a class="nav-link" href="#family" role="tab" id="family-tab" data-toggle="tab" aria-controls="family" >Family</a></li> -->
             <!-- property -->
-            <li class="nav-item"><a class="nav-link " href="#property" role="tab" id="property-tab" data-toggle="tab" aria-controls="property">Property</a></li>
+            <!-- <li class="nav-item"><a class="nav-link " href="#property" role="tab" id="property-tab" data-toggle="tab" aria-controls="property">Property</a></li> -->
             <!-- fuel -->
-            <li class="nav-item"><a class="nav-link " href="#fuel" role="tab" id="fuel-tab" data-toggle="tab" aria-controls="fuel">Fuel</a></li>
-          </ul>
-          <!-- table content -->
-          <div id="information-nav-content" class="tab-content">
-           <!-- personal informaiton table -->
-           <div role="tadpanel" class="tab-pane fade show active" id="personal" aria-labelledby="personal-tab">
-             <table class="table table-striped table-sm">
-               <tbody>
-                 <tr>
-                   <th class="col-xs-12 col-sm-6 col-md-4">First Name</th>
-                   <td class="col-xs-12 col-sm-6 col-md-8">Citizen</td>
-                 </tr>
-                 <tr>
-                   <th class="col-xs-12 col-sm-6 col-md-4">Surame</th>
-                   <td class="col-xs-12 col-sm-6 col-md-8">Twenty</td>
-                 </tr>
-                 <tr>
-                   <th class="col-xs-12 col-sm-6 col-md-4">DOB</th>
-                   <td class="col-xs-12 col-sm-6 col-md-8">01/01/01</td>
-                 </tr>
-                 <tr>
-                   <th class="col-xs-12 col-sm-6 col-md-4">Address</th>
-                   <td class="col-xs-12 col-sm-6 col-md-8">12 Fake Street<br>
-                     FakeTown<br>
-                   FA12 3KE</td>
-                 </tr>
-               </tbody>
-             </table>
-           </div>
-           <!-- family information table-->
-           <div role="tadpanel" class="tab-pane fade" id="family" aria-labelledby="family-tab">
-             <table class="table table-striped table-sm">
-               <tbody>
-                 <tr>
-                   <th class="col-xs-12 col-sm-6 col-md-4">No of adults at property</th>
-                   <td class="col-xs-12 col-sm-6 col-md-8">2</td>
-                 </tr>
-                 <tr>
-                   <th class="col-xs-12 col-sm-6 col-md-4">Total no of children</th>
-                   <td class="col-xs-12 col-sm-6 col-md-8">3</td>
-                 </tr>
-                 <tr>
-                   <th class="col-xs-12 col-sm-6 col-md-4">Children under 5</th>
-                   <td class="col-xs-12 col-sm-6 col-md-8">1</td>
-                 </tr>
-               </tbody>
-             </table>
-           </div>
-           <!-- property information table -->
-           <div role="tadpanel" class="tab-pane fade" id="property" aria-labelledby="property-tab">
-             <table class="table table-striped table-sm">
-               <tbody>
-                 <tr>
-                   <th class="col-xs-12 col-sm-6 col-md-4">Property Type</th>
-                   <td class="col-xs-12 col-sm-6 col-md-8">House</td>
-                 </tr>
-                 <tr>
-                   <th class="col-xs-12 col-sm-6 col-md-4">Home type</th>
-                   <td class="col-xs-12 col-sm-6 col-md-8">Mid terrace</td>
-                 </tr>
-                 <tr>
-                   <th class="col-xs-12 col-sm-6 col-md-4">No of bedrooms</th>
-                   <td class="col-xs-12 col-sm-6 col-md-8">Three</td>
-                 </tr>
-               </tbody>
-             </table>
-           </div>
-           <!-- fuel information table -->
-           <div role="tadpanel" class="tab-pane fade" id="fuel" aria-labelledby="fuel-tab">
-             <table class="table table-striped table-sm">
-               <tbody>
-                 <tr class="table-primary" >
-                   <th colspan="2">Electrcity</th>
-                 </tr>
-                 <tr>
-                   <th class="col-xs-12 col-sm-6 col-md-4">Meter point number</th>
-                   <td class="col-xs-12 col-sm-6 col-md-8">00000000000</td>
-                 </tr>
-                 <tr>
-                   <th class="col-xs-12 col-sm-6 col-md-4">Supplier</th>
-                   <td class="col-xs-12 col-sm-6 col-md-8"></td>
-                 </tr>
-                 <tr>
-                   <th class="col-xs-12 col-sm-6 col-md-4">Account Reference</th>
-                   <td class="col-xs-12 col-sm-6 col-md-8"></td>
-                 </tr>
-                 <tr>
-                   <th class="col-xs-12 col-sm-6 col-md-4">Tariff</th>
-                   <td class="col-xs-12 col-sm-6 col-md-8"></td>
-                 </tr>
-                 <tr>
-                   <th class="col-xs-12 col-sm-6 col-md-4">Meter Serial Number</th>
-                   <td class="col-xs-12 col-sm-6 col-md-8"></td>
-                 </tr>
-                 <tr class="table-primary">
-                   <th colspan="2">Gas</th>
-                 </tr>
-                 <tr>
-                   <th class="col-xs-12 col-sm-6 col-md-4">Meter point number</th>
-                   <td class="col-xs-12 col-sm-6 col-md-8"></td>
-                 </tr>
-                 <tr>
-                   <th class="col-xs-12 col-sm-6 col-md-4">Supplier</th>
-                   <td class="col-xs-12 col-sm-6 col-md-8"></td>
-                 </tr>
-                 <tr>
-                   <th class="col-xs-12 col-sm-6 col-md-4">Account Reference</th>
-                   <td class="col-xs-12 col-sm-6 col-md-8"></td>
-                 </tr>
-                 <tr>
-                   <th class="col-xs-12 col-sm-6 col-md-4">Tariff</th>
-                   <td class="col-xs-12 col-sm-6 col-md-8"></td>
-                 </tr>
-                 <tr>
-                   <th class="col-xs-12 col-sm-6 col-md-4">Meter Serial Number</th>
-                   <td class="col-xs-12 col-sm-6 col-md-8"></td>
-                 </tr>
-               </tbody>
-             </table>
+            <!-- <li class="nav-item"><a class="nav-link " href="#fuel" role="tab" id="fuel-tab" data-toggle="tab" aria-controls="fuel">Fuel</a></li> -->
+            <!-- </ul> --> 
+            <!-- table content -->
+            <div id="information-nav-content" class="tab-content">
+             <!-- personal informaiton table -->
+             <div role="tadpanel" class="tab-pane fade show active" id="personal" aria-labelledby="personal-tab">
+               <table class="table table-striped table-sm">
+                 <tbody>
+                   <tr>
+                     <th class="col-xs-12 col-sm-6 col-md-4">First Name</th>
+                     <td class="col-xs-12 col-sm-6 col-md-8">Citizen</td>
+                   </tr>
+                   <tr>
+                     <th class="col-xs-12 col-sm-6 col-md-4">Surame</th>
+                     <td class="col-xs-12 col-sm-6 col-md-8">Twenty</td>
+                   </tr>
+                   <tr>
+                     <th class="col-xs-12 col-sm-6 col-md-4">DOB</th>
+                     <td class="col-xs-12 col-sm-6 col-md-8">01/01/01</td>
+                   </tr>
+                   <tr>
+                     <th class="col-xs-12 col-sm-6 col-md-4">Address</th>
+                     <td class="col-xs-12 col-sm-6 col-md-8">12 Fake Street<br>
+                       FakeTown<br>
+                     FA12 3KE</td>
+                   </tr>
+                 </tbody>
+               </table>
+             </div>
+             <!-- family information table-->
+             <div role="tadpanel" class="tab-pane fade" id="family" aria-labelledby="family-tab">
+               <table class="table table-striped table-sm">
+                 <tbody>
+                   <tr>
+                     <th class="col-xs-12 col-sm-6 col-md-4">No of adults at property</th>
+                     <td class="col-xs-12 col-sm-6 col-md-8">2</td>
+                   </tr>
+                   <tr>
+                     <th class="col-xs-12 col-sm-6 col-md-4">Total no of children</th>
+                     <td class="col-xs-12 col-sm-6 col-md-8">3</td>
+                   </tr>
+                   <tr>
+                     <th class="col-xs-12 col-sm-6 col-md-4">Children under 5</th>
+                     <td class="col-xs-12 col-sm-6 col-md-8">1</td>
+                   </tr>
+                 </tbody>
+               </table>
+             </div>
+             <!-- property information table -->
+             <div role="tadpanel" class="tab-pane fade" id="property" aria-labelledby="property-tab">
+               <table class="table table-striped table-sm">
+                 <tbody>
+                   <tr>
+                     <th class="col-xs-12 col-sm-6 col-md-4">Property Type</th>
+                     <td class="col-xs-12 col-sm-6 col-md-8">House</td>
+                   </tr>
+                   <tr>
+                     <th class="col-xs-12 col-sm-6 col-md-4">Home type</th>
+                     <td class="col-xs-12 col-sm-6 col-md-8">Mid terrace</td>
+                   </tr>
+                   <tr>
+                     <th class="col-xs-12 col-sm-6 col-md-4">No of bedrooms</th>
+                     <td class="col-xs-12 col-sm-6 col-md-8">Three</td>
+                   </tr>
+                 </tbody>
+               </table>
+             </div>
+             <!-- fuel information table -->
+             <div role="tadpanel" class="tab-pane fade" id="fuel" aria-labelledby="fuel-tab">
+               <table class="table table-striped table-sm">
+                 <tbody>
+                   <tr class="table-primary" >
+                     <th colspan="2">Electrcity</th>
+                   </tr>
+                   <tr>
+                     <th class="col-xs-12 col-sm-6 col-md-4">Meter point number</th>
+                     <td class="col-xs-12 col-sm-6 col-md-8">00000000000</td>
+                   </tr>
+                   <tr>
+                     <th class="col-xs-12 col-sm-6 col-md-4">Supplier</th>
+                     <td class="col-xs-12 col-sm-6 col-md-8"></td>
+                   </tr>
+                   <tr>
+                     <th class="col-xs-12 col-sm-6 col-md-4">Account Reference</th>
+                     <td class="col-xs-12 col-sm-6 col-md-8"></td>
+                   </tr>
+                   <tr>
+                     <th class="col-xs-12 col-sm-6 col-md-4">Tariff</th>
+                     <td class="col-xs-12 col-sm-6 col-md-8"></td>
+                   </tr>
+                   <tr>
+                     <th class="col-xs-12 col-sm-6 col-md-4">Meter Serial Number</th>
+                     <td class="col-xs-12 col-sm-6 col-md-8"></td>
+                   </tr>
+                   <tr class="table-primary">
+                     <th colspan="2">Gas</th>
+                   </tr>
+                   <tr>
+                     <th class="col-xs-12 col-sm-6 col-md-4">Meter point number</th>
+                     <td class="col-xs-12 col-sm-6 col-md-8"></td>
+                   </tr>
+                   <tr>
+                     <th class="col-xs-12 col-sm-6 col-md-4">Supplier</th>
+                     <td class="col-xs-12 col-sm-6 col-md-8"></td>
+                   </tr>
+                   <tr>
+                     <th class="col-xs-12 col-sm-6 col-md-4">Account Reference</th>
+                     <td class="col-xs-12 col-sm-6 col-md-8"></td>
+                   </tr>
+                   <tr>
+                     <th class="col-xs-12 col-sm-6 col-md-4">Tariff</th>
+                     <td class="col-xs-12 col-sm-6 col-md-8"></td>
+                   </tr>
+                   <tr>
+                     <th class="col-xs-12 col-sm-6 col-md-4">Meter Serial Number</th>
+                     <td class="col-xs-12 col-sm-6 col-md-8"></td>
+                   </tr>
+                 </tbody>
+               </table>
+             </div>
            </div>
          </div>
        </div>
+       <p class="mt-2">Edit your information below</p>
+       <a href="https://tashaford.github.io/citizen_interactive_wireframe/edit_info.html" class="btn btn-outline-primary">Edit</a>
+
+       <h4 class="mt-4">Home Visit Form</h4>
+       <p>Information relating to visits with your Energy Advocate.</p>
+       <a href="#" class="btn btn-outline-info btn-sm">Form</a>
      </div>
-     <p class="mt-2">Edit your information below</p>
-     <a href="https://tashaford.github.io/citizen_interactive_wireframe/edit_info.html" class="btn btn-outline-primary">Edit</a>
 
-     <h4 class="mt-4">Home Visit Form</h4>
-     <p>Information relating to visits with your Energy Advocate.</p>
-     <a href="#" class="btn btn-outline-info btn-sm">Form</a>
-   </div>
+   </main>
 
- </main>
-
- <footer class="mt-5">
-  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">  
-    <img class="rounded mx-auto" src="https://tashaford.github.io/citizen_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
-    <small class="m-1 font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund. <br>
-    Mydex CIC - your data your way</small>
-    <img class="rounded mx-auto" src="https://tashaford.github.io/citizen_interactive_wireframe/images/esf.png" alt="logo" width="250">
-  </nav>
-</footer>
+   <footer class="mt-5">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">  
+      <img class="rounded mx-auto" src="https://tashaford.github.io/citizen_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
+      <small class="m-1 font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund. <br>
+      Mydex CIC - your data your way</small>
+      <img class="rounded mx-auto" src="https://tashaford.github.io/citizen_interactive_wireframe/images/esf.png" alt="logo" width="250">
+    </nav>
+  </footer>
 </div>
 </body>
 
