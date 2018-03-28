@@ -71,6 +71,15 @@
             </div>
           </nav>
 
+          <script>
+            $('.nav').on('shown.bs.tab', 'a', function (e) {
+              console.log(e.relatedTarget);
+              if (e.relatedTarget) {
+                $(e.relatedTarget).removeClass('active in');
+              }
+            });
+          </script>
+
           <!-- table content -->
           <div id="information-nav-content" class="tab-content responsive">
            <!-- personal informaiton table -->
