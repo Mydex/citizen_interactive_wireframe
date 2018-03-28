@@ -71,14 +71,12 @@
             </div>
           </nav>
 
-          <script>
-            $('.nav').on('shown.bs.tab', 'a', function (e) {
-              console.log(e.relatedTarget);
-              if (e.relatedTarget) {
-                $(e.relatedTarget).removeClass('active in');
-              }
-            });
-          </script>
+     <!--      <script>
+            $("a.dropdown-item").on('click',function(){
+                $(".tab-pane").hide();
+                $($(this).attr("href")).show();
+              });
+          </script> -->
 
           <!-- table content -->
           <div id="information-nav-content" class="tab-content responsive">
