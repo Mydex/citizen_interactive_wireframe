@@ -69,6 +69,15 @@
             </div>
           </nav>
 
+          <script>
+            $(function(){
+
+              $('.dropdown a').click(function(){ 
+                $(this).addClass('active').siblings().removeClass('active');
+              }); 
+            })
+          </script>
+
           <!-- table content -->
           <div id="information-nav-content" class="tab-content responsive">
            <!-- personal informaiton table -->
