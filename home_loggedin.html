@@ -70,12 +70,17 @@
           </nav>
 
           <script>
-            $(function(){
-
-              $('.dropdown-menu a').click(function(){ 
-                $(this).addClass('active').siblings().removeClass('active');
-              }); 
-            })
+            $(document).ready(function(){
+                    $(".dropdown-item").click(function(){
+                      var me = $(this);
+                      var panel = $('#' + this.hash.substr(1).toLowerCase());
+                      if(me.hasClass('active')){
+                         me.removeClass('active');
+                        panel.removeClass('active');     
+                            return false;
+                      }
+                    });
+                });
           </script>
 
           <!-- table content -->
