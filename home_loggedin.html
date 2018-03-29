@@ -61,7 +61,7 @@
             <button class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More data</button>
 
             <div class="dropdown-menu">
-              <a onclick="myFunction()" class="dropdown-item" id="personal-tab" href="#personal" role="tab" data-toggle="tab" aria-controls="personal">Personal</a>
+              <a class="dropdown-item" id="personal-tab" href="#personal" role="tab" data-toggle="tab" aria-controls="personal">Personal</a>
               <a class="dropdown-item" id="family-tab" href="#family" role="tab" data-toggle="tab" aria-controls="family">Family</a>
               <a class="dropdown-item" id="property-tab" href="#property" role="tab" data-toggle="tab" aria-controls="property">Property</a>
               <a class="dropdown-item" id="fuel-tab" href="#fuel" role="tab" data-toggle="tab" aria-controls="fuel">Fuel</a>
@@ -71,7 +71,7 @@
 
         <script>
           $("button").click(function(){
-            $("a").removeClass("active");
+              $("a").removeClass("active");
           });
         </script>
 
@@ -218,7 +218,7 @@
 </body>
 
 
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
 <script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
 </body>
 </html>
