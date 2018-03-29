@@ -61,7 +61,7 @@
             <button class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More data</button>
 
             <div class="dropdown-menu">
-              <a class="dropdown-item" id="personal-tab" href="#personal" role="tab" data-toggle="tab" aria-controls="personal">Personal</a>
+              <a onclick="myFunction()" class="dropdown-item" id="personal-tab" href="#personal" role="tab" data-toggle="tab" aria-controls="personal">Personal</a>
               <a class="dropdown-item" id="family-tab" href="#family" role="tab" data-toggle="tab" aria-controls="family">Family</a>
               <a class="dropdown-item" id="property-tab" href="#property" role="tab" data-toggle="tab" aria-controls="property">Property</a>
               <a class="dropdown-item" id="fuel-tab" href="#fuel" role="tab" data-toggle="tab" aria-controls="fuel">Fuel</a>
@@ -70,17 +70,10 @@
         </nav>
 
         <script>
-          $(function(){
-            $(".dropdown-item").click(function(){
-              var me = $(this);
-              var panel = $('#' + this.hash.substr(1).toLowerCase());
-              if(me.hasClass('active')){
-               me.removeClass('active');
-               panel.removeClass('active');     
-               return false;
-             }
-           });
-          })
+          function myFunction() {
+              var element = document.getElementById("personal-tab");
+              element.classList.remove("active");
+          }
         </script>
 
         <!-- table content -->
