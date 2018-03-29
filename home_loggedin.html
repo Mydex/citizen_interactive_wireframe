@@ -70,10 +70,9 @@
         </nav>
 
         <script>
-          function myFunction() {
-              var element = document.getElementById("personal-tab");
-              element.classList.remove("active");
-          }
+          $("button").click(function(){
+            $("a").removeClass("active");
+          });
         </script>
 
         <!-- table content -->
