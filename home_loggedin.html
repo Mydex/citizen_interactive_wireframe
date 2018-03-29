@@ -70,21 +70,21 @@
         </nav>
 
         <script>
-          
-          $(".dropdown-item").click(function(){
-            var me = $(this);
-            var panel = $('#' + this.hash.substr(1).toLowerCase());
-            if(me.hasClass('active')){
-             me.removeClass('active');
-             panel.removeClass('active');     
-             return false;
-           }
-         });
+          $(function(){
+            $(".dropdown-item").click(function(){
+              var me = $(this);
+              var panel = $('#' + this.hash.substr(1).toLowerCase());
+              if(me.hasClass('active')){
+               me.removeClass('active');
+               panel.removeClass('active');     
+               return false;
+             }
+           });
+          })
+        </script>
 
-       </script>
-
-       <!-- table content -->
-       <div id="information-nav-content" class="tab-content responsive">
+        <!-- table content -->
+        <div id="information-nav-content" class="tab-content responsive">
          <!-- personal informaiton table -->
          <div role="tadpanel" class="tab-pane fade show active" id="personal" aria-labelledby="personal-tab">
            <table class="table table-striped table-sm">
