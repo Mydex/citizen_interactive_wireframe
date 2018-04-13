@@ -55,6 +55,8 @@
                 <li class="nav-item"><a class="nav-link " href="#property" role="tab" id="property-tab" data-toggle="tab" aria-controls="property">Property</a></li>
                 <!-- heating -->
                 <li class="nav-item"><a class="nav-link" href="#heating" role="tab" id="heating-tab" data-toggle="tab" aria-controls="heating">Heating</a></li>
+                <!-- energy -->
+                <li class="nav-item"><a class="nav-link" href="#energy" role="tab" id="energy-tab" data-toggle="tab" aria-controls="energy">Energy</a></li>
                 <!-- family -->
                 <li class="nav-item"><a class="nav-link" href="#family" role="tab" id="family-tab" data-toggle="tab" aria-controls="family">Family</a></li>
                 <!-- fuel -->
@@ -240,6 +242,53 @@
             </table>
             <a href="#" class="btn btn-outline-primary btn-sm">Edit Heating</a>
         </div>
+        <!-- energy information table -->
+        <div role="tadpanel" class="tab-pane fade" id="energy" aria-labelledby="energy-tab">
+            <table class="table table-striped table-bordered table-sm">
+                <thead>
+                    <th colspan="2" class="bg-primary">Energy Information</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="text-primary">What is property glazing tpye? (%)</th>
+                        <td class="font-italic">To be added</td>
+                    </tr>
+                    <tr>
+                        <th class="text-primary">Do you use low energy light bulbs? (%)</th>
+                        <td class="font-italic">To be added</td>
+                    </tr>
+                    <tr>
+                        <th class="text-primary">What is the main heating fuel used to heat the property?</th>
+                        <td class="font-italic">To be added</td>
+                    </tr>
+                    <tr>
+                        <th class="text-primary">How old is your boiler?</th>
+                        <td class="font-italic">To be added</td>
+                    </tr>
+                    <tr>
+                        <th class="text-primary">Make and model of boiler</th>
+                        <td class="font-italic">To be added</td>
+                    </tr>
+                    <tr>
+                        <th class="text-primary">How is your water heated?</th>
+                        <td class="font-italic">To be added</td>
+                    </tr>
+                    <tr>
+                        <th class="text-primary">What is the size of the hot water cylinder?</th>
+                        <td class="font-italic">To be added</td>
+                    </tr>
+                    <tr>
+                        <th class="text-primary">What type of insulaion does it have?</th>
+                        <td class="font-italic">To be added</td>
+                    </tr>
+                    <tr>
+                        <th class="text-primary">Is there a thermostat on the hot water cylinder?</th>
+                        <td class="font-italic">To be added</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#" class="btn btn-outline-primary btn-sm">Edit Energy</a>
+        </div>
         <!-- family information table-->
         <div role="tadpanel" class="tab-pane fade" id="family" aria-labelledby="family-tab">
             <table class="table table-striped table-sm">
@@ -315,7 +364,7 @@
 
         <!-- property information table -->
         <div role="tadpanel" class="tab-pane fade" id="property" aria-labelledby="property-tab">
-            
+
         </div>
 
 
@@ -329,87 +378,14 @@
 </div>
 
 <div class="container col-xs-12 col-sm-8 col-md-8">
-    <nav class="nav nav-tabs" id="nav-tab" role="tablist">
-      <div class="dropdown">
-        <button class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More data</button>
-        <div class="dropdown-menu">
-            <a class="dropdown-item" id="service-tab" href="#service" role="tab" data-toggle="tab" aria-controls="service">Service Information</a>
-            <a class="dropdown-item" id="personal-tab" href="#personal" role="tab" data-toggle="tab" aria-controls="personal">Personal</a>
-            <a class="dropdown-item" id="property-tab" href="#property" role="tab" data-toggle="tab" aria-controls="property">Property</a>
-            <a class="dropdown-item" id="heating-tab" href="#heating" role="tab" data-toggle="tab" aria-controls="heating">Heating</a>
-            <a class="dropdown-item" id="energy-tab" href="#energy" role="tab" data-toggle="tab" aria-controls="energy">Energy</a>
-            <a class="dropdown-item" id="safety-tab" href="#safety" role="tab" data-toggle="tab" aria-controls="safety">Safety</a>
-            <a class="dropdown-item" id="residents-tab" href="#residents" role="tab" data-toggle="tab" aria-controls="residents">Residents</a>
-            <a class="dropdown-item" id="electricity-tab" href="#electricity" role="tab" data-toggle="tab" aria-controls="electricity">Electricity</a>
-            <a class="dropdown-item" id="gas-tab" href="#gas" role="tab" data-toggle="tab" aria-controls="gas">Gas</a>
-            <a class="dropdown-item" id="notes-tab" href="#notes" role="tab" data-toggle="tab" aria-controls="notes">Notes</a>
-            <a class="dropdown-item" id="data-tab" href="#data" role="tab" data-toggle="tab" aria-controls="data">Data Protection Act 1998</a>
-        </div>
-    </div>
-</nav>
-
-<script>
-  $(document).ready(function () {
-    $("button").click(function(){
-      $("a").removeClass("active");
-  });
-});
-</script>
 
 <!-- table content -->
 <div id="information-nav-content" class="tab-content">
 
 
-    <!-- heating information table -->
-    <div role="tadpanel" class="tab-pane fade" id="heating" aria-labelledby="heating-tab">
-      
-    </div>
     <!-- energy information table -->
     <div role="tadpanel" class="tab-pane fade" id="energy" aria-labelledby="energy-tab">
-        <table class="table table-striped table-bordered table-sm">
-            <thead>
-                <th colspan="2" class="bg-primary">Energy Information</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <th class="text-primary">What is property glazing tpye? (%)</th>
-                    <td class="font-italic">To be added</td>
-                </tr>
-                <tr>
-                    <th class="text-primary">Do you use low energy light bulbs? (%)</th>
-                    <td class="font-italic">To be added</td>
-                </tr>
-                <tr>
-                    <th class="text-primary">What is the main heating fuel used to heat the property?</th>
-                    <td class="font-italic">To be added</td>
-                </tr>
-                <tr>
-                    <th class="text-primary">How old is your boiler?</th>
-                    <td class="font-italic">To be added</td>
-                </tr>
-                <tr>
-                    <th class="text-primary">Make and model of boiler</th>
-                    <td class="font-italic">To be added</td>
-                </tr>
-                <tr>
-                    <th class="text-primary">How is your water heated?</th>
-                    <td class="font-italic">To be added</td>
-                </tr>
-                <tr>
-                    <th class="text-primary">What is the size of the hot water cylinder?</th>
-                    <td class="font-italic">To be added</td>
-                </tr>
-                <tr>
-                    <th class="text-primary">What type of insulaion does it have?</th>
-                    <td class="font-italic">To be added</td>
-                </tr>
-                <tr>
-                    <th class="text-primary">Is there a thermostat on the hot water cylinder?</th>
-                    <td class="font-italic">To be added</td>
-                </tr>
-            </tbody>
-        </table>
-        <a href="#" class="btn btn-outline-primary btn-sm">Edit Energy</a>
+     
     </div>
     <!-- safety information table -->
     <div role="tadpanel" class="tab-pane fade" id="safety" aria-labelledby="safety-tab">
