@@ -219,6 +219,25 @@
         }
       });
     });
+      //popover for message 4
+      $(function(){
+        $("#popoverMessage4").popover({
+          html : true, 
+          content: function() {
+            return $('#popoverMessage4Content').html();
+          },
+          title: function() {
+            return $('#popoverMessage4Title').html();
+          }
+        });
+      })
+      $('body').on('click', function (e) {
+       $('#popoverMessage3').each(function () {
+         if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+           $(this).popover('hide');
+         }
+       });
+     });
   </script>
 
   <footer class="mt-2" style="height:30px; margin-top:-30px;">
