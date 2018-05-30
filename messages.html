@@ -45,15 +45,28 @@
               <thead class="table-info">
                 <tr>
                   <th>From</th>
-                  <th>Message</th>
-                  <th>View</th>
+                  <th>View Message</th>
+                  <th>Date Created</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>Energy Advocate</td>
-                  <td>You have created an account. You are able to view and update your information.</td>
-                  <td>Link</td>
+                  <td>
+                    <div style="max-width: 100%;">
+                      <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="right" data-trigger="click" id="popoverMessage1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</a>
+                      <h5 id="popoverMessage1Title" style="display: none">From : Energy Advocate</h5>
+                      <div id="popoverMessage1Content" style="display: none">
+                        <p>You have created an account. You are able to view and update your information.</p>
+                        <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
+                        <form action='#/''>
+                          <textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea>
+                        </form>
+                        <a href='#/' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);''>Send</a>
+                      </div>
+                    </div>
+                  </td>
+                  <td>02/02/2018</td>
                 </tr>
                 <tr>
                   <td>Energy Advocate</td>
