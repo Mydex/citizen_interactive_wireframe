@@ -121,6 +121,66 @@
     </div>
   </main>
 
+  <script>
+   //popover for message 1
+   $(function(){
+     $("#popoverMessage1").popover({
+       html : true, 
+       content: function() {
+         return $('#popoverMessage1Content').html();
+       },
+       title: function() {
+         return $('#popoverMessage1Title').html();
+       }
+     });
+   })
+   $('body').on('click', function (e) {
+    $('#popoverMessage1').each(function () {
+      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+        $(this).popover('hide');
+      }
+    });
+  });
+    //popover for message 2
+    $(function(){
+      $("#popoverMessage2").popover({
+        html : true, 
+        content: function() {
+          return $('#popoverMessage2Content').html();
+        },
+        title: function() {
+          return $('#popoverMessage2Title').html();
+        }
+      });
+    })
+    $('body').on('click', function (e) {
+     $('#popoverMessage2').each(function () {
+       if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+         $(this).popover('hide');
+       }
+     });
+   });
+     //popover for message 3
+     $(function(){
+       $("#popoverMessage3").popover({
+         html : true, 
+         content: function() {
+           return $('#popoverMessage3Content').html();
+         },
+         title: function() {
+           return $('#popoverMessage3Title').html();
+         }
+       });
+     })
+     $('body').on('click', function (e) {
+      $('#popoverMessage3').each(function () {
+        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+          $(this).popover('hide');
+        }
+      });
+    });
+  </script>
+
   <footer class="mt-2" style="height:30px; margin-top:-30px;">
     <nav class="navbar navbar-expand-sm">  
       <img class="rounded mx-auto" src="https://tashaford.github.io/citizen_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
