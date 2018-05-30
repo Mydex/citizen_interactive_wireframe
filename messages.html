@@ -316,19 +316,133 @@
          }
        });
      });
-  </script>
+       //popover for message 5
+       $(function(){
+         $("#popoverMessage5").popover({
+           html : true, 
+           content: function() {
+             return $('#popoverMessage5Content').html();
+           },
+           title: function() {
+             return $('#popoverMessage5Title').html();
+           }
+         });
+       })
+       $('body').on('click', function (e) {
+        $('#popoverMessage5').each(function () {
+          if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+            $(this).popover('hide');
+          }
+        });
+      });
+        //popover for message 6
+        $(function(){
+          $("#popoverMessage6").popover({
+            html : true, 
+            content: function() {
+              return $('#popoverMessage6Content').html();
+            },
+            title: function() {
+              return $('#popoverMessage6Title').html();
+            }
+          });
+        })
+        $('body').on('click', function (e) {
+         $('#popoverMessage6').each(function () {
+           if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+             $(this).popover('hide');
+           }
+         });
+       });
+         //popover for message 7
+         $(function(){
+           $("#popoverMessage7").popover({
+             html : true, 
+             content: function() {
+               return $('#popoverMessage7Content').html();
+             },
+             title: function() {
+               return $('#popoverMessage7Title').html();
+             }
+           });
+         })
+         $('body').on('click', function (e) {
+          $('#popoverMessage7').each(function () {
+            if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+              $(this).popover('hide');
+            }
+          });
+        });
+          //popover for message 8
+          $(function(){
+            $("#popoverMessage8").popover({
+              html : true, 
+              content: function() {
+                return $('#popoverMessage8Content').html();
+              },
+              title: function() {
+                return $('#popoverMessage8Title').html();
+              }
+            });
+          })
+          $('body').on('click', function (e) {
+           $('#popoverMessage8').each(function () {
+             if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+               $(this).popover('hide');
+             }
+           });
+         });
+           //popover for message 9
+           $(function(){
+             $("#popoverMessage9").popover({
+               html : true, 
+               content: function() {
+                 return $('#popoverMessage9Content').html();
+               },
+               title: function() {
+                 return $('#popoverMessage9Title').html();
+               }
+             });
+           })
+           $('body').on('click', function (e) {
+            $('#popoverMessage9').each(function () {
+              if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                $(this).popover('hide');
+              }
+            });
+          });
+            //popover for message 10
+            $(function(){
+              $("#popoverMessage10").popover({
+                html : true, 
+                content: function() {
+                  return $('#popoverMessage10Content').html();
+                },
+                title: function() {
+                  return $('#popoverMessage10Title').html();
+                }
+              });
+            })
+            $('body').on('click', function (e) {
+             $('#popoverMessage10').each(function () {
+               if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                 $(this).popover('hide');
+               }
+             });
+           });
+         </script>
 
-  <footer class="mt-2" style="height:30px; margin-top:-30px;">
-    <nav class="navbar navbar-expand-sm">  
-      <img class="rounded mx-auto" src="https://tashaford.github.io/citizen_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
-      <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
-      <img class="rounded mx-auto" src="https://tashaford.github.io/citizen_interactive_wireframe/images/esf.png" alt="logo" width="250">
-    </nav>
-  </footer>
-</body>
+         <footer class="mt-2" style="height:30px; margin-top:-30px;">
+          <nav class="navbar navbar-expand-sm">  
+            <img class="rounded mx-auto" src="https://tashaford.github.io/citizen_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
+            <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
+            <img class="rounded mx-auto" src="https://tashaford.github.io/citizen_interactive_wireframe/images/esf.png" alt="logo" width="250">
+          </nav>
+        </footer>
+      </body>
 
-<script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
-<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
-<script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
-</body>
-</html>
+      <script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
+      <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+      <script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+    </body>
+    </html>
