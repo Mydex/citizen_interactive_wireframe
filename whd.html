@@ -242,20 +242,36 @@
         </select>
       </form>
     </div>
-    <script type="text/javascript">
-     function showLink(site){
-      if(site != 'supplierDefault') {
-        document.getElementById('whdIframe').innerHTML = '<a id="linkIframe" href="" target="_blank">Link to WHD page</a>';
-        document.getElementById('linkIframe').href = site;
-      } else {
-        document.getElementById('whdIframe').innerHTML='';
-      } 
-    }
-  </script>
   <div id="whdIframe"></div>
 </div>
 
 </main>
+
+  <script type="text/javascript">
+
+var dobCounter = 2;
+function addDOB(){
+  var newDiv = document.createElement('div');
+  newDiv.innerHTML =
+  "<>\
+  <>";
+  document.getElementById('content').appendChild(newDiv);
+  dobCounter ++;
+}
+function removeRow(input){
+  document.getElementById('content').removeChild(input.parentNode);
+}
+
+
+   function showLink(site){
+    if(site != 'supplierDefault') {
+      document.getElementById('whdIframe').innerHTML = '<a id="linkIframe" href="" target="_blank">Link to WHD page</a>';
+      document.getElementById('linkIframe').href = site;
+    } else {
+      document.getElementById('whdIframe').innerHTML='';
+    } 
+  }
+</script>
 
 <footer class="mt-2" style="height:30px; margin-top:-30px;">
   <nav class="navbar navbar-expand-sm">  
