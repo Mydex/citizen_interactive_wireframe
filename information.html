@@ -467,7 +467,7 @@
                <input type="date" name="dob1">
                <button onclick="addDOB()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+</button>
            </div>
-           <div id="dob1"></div>
+           <div id="content"></div>
        </td>
    </tr>
    <tr>
@@ -964,11 +964,17 @@ function showCarbon(name){
 } 
 }
 
+var dobCounter = 2;
 function addDOB(){
-    counter=0;
-    if(counter == 0){
-        document.getElementById('dob1').innerHTML = "<input type='date' name='dob2'>";
-    }
+    var newDiv = document.createElement('div');
+    newDiv.innerHTML = 
+    "<input type='date' name='dob' class='mb-2' >\
+    <input type='button' class='btn btn-outline-primary' value='-' onclick='removeRow(this)' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);' >";
+    document.getElementById('content').appendChild(newDiv);
+    dobCounter ++;
+}
+function removeRow(input){
+  document.getElementById('content').removeChild(input.parentNode);
 }
 
 function showElecPay(name){
