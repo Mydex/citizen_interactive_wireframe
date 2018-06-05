@@ -67,6 +67,10 @@
         <p>Hello it is Scottish Power content</p>
       </div>
 
+      <div id="britishGasContent" style="visibility: hidden;">
+        <p>Hello it is British Gas content</p>
+      </div>
+
     </div>
 
   </main>
@@ -76,6 +80,8 @@
     function showApplciation(name){
       if(name == 'scottishPower'){
         document.getElementById('scottishPowerContent').style.visibility = 'visible';
+      } else if (name == 'britishGas'){
+        document.getElementById('britishGasContent').style.visibility = 'visibile';
       };
     }
 
