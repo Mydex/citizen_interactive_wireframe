@@ -52,24 +52,32 @@
           Download report as a PDF <a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Download</a>
         </p> -->
       </div>
-      <p>Please pick your supplier from below</p>
+      <p>Please pick your supplier:</p>
       <form action="#/">
-        <select name="energySupplier">
+        <select name="energySupplier" onchange="showApplciation(this.options[this.selectedIndex].value)" required>
           <option value="default"></option>
-          <option value="supplierDefault"></option>
           <option value="scottishPower">Scottish Power</option>
           <option value="britishGas">British Gas</option>
-          <option value="edfEnergy">EDF Energy</option>
-          <option value="eon">E.ON</option>
+          <!-- <option value="edfEnergy">EDF Energy</option> -->
+          <!-- <option value="eon">E.ON</option> -->
         </select>
       </form>
 
+      <div id="scottishPowerContent" style="visibility: hidden;">
+        <p>Hello it is Scottish Power content</p>
+      </div>
 
     </div>
 
   </main>
 
   <script type="text/javascript">
+
+    function showApplciation(name){
+      if(name == 'scottishPower'){
+        document.getElementById('scottishPowerContent').style.visibility = 'visible';
+      };
+    }
 
     var dobCounter = 2;
     function addDOB(){
