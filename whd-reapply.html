@@ -80,8 +80,13 @@
     function showApplciation(name){
       if(name == 'scottishPower'){
         document.getElementById('scottishPowerContent').style.visibility = 'visible';
+        document.getElementById('britishGasContent').style.visibility = 'hidden';
       } else if (name == 'britishGas'){
         document.getElementById('britishGasContent').style.visibility = 'visibile';
+        document.getElementById('scottishPowerContent').style.visibility = 'hidden';
+      } else {
+        document.getElementById('scottishPowerContent').style.visibility = 'hidden';
+        document.getElementById('britishGasContent').style.visibility = 'hidden';
       };
     }
 
