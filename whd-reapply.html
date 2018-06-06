@@ -649,15 +649,12 @@
 
    //popover 1
    $(function(){
-    $('#popoverPersonal1').popover({
-      template: '<h3 class="popover-title" style="display: none"></h3>'
-    });
     $("#popoverPersonal1").popover({
      html : true, 
      content: function() {
        return $('#popoverPersonal1Content').html();
      },
-     title: ""
+     template: '<h3 class="popover-title" style="display: none"></h3>'
    });
   })
    $('body').on('click', function (e) {
