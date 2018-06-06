@@ -256,17 +256,29 @@
   function showApplciation(name){
     if(name == 'scottishPower'){
       document.getElementById('scottishPowerContent').style.display = 'block';
+      document.getElementById('britishGasContent').style.display = 'none';
+      document.getElementById('edfEnergyContent').style.display = 'none';
+      document.getElementById('eonContent').style.display = 'none';
     } else if (name == 'britishGas'){
       document.getElementById('britishGasContent').style.display = 'block';
+      document.getElementById('scottishPowerContent').style.display = 'none';
+      document.getElementById('edfEnergyContent').style.display = 'none';
+      document.getElementById('eonContent').style.display = 'none';
     } else if (name == 'edfEnergy'){
       document.getElementById('edfEnergyContent').style.display = 'block';
+      document.getElementById('scottishPowerContent').style.display = 'none';
+      document.getElementById('britishGasContent').style.display = 'none';
+      document.getElementById('eonContent').style.display = 'none';
     } else if (name == 'eon'){
       document.getElementById('eonContent').style.display = 'block';
+      document.getElementById('scottishPowerContent').style.display = 'none';
+      document.getElementById('britishGasContent').style.display = 'none';
+      document.getElementById('edfEnergyContent').style.display = 'none';
     } else {
       document.getElementById('scottishPowerContent').style.display = 'none';
       document.getElementById('britishGasContent').style.display = 'none';
-      document.getElementById('edfEnergy').style.display = 'none';
-      document.getElementById('eon').style.display = 'none';
+      document.getElementById('edfEnergyContent').style.display = 'none';
+      document.getElementById('eonContent').style.display = 'none';
     };
   }
 
