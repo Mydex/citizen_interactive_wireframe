@@ -345,7 +345,8 @@
               <td contenteditable="true" spellcheck="true">Citizen</td>
               <td>
                 <div style="max-width: 100%;">
-                  <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="right" data-trigger="click" id="popoverPersonal1">Previous</a>
+                  <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="left" data-trigger="click" id="popoverPersonal1">Previous</a>
+                  <h5 id="popoverPersonal1Title" style="display: none"></h5>
                   <div id="popoverPersonal1Content" style="display: none">
                     Citizen
                   </div>
@@ -611,6 +612,9 @@
        html : true, 
        content: function() {
          return $('#popoverPersonal1Content').html();
+       },
+       title: function() {
+         return $('#popoverPersonal1Title').html();
        }
      });
    })
