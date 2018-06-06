@@ -58,7 +58,7 @@
         </select>
       </form>
 
-      <div id="scottishPowerContent" style="visibility: hidden;">
+      <div id="scottishPowerContent" style="display:none;">
 
         <div class="row">
           <div class="col-5">
@@ -255,7 +255,7 @@
 
   function showApplciation(name){
     if(name == 'scottishPower'){
-      document.getElementById('scottishPowerContent').style.visibility = 'visible';
+      document.getElementById('scottishPowerContent').style.display = 'block';
     } else if (name == 'britishGas'){
       document.getElementById('britishGasContent').style.visibility = 'visible';
     } else if (name == 'edfEnergy'){
