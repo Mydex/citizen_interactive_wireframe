@@ -346,7 +346,7 @@
               <td>
                 <div style="max-width: 100%;">
                   <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="left" data-trigger="click" id="popoverPersonal1">View</a>
-                  <h5 id="popoverPersonal1Title" style="display: none">Previous</h5>
+                  <h5 id="popoverPersonal1Title" style="display: none">Previous data</h5>
                   <div id="popoverPersonal1Content" style="display: none">
                     Citizen
                   </div>
@@ -358,7 +358,8 @@
               <td contenteditable="true" spellcheck="true">Twenty</td>
               <td>
                 <div style="max-width: 100%;">
-                  <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="left" data-trigger="click" id="popoverPersonal2">Previous</a>
+                  <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="left" data-trigger="click" id="popoverPersonal2">View</a>
+                  <h5 id="popoverPersonal2Title" style="display: none">Previous data</h5>
                   <div id="popoverPersonal2Content" style="display: none">
                     Twenty
                   </div>
@@ -370,7 +371,8 @@
               <td contenteditable="true" spellcheck="true">12 Fake Street <br>FakeTown</td>
               <td>
                 <div style="max-width: 100%;">
-                  <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="left" data-trigger="click" id="popoverPersonal3">Previous</a>
+                  <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="left" data-trigger="click" id="popoverPersonal3">View</a>
+                  <h5 id="popoverPersonal3Title" style="display: none">Previous data</h5>
                   <div id="popoverPersonal3Content" style="display: none">
                     12 Fake Street<br>FakeTown
                   </div>
@@ -382,7 +384,8 @@
               <td contenteditable="true" spellcheck="true">FA12 3KE</td>
               <td>
                 <div style="max-width: 100%;">
-                  <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="left" data-trigger="click" id="popoverPersonal4">Previous</a>
+                  <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="left" data-trigger="click" id="popoverPersonal4">View</a>
+                  <h5 id="popoverPersonal4Title" style="display: none">Previous data</h5>
                   <div id="popoverPersonal4Content" style="display: none">
                     FA12 3KE
                   </div>
@@ -394,7 +397,8 @@
               <td contenteditable="true" spellcheck="true">012345 678901</td>
               <td>
                 <div style="max-width: 100%;">
-                  <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="left" data-trigger="click" id="popoverPersonal5">Previous</a>
+                  <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="left" data-trigger="click" id="popoverPersonal5">View</a>
+                  <h5 id="popoverPersonal5Title" style="display: none">Previous data</h5>
                   <div id="popoverPersonal5Content" style="display: none">
                     012345 678901
                   </div>
@@ -406,7 +410,8 @@
               <td contenteditable="true" spellcheck="true">077123456789</td>
               <td>
                 <div style="max-width: 100%;">
-                  <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="left" data-trigger="click" id="popoverPersonal6">Previous</a>
+                  <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="left" data-trigger="click" id="popoverPersonal6">View</a>
+                  <h5 id="popoverPersonal6Title" style="display: none">Previous data</h5>
                   <div id="popoverPersonal6Content" style="display: none">
                     077123456789
                   </div>
@@ -418,7 +423,8 @@
               <td><input type="date" name="dob"></td>
               <td>
                 <div style="max-width: 100%;">
-                  <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="left" data-trigger="click" id="popoverPersonal7">Previous</a>
+                  <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="left" data-trigger="click" id="popoverPersonal7">View</a>
+                  <h5 id="popoverPersonal7Title" style="display: none">Previous data</h5>
                   <div id="popoverPersonal7Content" style="display: none">
                     <input type="date" name="dob" value="1990-01-01">
                   </div>
@@ -655,10 +661,10 @@
      content: function() {
        return $('#popoverPersonal1Content').html();
      },
-          title: function() {
-            return $('#popoverPersonal1Title').html();
-          }
-   });
+     title: function() {
+      return $('#popoverPersonal1Title').html();
+    }
+  });
   })
    $('body').on('click', function (e) {
     $('#popoverPersonal1').each(function () {
@@ -674,7 +680,9 @@
         content: function() {
           return $('#popoverPersonal2Content').html();
         },
-        title: ""
+        title: function() {
+          return $('#popoverPersonal2Title').html();
+        }
       });
     })
     $('body').on('click', function (e) {
@@ -691,16 +699,17 @@
          content: function() {
            return $('#popoverPersonal3Content').html();
          },
-         title: ""
-       });
-     })
-     $('body').on('click', function (e) {
-      $('#popoverPersonal3').each(function () {
-        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-          $(this).popover('hide');
+         title: function() {
+          return $('#popoverPersonal3Title').html();
         }
+      })
+       $('body').on('click', function (e) {
+        $('#popoverPersonal3').each(function () {
+          if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+            $(this).popover('hide');
+          }
+        });
       });
-    });
       //popover 4
       $(function(){
         $("#popoverPersonal4").popover({
@@ -708,16 +717,17 @@
           content: function() {
             return $('#popoverPersonal4Content').html();
           },
-          title: ""
-        });
-      })
-      $('body').on('click', function (e) {
-       $('#popoverPersonal4').each(function () {
-         if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-           $(this).popover('hide');
-         }
+          title: function() {
+            return $('#popoverPersonal4Title').html();
+          }
+        })
+        $('body').on('click', function (e) {
+         $('#popoverPersonal4').each(function () {
+           if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+             $(this).popover('hide');
+           }
+         });
        });
-     });
        //popover 5
        $(function(){
          $("#popoverPersonal5").popover({
@@ -725,16 +735,17 @@
            content: function() {
              return $('#popoverPersonal5Content').html();
            },
-           title: ""
-         });
-       })
-       $('body').on('click', function (e) {
-        $('#popoverPersonal5').each(function () {
-          if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-            $(this).popover('hide');
+           title: function() {
+            return $('#popoverPersonal5Title').html();
           }
+        })
+         $('body').on('click', function (e) {
+          $('#popoverPersonal5').each(function () {
+            if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+              $(this).popover('hide');
+            }
+          });
         });
-      });
         //popover 6
         $(function(){
           $("#popoverPersonal6").popover({
@@ -742,16 +753,17 @@
             content: function() {
               return $('#popoverPersonal6Content').html();
             },
-            title: ""
-          });
-        })
-        $('body').on('click', function (e) {
-         $('#popoverPersonal6').each(function () {
-           if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-             $(this).popover('hide');
-           }
+            title: function() {
+              return $('#popoverPersonal6Title').html();
+            }
+          })
+          $('body').on('click', function (e) {
+           $('#popoverPersonal6').each(function () {
+             if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+               $(this).popover('hide');
+             }
+           });
          });
-       });
          //popover 7
          $(function(){
            $("#popoverPersonal7").popover({
@@ -759,84 +771,85 @@
              content: function() {
                return $('#popoverPersonal7Content').html();
              },
-             title: ""
-           });
-         })
-         $('body').on('click', function (e) {
-          $('#popoverPersonal7').each(function () {
-            if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-              $(this).popover('hide');
-            }
+             title: function() {
+              return $('#popoverPersonal7Title').html();
+            };
+          })
+           $('body').on('click', function (e) {
+            $('#popoverPersonal7').each(function () {
+              if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                $(this).popover('hide');
+              }
+            });
           });
-        });
-      </script>
+        </script>
 
-      <script type="text/javascript">
+        <script type="text/javascript">
 
-        function showApplciation(name){
-          if(name == 'scottishPower'){
-            document.getElementById('scottishPowerContent').style.display = 'block';
-            document.getElementById('britishGasContent').style.display = 'none';
-            document.getElementById('edfEnergyContent').style.display = 'none';
-            document.getElementById('eonContent').style.display = 'none';
-          } else if (name == 'britishGas'){
-            document.getElementById('britishGasContent').style.display = 'block';
-            document.getElementById('scottishPowerContent').style.display = 'none';
-            document.getElementById('edfEnergyContent').style.display = 'none';
-            document.getElementById('eonContent').style.display = 'none';
-          } else if (name == 'edfEnergy'){
-            document.getElementById('edfEnergyContent').style.display = 'block';
-            document.getElementById('scottishPowerContent').style.display = 'none';
-            document.getElementById('britishGasContent').style.display = 'none';
-            document.getElementById('eonContent').style.display = 'none';
-          } else if (name == 'eon'){
-            document.getElementById('eonContent').style.display = 'block';
-            document.getElementById('scottishPowerContent').style.display = 'none';
-            document.getElementById('britishGasContent').style.display = 'none';
-            document.getElementById('edfEnergyContent').style.display = 'none';
-          } else {
-            document.getElementById('scottishPowerContent').style.display = 'none';
-            document.getElementById('britishGasContent').style.display = 'none';
-            document.getElementById('edfEnergyContent').style.display = 'none';
-            document.getElementById('eonContent').style.display = 'none';
-          };
-        }
+          function showApplciation(name){
+            if(name == 'scottishPower'){
+              document.getElementById('scottishPowerContent').style.display = 'block';
+              document.getElementById('britishGasContent').style.display = 'none';
+              document.getElementById('edfEnergyContent').style.display = 'none';
+              document.getElementById('eonContent').style.display = 'none';
+            } else if (name == 'britishGas'){
+              document.getElementById('britishGasContent').style.display = 'block';
+              document.getElementById('scottishPowerContent').style.display = 'none';
+              document.getElementById('edfEnergyContent').style.display = 'none';
+              document.getElementById('eonContent').style.display = 'none';
+            } else if (name == 'edfEnergy'){
+              document.getElementById('edfEnergyContent').style.display = 'block';
+              document.getElementById('scottishPowerContent').style.display = 'none';
+              document.getElementById('britishGasContent').style.display = 'none';
+              document.getElementById('eonContent').style.display = 'none';
+            } else if (name == 'eon'){
+              document.getElementById('eonContent').style.display = 'block';
+              document.getElementById('scottishPowerContent').style.display = 'none';
+              document.getElementById('britishGasContent').style.display = 'none';
+              document.getElementById('edfEnergyContent').style.display = 'none';
+            } else {
+              document.getElementById('scottishPowerContent').style.display = 'none';
+              document.getElementById('britishGasContent').style.display = 'none';
+              document.getElementById('edfEnergyContent').style.display = 'none';
+              document.getElementById('eonContent').style.display = 'none';
+            };
+          }
 
-        var dobCounter = 2;
-        function addDOB(){
-          var newDiv = document.createElement('div');
-          newDiv.innerHTML =
-          "<input type='date' name='dob" + dobCounter+ "' class='mb-2' >\
-          <input type='button' class='btn btn-outline-primary' value='-' onclick='removeRow(this)' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>";
-          document.getElementById('content').appendChild(newDiv);
-          dobCounter ++;
-        }
-        function removeRow(input){
-          document.getElementById('content').removeChild(input.parentNode);
-        }
+          var dobCounter = 2;
+          function addDOB(){
+            var newDiv = document.createElement('div');
+            newDiv.innerHTML =
+            "<input type='date' name='dob" + dobCounter+ "' class='mb-2' >\
+            <input type='button' class='btn btn-outline-primary' value='-' onclick='removeRow(this)' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>";
+            document.getElementById('content').appendChild(newDiv);
+            dobCounter ++;
+          }
+          function removeRow(input){
+            document.getElementById('content').removeChild(input.parentNode);
+          }
 
 
-        function showLink(site){
-          if(site != 'supplierDefault') {
-            document.getElementById('whdIframe').innerHTML = '<u><a id="linkIframe" href="" target="_blank" class="text-info">Link to WHD page</a></u>';
-            document.getElementById('linkIframe').href = site;
-          } else {
-            document.getElementById('whdIframe').innerHTML='';
-          } 
-        }
-      </script>
+          function showLink(site){
+            if(site != 'supplierDefault') {
+              document.getElementById('whdIframe').innerHTML = '<u><a id="linkIframe" href="" target="_blank" class="text-info">Link to WHD page</a></u>';
+              document.getElementById('linkIframe').href = site;
+            } else {
+              document.getElementById('whdIframe').innerHTML='';
+            } 
+          }
+        </script>
 
-      <footer class="mt-2" style="height:30px; margin-top:-30px;">
-        <nav class="navbar navbar-expand-sm">  
-          <img class="rounded mx-auto" src="https://tashaford.github.io/citizen_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
-          <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
-          <img class="rounded mx-auto" src="https://tashaford.github.io/citizen_interactive_wireframe/images/esf.png" alt="logo" width="250">
-        </nav>
-      </footer>
+        <footer class="mt-2" style="height:30px; margin-top:-30px;">
+          <nav class="navbar navbar-expand-sm">  
+            <img class="rounded mx-auto" src="https://tashaford.github.io/citizen_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
+            <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
+            <img class="rounded mx-auto" src="https://tashaford.github.io/citizen_interactive_wireframe/images/esf.png" alt="logo" width="250">
+          </nav>
+        </footer>
+      </body>
+
+      <script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
+      <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+      <script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
     </body>
-
-    <script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
-    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
-    <script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
-  </body>
-  </html>
+    </html>
