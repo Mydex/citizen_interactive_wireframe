@@ -237,15 +237,15 @@
 </div>
 </div>
 
-<div class="row" id="britishGasContent" style="visibility: hidden;">
-<div>British Gas content</div>
+<div class="row" id="britishGasContent" style="display: none;">
+  <div>British Gas content</div>
 </div>
 
-<div class="row" id="edfEnergyContent" style="visibility: hidden;">
+<div class="row" id="edfEnergyContent" style="display: none;">
   <div>EDF energy content</div>
 </div>
 
-<div class="row" id="eonContent" style="visibility: hidden;">
+<div class="row" id="eonContent" style="display: none;">
   <div>EON content</div>
 </div>
 
@@ -257,16 +257,16 @@
     if(name == 'scottishPower'){
       document.getElementById('scottishPowerContent').style.display = 'block';
     } else if (name == 'britishGas'){
-      document.getElementById('britishGasContent').style.visibility = 'visible';
+      document.getElementById('britishGasContent').style.display = 'block';
     } else if (name == 'edfEnergy'){
-      document.getElementById('edfEnergyContent').style.visibility = 'visible';
+      document.getElementById('edfEnergyContent').style.display = 'block';
     } else if (name == 'eon'){
-      document.getElementById('eonContent').style.visibility = 'visible';
+      document.getElementById('eonContent').style.display = 'block';
     } else {
-      document.getElementById('scottishPowerContent').style.visibility = 'hidden';
-      document.getElementById('britishGasContent').style.visibility = 'hidden';
-      document.getElementById('edfEnergy').style.visibility = 'hidden';
-      document.getElementById('eon').style.visibility = 'hidden';
+      document.getElementById('scottishPowerContent').style.display = 'none';
+      document.getElementById('britishGasContent').style.display = 'none';
+      document.getElementById('edfEnergy').style.display = 'none';
+      document.getElementById('eon').style.display = 'none';
     };
   }
 
