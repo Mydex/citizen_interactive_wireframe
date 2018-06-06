@@ -299,19 +299,19 @@
   </div>
   <div class="col-12 col-md-6 col-lg-6 mt-2">
    <div>Request Energy Advocate check over new data before apply for WHD</div>
-    <p>
-      <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" data-toggle="collapse" data-target="#collapseCheckBg" aria-expanded="false" aria-controls="collapseCheckBg">Check</button>
-    </p>     
-    <div class="collapse" id="collapseCheckBg" aria-labelledby="headingCheckBg">
-      <div class="card card-body">
-        <form action='#/''>
-          <label>Additional information:</label>
-          <textarea class='form-control form-control-sm mt-3' id='textarea4' rows='3' spellcheck='true' type='text'></textarea>
-        </form>
-        <a href='#/' class='btn btn-outline-primary' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Send</a>
-      </div>
+   <p>
+    <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" data-toggle="collapse" data-target="#collapseCheckBg" aria-expanded="false" aria-controls="collapseCheckBg">Check</button>
+  </p>     
+  <div class="collapse" id="collapseCheckBg" aria-labelledby="headingCheckBg">
+    <div class="card card-body">
+      <form action='#/''>
+        <label>Additional information:</label>
+        <textarea class='form-control form-control-sm mt-3' id='textarea4' rows='3' spellcheck='true' type='text'></textarea>
+      </form>
+      <a href='#/' class='btn btn-outline-primary' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Send</a>
     </div>
   </div>
+</div>
 </div>
 
 <div class="row">
@@ -336,14 +336,21 @@
          <table class="table table-striped table-bordered table-sm text-left">
           <thead>
             <th></th>
-            <th class="bg-primary">Previous Data</th>
             <th class="bg-primary">New Data</th>
+            <th class="bg-primary">Previous Data</th>
           </thead>
           <tbody>
             <tr>
               <th>Forename</th>
-              <td>Citizen</td>
               <td contenteditable="true" spellcheck="true">Citizen</td>
+              <td>
+                <div style="max-width: 100%;">
+                  <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="right" data-trigger="click" id="popoverPersonal1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</a>
+                  <div id="popoverPersonal1Content" style="display: none">
+                    Citizen
+                  </div>
+                </div>
+              </td>
             </tr>
             <tr>
               <th>Surame</th>
@@ -595,6 +602,26 @@
 </div>
 
 </main>
+
+<script>
+
+   //popover 1
+   $(function(){
+     $("#popoverPersonal1").popover({
+       html : true, 
+       content: function() {
+         return $('#popoverPersonal1Content').html();
+       }
+     });
+   })
+   $('body').on('click', function (e) {
+    $('#popoverPersonal1').each(function () {
+      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+        $(this).popover('hide');
+      }
+    });
+  });
+</script>
 
 <script type="text/javascript">
 
