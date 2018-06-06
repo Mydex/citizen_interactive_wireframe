@@ -646,7 +646,11 @@
 </main>
 
 <script>
+  
    //popover 1
+   $('#popoverPersonal1').popover({
+     template: '<h3 class="popover-title" style="display: none"></h3>'
+   });
    $(function(){
      $("#popoverPersonal1").popover({
        html : true, 
