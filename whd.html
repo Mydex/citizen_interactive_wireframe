@@ -242,7 +242,7 @@
         </select>
       </form>
     </div>
-    <div id="whdIframe"></div>
+    <div id="whdLink"></div>
   </div>
 
 </main>
@@ -265,10 +265,10 @@
 
   function showLink(site){
     if(site != 'supplierDefault') {
-      document.getElementById('whdIframe').innerHTML = '<u><a id="linkIframe" href="" target="_blank" class="text-info">Link to WHD page</a></u>';
-      document.getElementById('linkIframe').href = site;
+      document.getElementById('whdLink').innerHTML = '<u><a id="siteLink" href="" target="_blank" class="text-info">Link to WHD page</a></u>';
+      document.getElementById('siteLink').href = site;
     } else {
-      document.getElementById('whdIframe').innerHTML='';
+      document.getElementById('whdLink').innerHTML='';
     } 
   }
 </script>

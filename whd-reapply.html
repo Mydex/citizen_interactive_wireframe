@@ -248,6 +248,175 @@
       Download report as a PDF <br><a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Download</a>
     </div>
   </div>
+  <div class="row">
+    <div class="col-12">
+      <h4 class="mt-4 mb-2">New application</h4>
+      <div class="container">
+                <ul id="bg-information-nav" class="nav nav-tabs" role="tablist">
+                  <!-- Personal -->
+                  <li class="nav-item"><a class="nav-link active" href="#bgpageone" role="tab" id="bgpageone-tab" data-toggle="tab" aria-controls="bgpageone" >Personal</a></li>
+                  <!-- Income -->
+                  <li class="nav-item"><a class="nav-link " href="#bgpagetwo" role="tab" id="bgpagetwo-tab" data-toggle="tab" aria-controls="bgpagetwo" >Income</a></li>
+                  <!-- Fuel -->
+                  <li class="nav-item"><a class="nav-link " href="#bgpagethree" role="tab" id="bgpagethree-tab" data-toggle="tab" aria-controls="bgpagethree" >Fuel</a></li>
+                  <!-- Supplier -->
+                  <li class="nav-item"><a class="nav-link " href="#bgpagefour" role="tab" id="bgpageffour-tab" data-toggle="tab" aria-controls="bgpagefour" >Suppliers</a></li>
+                </ul>
+                <div id="information-nav-content" class="tab-content">
+                  <!-- personal -->
+                  <div role="tadpanel" class="tab-pane fade show active" id="bgpageone" aria-labelledby="bgpageone-tab">
+                   <table class="table table-striped table-bordered table-sm text-left">
+                    <thead>
+                      <th></th>
+                      <th class="bg-primary">Previous Data</th>
+                      <th class="bg-primary">New Data</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>Title</th>
+                        <td>Ms</td>
+                        <td contenteditable="true" spellcheck="true">Ms</td>
+                      </tr>
+                      <tr>
+                        <th>Forename</th>
+                        <td>Citizen</td>
+                        <td contenteditable="true" spellcheck="true">Citizen</td>
+                      </tr>
+                      <tr>
+                        <th>Surame</th>
+                        <td>Twenty</td>
+                        <td contenteditable="true" spellcheck="true">Twenty</td>
+                      </tr>
+                      <tr>
+                        <th>Address</th>
+                        <td>12 Fake Street<br>FakeTown</td>
+                        <td contenteditable="true" spellcheck="true">12 Fake Street <br>FakeTown</td>
+                      </tr>
+                      <tr>
+                        <th>Postcode</th>
+                        <td>FA12 3KE</td>
+                        <td contenteditable="true" spellcheck="true">FA12 3KE</td>
+                      </tr>
+                      <tr>
+                        <th>Telephone</th>
+                        <td>012345 678901</td>
+                        <td contenteditable="true" spellcheck="true">012345 678901</td>
+                      </tr>
+                      <tr>
+                        <th>Mobile</th>
+                        <td>077123456789</td>
+                        <td contenteditable="true" spellcheck="true">077123456789</td>
+                      </tr>
+                      <tr>
+                        <th>Date of birth</th>
+                        <td><input type="date" name="dob" value="1990-01-01"></td>
+                        <td><input type="date" name="dob"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- income -->
+                <div role="tadpanel" class="tab-pane fade" id="bgpagetwo" aria-labelledby="bgpagetwo-tab">
+                 <table class="table table-striped table-bordered table-sm text-left">
+                  <thead>
+                    <th></th>
+                    <th class="bg-primary">Previous Data</th>
+                    <th class="bg-primary">New Data</th>
+                  </thead>
+                  <tbody>
+                   <tr>
+                    <th>Your yearly income</th>
+                    <td>£15000</td>
+                    <td contenteditable="true" spellcheck="true" class="font-italic">No data</td>
+                  </tr>
+                  <tr>
+                    <th>Previous: your partner's yearly income</th>
+                    <td>£10000</td>
+                    <td contenteditable="true" spellcheck="true" class="font-italic">No data</td>
+                  </tr>
+                  <tr>
+                    <th>Previous: your totally weekly income</th>
+                    <td>£1480</td>
+                    <td contenteditable="true" spellcheck="true" class="font-italic">No data</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- fuel -->
+            <div role="tadpanel" class="tab-pane fade" id="bgpagethree" aria-labelledby="bgpagethree-tab">
+             <table class="table table-striped table-bordered table-sm text-left">
+              <thead>
+                <th></th>
+                <th class="bg-primary">Previous Data</th>
+                <th class="bg-primary">New Data</th>
+              </thead>
+              <tbody>
+                <tr>
+                 <th>Previous: your weekly spend on fuel</th>
+                 <td>£60</td>
+                 <td contenteditable="true" spellcheck="true" class="font-italic">No data</td>
+               </tr>
+               <tr>
+                 <th>Previous: % on fuel</th>
+                 <td>12.5</td>
+                 <td contenteditable="true" spellcheck="true" class="font-italic">No data</td>
+               </tr>
+             </tbody>
+           </table>
+         </div>
+         <!-- supplier -->
+         <div role="tadpanel" class="tab-pane fade" id="bgpagefour" aria-labelledby="bgpagefour-tab">
+           <table class="table table-striped table-bordered table-sm text-left">
+            <thead>
+              <tr>
+                <th colspan="3" class="table-primary">Electricity</th>
+              </tr>
+              <tr>
+                <th></th>
+                <th class="bg-primary">Previous Data</th>
+                <th class="bg-primary">New Data</th>
+              </tr>
+            </thead>
+            <tbody>
+             <tr>
+              <th>MPAN</th>
+              <td>0987654321</td>
+              <td contenteditable="true" spellcheck="true">0987654321</td>
+            </tr>
+            <tr>
+              <th>Supplier</th>
+              <td>Scottish Power</td>
+              <td contenteditable="true" spellcheck="true">Scottish Power</td>
+            </tr>
+            <tr>
+              <th>Electric Account Number</th>
+              <td>0987654321</td>
+              <td contenteditable="true" spellcheck="true">0987654321</td>
+            </tr>
+            <tr>
+              <th>Customer Reference Number (CRM)</th>
+              <td>0987654321</td>
+              <td contenteditable="true" spellcheck="true">0987654321</td>
+            </tr>
+            <tr>
+              <th>Tariff</th>
+              <td>0987654321</td>
+              <td contenteditable="true" spellcheck="true">0987654321</td>
+            </tr>
+            <tr>
+              <th>Meter Serial Number</th>
+              <td>0987654321</td>
+              <td contenteditable="true" spellcheck="true">0987654321</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  <h4 class="mt-2 mb-2">Apply for WHD</h4>
+  <u><a href="https://www.britishgas.co.uk/energy/energy-saving/warm-home-discount.html" target="_blank" class="text-info">Link to British Gas WHD page</a></u>
 </div>
 
 <div id="edfEnergyContent" style="display: none;">
