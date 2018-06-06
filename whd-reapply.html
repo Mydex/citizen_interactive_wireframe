@@ -58,43 +58,8 @@
         </select>
       </form>
 
-      <div id="scottishPowerContent" style="visibility: hidden;">
+      <!-- <div id="scottishPowerContent" style="visibility: hidden;"> -->
 
-
-
-       <!--  <div class="accordion col-md-5 col-lg-5">
-          <div class="card">
-            <div class="card-header" id="headingOneCit" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSPCheckList" aria-expanded="false" aria-controls="collapseSPCheckList">Checklist</button>
-              </h5>
-            </div>
-            <div id="collapseSPCheckList" class="collapse" aria-labelledby="headingSPCheckList" data-parent="#accordion">
-              <table class="table table-striped table-bordered table-sm text-left">
-                <thead>
-                  <tr>
-                    <th>Data</th>
-                    <th>Confirm</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Ms</td>
-                    <td><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></td>
-                  </tr>
-                  <tr>
-                    <td>Citizen</td>
-                    <td><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></td>
-                  </tr>
-                  <tr>
-                    <td>Fifteen</td>
-                    <td><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div> -->
         <div class="row">
           <div class="col-5">
             Print report <br><a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Print</a>
@@ -104,229 +69,144 @@
           </div>
         </div>
         <div class="row">
-         <div class="col-12 col-md-6 col-lg-6">
-           <h4 class="mt-4 mb-2">Previous application</h4>
-           <div class="container">
-             <ul id="information-nav" class="nav nav-tabs" role="tablist">
-              <!-- Personal -->
-              <li class="nav-item"><a class="nav-link active" href="#sppageoneprevious" role="tab" id="sppageoneprevious-tab" data-toggle="tab" aria-controls="sppageoneprevious" >Personal</a></li>
-              <!-- Income -->
-              <li class="nav-item"><a class="nav-link " href="#sppagetwoprevious" role="tab" id="sppagetwoprevious-tab" data-toggle="tab" aria-controls="sppagetwoprevious" >Income</a></li>
-              <!-- fuel -->
-              <li class="nav-item"><a class="nav-link " href="#sppagethreeprevious" role="tab" id="sppagethreeprevious-tab" data-toggle="tab" aria-controls="sppagethreeprevious" >Fuel</a></li>
-              <!-- supplier -->
-              <li class="nav-item"><a class="nav-link " href="#sppagefourprevious" role="tab" id="sppagefourprevious-tab" data-toggle="tab" aria-controls="sppagefourprevious" >Supplier</a></li>
-            </ul>
-            <!-- personal -->
-            <div id="information-nav-content" class="tab-content">
-             <div role="tadpanel" class="tab-pane fade show active" id="sppageoneprevious" aria-labelledby="sppageoneprevious-tab">
-              <table class="table table-striped table-bordered table-sm text-left">
-               <tbody>
+          <div class="col-12">
+            <h4 class="mt-4 mb-2">New application</h4>
+            <div class="container">
+              <ul id="information-nav" class="nav nav-tabs" role="tablist">
+                <!-- Personal -->
+                <li class="nav-item"><a class="nav-link active" href="#sppageone" role="tab" id="sppageone-tab" data-toggle="tab" aria-controls="sppageone" >Personal</a></li>
+                <!-- Income -->
+                <li class="nav-item"><a class="nav-link " href="#sppagetwo" role="tab" id="sppagetwo-tab" data-toggle="tab" aria-controls="sppagetwo" >Income</a></li>
+                <!-- Fuel -->
+                <li class="nav-item"><a class="nav-link " href="#sppagethree" role="tab" id="sppagethree-tab" data-toggle="tab" aria-controls="sppagethree" >Fuel</a></li>
+                <!-- Supplier -->
+                <li class="nav-item"><a class="nav-link " href="#sppagefour" role="tab" id="sppageffour-tab" data-toggle="tab" aria-controls="sppagefour" >Suppliers</a></li>
+              </ul>
+              <div id="information-nav-content" class="tab-content">
+                <!-- personal -->
+                <div role="tadpanel" class="tab-pane fade show active" id="sppageone" aria-labelledby="sppageone-tab">
+                 <table class="table table-striped table-bordered table-sm text-left">
+                  <tbody>
+                    <tr>
+                      <th>Previous title</th>
+                      <td>Ms</td>
+                      <th>Title</th>
+                      <td contenteditable="true" spellcheck="true">Ms</td>
+                    </tr>
+                    <tr>
+                      <th>Previous forename</th>
+                      <td>Citizen</td>
+                      <th>Forename</th>
+                      <td contenteditable="true" spellcheck="true">Citizen</td>
+                    </tr>
+                    <tr>
+                      <th>Previous surame</th>
+                      <td>Twenty</td>
+                      <th>Surame</th>
+                      <td contenteditable="true" spellcheck="true">Twenty</td>
+                    </tr>
+                    <tr>
+                      <th>Previous address</th>
+                      <td>12 Fake Street<br>FakeTown</td>
+                      <th>Address</th>
+                      <td contenteditable="true" spellcheck="true">12 Fake Street <br>FakeTown</td>
+                    </tr>
+                    <tr>
+                      <th>Previous postcode</th>
+                      <td>FA12 3KE</td>
+                      <th>Postcode</th>
+                      <td contenteditable="true" spellcheck="true">FA12 3KE</td>
+                    </tr>
+                    <tr>
+                      <th>Previous telephone</th>
+                      <td>012345 678901</td>
+                      <th>Telephone</th>
+                      <td contenteditable="true" spellcheck="true">012345 678901</td>
+                    </tr>
+                    <tr>
+                      <th>Previous mobile</th>
+                      <td>077123456789</td>
+                      <th>Mobile</th>
+                      <td contenteditable="true" spellcheck="true">077123456789</td>
+                    </tr>
+                    <tr>
+                      <th>Previous date of birth</th>
+                      <td><input type="date" name="dob" value="1990-01-01"></td>
+                      <th>Date of birth</th>
+                      <td><input type="date" name="dob"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- income -->
+              <div role="tadpanel" class="tab-pane fade" id="sppagetwo" aria-labelledby="sppagetwo-tab">
+               <table class="table table-striped table-bordered table-sm text-left">
+                <tbody>
                  <tr>
-                  <th>Previous title</th>
-                  <td>Ms</td>
+                  <th>Previous: your yearly income</th>
+                  <td>£15000</td>
                 </tr>
                 <tr>
-                 <th>Previous forename</th>
-                 <td>Citizen</td>
-               </tr>
-               <tr>
-                 <th>Previous surame</th>
-                 <td>Twenty</td>
-               </tr>
-               <tr>
-                 <th>Previous address</th>
-                 <td>12 Fake Street<br>FakeTown</td>
-               </tr>
-               <tr>
-                 <th>Previous postcode</th>
-                 <td>FA12 3KE</td>
-               </tr>
-               <tr>
-                 <th>Previous telephone</th>
-                 <td>012345 678901</td>
-               </tr>
-               <tr>
-                 <th>Previous mobile</th>
-                 <td>077123456789</td>
-               </tr>
-               <tr>
-                <th>Previous date of birth</th>
-                <td><input type="date" name="dob" value="1990-01-01"></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <!-- income -->
-        <div role="tadpanel" class="tab-pane fade" id="sppagetwoprevious" aria-labelledby="sppagetwoprevious-tab">
-          <table class="table table-striped table-bordered table-sm text-left">
-           <tbody>
+                  <th>Previous: your partner's yearly income</th>
+                  <td>£10000</td>
+                </tr>
+                <tr>
+                  <th>Previous: your totally weekly income</th>
+                  <td>£1480</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- fuel -->
+          <div role="tadpanel" class="tab-pane fade" id="sppagethree" aria-labelledby="sppagethree-tab">
+           <table class="table table-striped table-bordered table-sm text-left">
+            <tbody>
+              <tr>
+               <th>Previous: your weekly spend on fuel</th>
+               <td>£60</td>
+             </tr>
              <tr>
-              <th>Previous: your yearly income</th>
-              <td>£15000</td>
-            </tr>
-            <tr>
-              <th>Previous: your partner's yearly income</th>
-              <td>£10000</td>
-            </tr>
-            <tr>
-              <th>Previous: your totally weekly income</th>
-              <td>£1480</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <!-- fuel -->
-      <div role="tadpanel" class="tab-pane fade" id="sppagethreeprevious" aria-labelledby="sppagethreeprevious-tab">
-        <table class="table table-striped table-bordered table-sm text-left">
-         <tbody>
+               <th>Previous: % on fuel</th>
+               <td>12.5</td>
+             </tr>
+           </tbody>
+         </table>
+       </div>
+       <!-- supplier -->
+       <div role="tadpanel" class="tab-pane fade" id="sppagefour" aria-labelledby="sppagefour-tab">
+         <table class="table table-striped table-bordered table-sm text-left">
+          <thead>
+            <th colspan="2" class="table-primary">Electricity</th>
+          </thead>
+          <tbody>
            <tr>
-            <th>Previous: your weekly spend on fuel</th>
-            <td>£60</td>
+            <th>MPAN</th>
+            <td>0987654321</td>
           </tr>
           <tr>
-            <th>Previous: % on fuel</th>
-            <td>12.5</td>
+            <th>Supplier</th>
+            <td>Scottish Power</td>
+          </tr>
+          <tr>
+            <th>Electric Account Number</th>
+            <td>0987654321</td>
+          </tr>
+          <tr>
+            <th>Customer Reference Number (CRM)</th>
+            <td>0987654321</td>
+          </tr>
+          <tr>
+            <th>Tariff</th>
+            <td>0987654321</td>
+          </tr>
+          <tr>
+            <th>Meter Serial Number</th>
+            <td>0987654321</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <!-- supplier -->
-    <div role="tadpanel" class="tab-pane fade" id="sppagefourprevious" aria-labelledby="sppagefourprevious-tab">
-      <table class="table table-striped table-bordered table-sm text-left">
-        <thead>
-          <th colspan="2" class="table-primary">Electricity</th>
-        </thead>
-        <tbody>
-         <tr>
-          <th>MPAN</th>
-          <td>0987654321</td>
-        </tr>
-        <tr>
-          <th>Supplier</th>
-          <td>Scottish Power</td>
-        </tr>
-        <tr>
-          <th>Electric Account Number</th>
-          <td>0987654321</td>
-        </tr>
-        <tr>
-          <th>Customer Reference Number (CRM)</th>
-          <td>0987654321</td>
-        </tr>
-        <tr>
-          <th>Tariff</th>
-          <td>0987654321</td>
-        </tr>
-        <tr>
-          <th>Meter Serial Number</th>
-          <td>0987654321</td>
-        </tr>
-      </tbody>
-    </table>
   </div>
-</div>
-</div>
-</div>
-<div class="col-12 col-md-6 col-lg-6">
-  <h4 class="mt-4 mb-2">New application</h4>
-  <div class="container">
-    <ul id="information-nav" class="nav nav-tabs" role="tablist">
-      <!-- Personal -->
-      <li class="nav-item"><a class="nav-link active" href="#sppageone" role="tab" id="sppageone-tab" data-toggle="tab" aria-controls="sppageone" >Personal</a></li>
-      <!-- Income -->
-      <li class="nav-item"><a class="nav-link " href="#sppagetwo" role="tab" id="sppagetwo-tab" data-toggle="tab" aria-controls="sppagetwo" >Income</a></li>
-      <!-- Fuel -->
-      <li class="nav-item"><a class="nav-link " href="#sppagethree" role="tab" id="sppagethree-tab" data-toggle="tab" aria-controls="sppagethree" >Fuel</a></li>
-      <!-- Supplier -->
-      <li class="nav-item"><a class="nav-link " href="#sppagefour" role="tab" id="sppageffour-tab" data-toggle="tab" aria-controls="sppagefour" >Suppliers</a></li>
-    </ul>
-    <div id="information-nav-content" class="tab-content">
-      <!-- personal -->
-      <div role="tadpanel" class="tab-pane fade show active" id="sppageone" aria-labelledby="sppageone-tab">
-       <table class="table table-striped table-bordered table-sm text-left">
-        <tbody>
-          <tr>
-           <th>Title</th>
-           <td contenteditable="true" spellcheck="true">Ms</td>
-         </tr>
-         <tr>
-           <th>Forename</th>
-           <td contenteditable="true" spellcheck="true">Citizen</td>
-         </tr>
-         <tr>
-           <th>Surame</th>
-           <td contenteditable="true" spellcheck="true">Twenty</td>
-         </tr>
-         <tr>
-           <th>Address</th>
-           <td contenteditable="true" spellcheck="true">12 Fake Street <br>FakeTown</td>
-         </tr>
-         <tr>
-           <th>Postcode</th>
-           <td contenteditable="true" spellcheck="true">FA12 3KE</td>
-         </tr>
-         <tr>
-           <th>Telephone</th>
-           <td contenteditable="true" spellcheck="true">012345 678901</td>
-         </tr>
-         <tr>
-           <th>Mobile</th>
-           <td contenteditable="true" spellcheck="true">077123456789</td>
-         </tr>
-         <tr>
-           <th>Date of birth</th>
-           <td><input type="date" name="dob"></td>
-         </tr>
-       </tbody>
-     </table>
-   </div>
-   <!-- income -->
-   <div role="tadpanel" class="tab-pane fade" id="sppagetwo" aria-labelledby="sppagetwo-tab">
-     <table class="table table-striped table-bordered table-sm text-left">
-      <tbody>
-        <tr>
-         <th>New</th>
-         <td contenteditable="true" spellcheck="true">New</td>
-       </tr>
-     </tbody>
-   </table>
- </div>
- <!-- fuel -->
- <div role="tadpanel" class="tab-pane fade" id="sppagethree" aria-labelledby="sppagethree-tab">
-   <table class="table table-striped table-bordered table-sm text-left">
-    <tbody>
-      <tr>
-        <th>New fuel</th>
-        <td contenteditable="true" spellcheck="true">New fuel</td>
-      </tr>
-      <tr>
-        <th>New fuel</th>
-        <td contenteditable="true" spellcheck="true">New fuel</td>
-      </tr>
-      <tr>
-        <th>New fuel</th>
-        <td contenteditable="true" spellcheck="true">New fuel</td>
-      </tr>
-      <tr>
-        <th>New fuel</th>
-        <td contenteditable="true" spellcheck="true">New fuel</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<!-- supplier -->
-<div role="tadpanel" class="tab-pane fade" id="sppagefour" aria-labelledby="sppagefour-tab">
- <table class="table table-striped table-bordered table-sm text-left">
-  <tbody>
-    <tr>
-     <th>New supplier</th>
-     <td contenteditable="true" spellcheck="true">New supplier</td>
-   </tr>
- </tbody>
-</table>
-</div>
-</div>
 </div>
 </div>
 </div>
