@@ -102,65 +102,62 @@
 
       <div class="row">
         <div class="col-12">
-          <h4 class="mt-4 mb-2">New application</h4>
+          <h4 class="mt-4 mb-4">New application</h4>
           <div class="container">
-            
-            <div id="information-nav-content" class="tab-content">
-              <!-- personal -->
-              <div role="tadpanel" class="tab-pane fade show active" id="sppageone" aria-labelledby="sppageone-tab">
-               <table class="table table-striped table-bordered table-sm text-left">
-                <thead>
-                  <th></th>
-                  <th class="bg-primary">Previous Data</th>
-                  <th class="bg-primary">New Data</th>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th>Title</th>
-                    <td>Ms</td>
-                    <td contenteditable="true" spellcheck="true">Ms</td>
-                  </tr>
-                  <tr>
-                    <th>Forename</th>
-                    <td>Citizen</td>
-                    <td contenteditable="true" spellcheck="true">Citizen</td>
-                  </tr>
-                  <tr>
-                    <th>Surame</th>
-                    <td>Twenty</td>
-                    <td contenteditable="true" spellcheck="true">Twenty</td>
-                  </tr>
-                  <tr>
-                    <th>Address</th>
-                    <td>12 Fake Street<br>FakeTown</td>
-                    <td contenteditable="true" spellcheck="true">12 Fake Street <br>FakeTown</td>
-                  </tr>
-                  <tr>
-                    <th>Postcode</th>
-                    <td>FA12 3KE</td>
-                    <td contenteditable="true" spellcheck="true">FA12 3KE</td>
-                  </tr>
-                  <tr>
-                    <th>Telephone</th>
-                    <td>012345 678901</td>
-                    <td contenteditable="true" spellcheck="true">012345 678901</td>
-                  </tr>
-                  <tr>
-                    <th>Mobile</th>
-                    <td>077123456789</td>
-                    <td contenteditable="true" spellcheck="true">077123456789</td>
-                  </tr>
-                  <tr>
-                    <th>Date of birth</th>
-                    <td><input type="date" name="dob" value="1990-01-01"></td>
-                    <td><input type="date" name="dob"></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <!-- income -->
-            <div role="tadpanel" class="tab-pane fade" id="sppagetwo" aria-labelledby="sppagetwo-tab">
-             <table class="table table-striped table-bordered table-sm text-left">
+
+            <h5 class="mt-4 mb-2">Personal</h5>
+            <table class="table table-striped table-bordered table-sm text-left">
+              <thead>
+                <th></th>
+                <th class="bg-primary">Previous Data</th>
+                <th class="bg-primary">New Data</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Title</th>
+                  <td>Ms</td>
+                  <td contenteditable="true" spellcheck="true">Ms</td>
+                </tr>
+                <tr>
+                  <th>Forename</th>
+                  <td>Citizen</td>
+                  <td contenteditable="true" spellcheck="true">Citizen</td>
+                </tr>
+                <tr>
+                  <th>Surame</th>
+                  <td>Twenty</td>
+                  <td contenteditable="true" spellcheck="true">Twenty</td>
+                </tr>
+                <tr>
+                  <th>Address</th>
+                  <td>12 Fake Street<br>FakeTown</td>
+                  <td contenteditable="true" spellcheck="true">12 Fake Street <br>FakeTown</td>
+                </tr>
+                <tr>
+                  <th>Postcode</th>
+                  <td>FA12 3KE</td>
+                  <td contenteditable="true" spellcheck="true">FA12 3KE</td>
+                </tr>
+                <tr>
+                  <th>Telephone</th>
+                  <td>012345 678901</td>
+                  <td contenteditable="true" spellcheck="true">012345 678901</td>
+                </tr>
+                <tr>
+                  <th>Mobile</th>
+                  <td>077123456789</td>
+                  <td contenteditable="true" spellcheck="true">077123456789</td>
+                </tr>
+                <tr>
+                  <th>Date of birth</th>
+                  <td><input type="date" name="dob" value="1990-01-01"></td>
+                  <td><input type="date" name="dob"></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h5 class="mt-4 mb-2">Income</h5>
+            <table class="table table-striped table-bordered table-sm text-left">
               <thead>
                 <th></th>
                 <th class="bg-primary">Previous Data</th>
@@ -184,77 +181,77 @@
               </tr>
             </tbody>
           </table>
-        </div>
-        <!-- fuel -->
-        <div role="tadpanel" class="tab-pane fade" id="sppagethree" aria-labelledby="sppagethree-tab">
+          
+          <h5 class="mt-4 mb-2">Fuel</h5>
+          <div role="tadpanel" class="tab-pane fade" id="sppagethree" aria-labelledby="sppagethree-tab">
+           <table class="table table-striped table-bordered table-sm text-left">
+            <thead>
+              <th></th>
+              <th class="bg-primary">Previous Data</th>
+              <th class="bg-primary">New Data</th>
+            </thead>
+            <tbody>
+              <tr>
+               <th>Previous: your weekly spend on fuel</th>
+               <td>£60</td>
+               <td contenteditable="true" spellcheck="true" class="font-italic">No data</td>
+             </tr>
+             <tr>
+               <th>Previous: % on fuel</th>
+               <td>12.5</td>
+               <td contenteditable="true" spellcheck="true" class="font-italic">No data</td>
+             </tr>
+           </tbody>
+         </table>
+       </div>
+       <!-- supplier -->
+       <div role="tadpanel" class="tab-pane fade" id="sppagefour" aria-labelledby="sppagefour-tab">
          <table class="table table-striped table-bordered table-sm text-left">
           <thead>
-            <th></th>
-            <th class="bg-primary">Previous Data</th>
-            <th class="bg-primary">New Data</th>
+            <tr>
+              <th colspan="3" class="table-primary">Electricity</th>
+            </tr>
+            <tr>
+              <th></th>
+              <th class="bg-primary">Previous Data</th>
+              <th class="bg-primary">New Data</th>
+            </tr>
           </thead>
           <tbody>
-            <tr>
-             <th>Previous: your weekly spend on fuel</th>
-             <td>£60</td>
-             <td contenteditable="true" spellcheck="true" class="font-italic">No data</td>
-           </tr>
            <tr>
-             <th>Previous: % on fuel</th>
-             <td>12.5</td>
-             <td contenteditable="true" spellcheck="true" class="font-italic">No data</td>
-           </tr>
-         </tbody>
-       </table>
-     </div>
-     <!-- supplier -->
-     <div role="tadpanel" class="tab-pane fade" id="sppagefour" aria-labelledby="sppagefour-tab">
-       <table class="table table-striped table-bordered table-sm text-left">
-        <thead>
-          <tr>
-            <th colspan="3" class="table-primary">Electricity</th>
+            <th>MPAN</th>
+            <td>0987654321</td>
+            <td contenteditable="true" spellcheck="true">0987654321</td>
           </tr>
           <tr>
-            <th></th>
-            <th class="bg-primary">Previous Data</th>
-            <th class="bg-primary">New Data</th>
+            <th>Supplier</th>
+            <td>Scottish Power</td>
+            <td contenteditable="true" spellcheck="true">Scottish Power</td>
           </tr>
-        </thead>
-        <tbody>
-         <tr>
-          <th>MPAN</th>
-          <td>0987654321</td>
-          <td contenteditable="true" spellcheck="true">0987654321</td>
-        </tr>
-        <tr>
-          <th>Supplier</th>
-          <td>Scottish Power</td>
-          <td contenteditable="true" spellcheck="true">Scottish Power</td>
-        </tr>
-        <tr>
-          <th>Electric Account Number</th>
-          <td>0987654321</td>
-          <td contenteditable="true" spellcheck="true">0987654321</td>
-        </tr>
-        <tr>
-          <th>Customer Reference Number (CRM)</th>
-          <td>0987654321</td>
-          <td contenteditable="true" spellcheck="true">0987654321</td>
-        </tr>
-        <tr>
-          <th>Tariff</th>
-          <td>0987654321</td>
-          <td contenteditable="true" spellcheck="true">0987654321</td>
-        </tr>
-        <tr>
-          <th>Meter Serial Number</th>
-          <td>0987654321</td>
-          <td contenteditable="true" spellcheck="true">0987654321</td>
-        </tr>
-      </tbody>
-    </table>
+          <tr>
+            <th>Electric Account Number</th>
+            <td>0987654321</td>
+            <td contenteditable="true" spellcheck="true">0987654321</td>
+          </tr>
+          <tr>
+            <th>Customer Reference Number (CRM)</th>
+            <td>0987654321</td>
+            <td contenteditable="true" spellcheck="true">0987654321</td>
+          </tr>
+          <tr>
+            <th>Tariff</th>
+            <td>0987654321</td>
+            <td contenteditable="true" spellcheck="true">0987654321</td>
+          </tr>
+          <tr>
+            <th>Meter Serial Number</th>
+            <td>0987654321</td>
+            <td contenteditable="true" spellcheck="true">0987654321</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-</div>
 </div>
 </div>
 </div>
@@ -581,7 +578,6 @@
       </div>
     </div>
   </div>
-</div>
 
 </div>
 
