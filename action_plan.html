@@ -42,73 +42,74 @@
       <h3 class="mt-4">Action Plan</h3>
       <p>Your energy advocate is supporting you with the applications and services shown below. There is also a list of referrals that your energy advocate has made on your behalf.</p>
 
-      <div class="col-12 col-md-6 col-lg-6">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-6">
 
-        <h4 class="mt-4">Applications</h4>
-        <div class="card">
-          <div class="card-header" id=headingWdh>
-            <h6 class="mb-0">Warm Home Discount</h6>
+          <h4 class="mt-4">Applications</h4>
+          <div class="card">
+            <div class="card-header" id=headingWdh>
+              <h6 class="mb-0">Warm Home Discount</h6>
+            </div>
+            <div class="card-body">
+              <small>Money off your electricity bill for winter. The money isn’t paid to you - it’s a one-off discount on your electricity bill, between September and March of the year you apply.</small>
+              <div class="mt-2 mb-2">Status: 3/5 Waiting for reply from energy supplier</div>
+              <small class="mb-1">Progress:</small>
+              <div class="progress">
+               <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+             </div>
+             <a href="https://mydex.github.io/citizen_interactive_wireframe/whd.html" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Not applied before</a>
+             <a href="https://mydex.github.io/citizen_interactive_wireframe/whd-reapply.html" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Previously applied</a>
+           </div>
+         </div>
+
+         <div class="card">
+          <div class="card-header bg-light" id=headingTrust>
+            <h6 class="mb-0">Trust Fund</h6>
           </div>
           <div class="card-body">
-            <small>Money off your electricity bill for winter. The money isn’t paid to you - it’s a one-off discount on your electricity bill, between September and March of the year you apply.</small>
-            <div class="mt-2 mb-2">Status: 3/5 Waiting for reply from energy supplier</div>
+            <small>Electricity Supplier's Trusts assist those in need by awarding grants to clear energy debts. In exceptional cases they can also help with other priority household costs and items.</small>
+            <p class="mt-2 mb-2">Status: 2/5 Application in progress</p>
             <small class="mb-1">Progress:</small>
             <div class="progress">
-             <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-           </div>
-           <a href="https://mydex.github.io/citizen_interactive_wireframe/whd.html" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Not applied before</a>
-           <a href="https://mydex.github.io/citizen_interactive_wireframe/whd-reapply.html" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Previously applied</a>
-         </div>
-       </div>
-
-       <div class="card">
-        <div class="card-header bg-light" id=headingTrust>
-          <h6 class="mb-0">Trust Fund</h6>
-        </div>
-        <div class="card-body">
-          <small>Electricity Supplier's Trusts assist those in need by awarding grants to clear energy debts. In exceptional cases they can also help with other priority household costs and items.</small>
-          <p class="mt-2 mb-2">Status: 2/5 Application in progress</p>
-          <small class="mb-1">Progress:</small>
-          <div class="progress">
-            <div class="progress-bar bg-info" role="progressbar" style="width: 40%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar bg-info" role="progressbar" style="width: 40%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <a href="https://mydex.github.io/citizen_interactive_wireframe/trust-fund.html" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Application</a>
           </div>
-          <a href="https://mydex.github.io/citizen_interactive_wireframe/trust-fund.html" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Application</a>
         </div>
       </div>
-    </div>
 
-    <div class="col-12 col-md-6 col-lg-6">
-      <h4 class="mt-4 mb-4">Services</h4>
-      <div class="card">
+      <div class="col-12 col-md-6 col-lg-6">
+        <h4 class="mt-4 mb-4">Services</h4>
+        <div class="card">
+          <div class="card-header" id=headingComplaint>
+            <h6 class="mb-0">Complaints</h6>
+          </div>
+          <div class="card-body">
+            <small>Info</small>
+            <p class="mt-2 mb-2">Status: 5/5 Complaint resolved satisfactorily/unsatisfactorily</p>
+            <small class="mb-0">Progress:</small>
+            <div class="progress">
+             <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+           </div>
+           <a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">List</a>
+         </div>
+       </div>
+       <div class="card">
         <div class="card-header" id=headingComplaint>
-          <h6 class="mb-0">Complaints</h6>
+          <h6 class="mb-0">Change Supplier</h6>
         </div>
         <div class="card-body">
           <small>Info</small>
-          <p class="mt-2 mb-2">Status: 5/5 Complaint resolved satisfactorily/unsatisfactorily</p>
+          <p class="mt-2 mb-2">Status: 2/5 Supplier switch submitted</p>
           <small class="mb-0">Progress:</small>
           <div class="progress">
-           <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-         </div>
-         <a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">List</a>
-       </div>
-     </div>
-     <div class="card">
-      <div class="card-header" id=headingComplaint>
-        <h6 class="mb-0">Change Supplier</h6>
-      </div>
-      <div class="card-body">
-        <small>Info</small>
-        <p class="mt-2 mb-2">Status: 2/5 Supplier switch submitted</p>
-        <small class="mb-0">Progress:</small>
-        <div class="progress">
-          <div class="progress-bar bg-info" role="progressbar" style="width: 40%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar bg-info" role="progressbar" style="width: 40%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Link</a>
         </div>
-        <a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Link</a>
       </div>
     </div>
   </div>
-  <br>
 
   <div class="col-12">
     <h4 class="mt-4">Referrals</h4>
