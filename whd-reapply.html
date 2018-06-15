@@ -44,16 +44,8 @@
           Return to applications <a href="https://mydex.github.io/citizen_interactive_wireframe/action_plan.html" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);"><img class="rounded" src="https://mydex.github.io/citizen_interactive_wireframe/images/double-arrow.png" alt="logo" width="15"></a>
         </p>
       </div>
-      <p class="mt-2 mb-2">Who is your current supplier?</p>
-      <form action="#/">
-        <select name="energySupplier" onchange="showApplciation(this.options[this.selectedIndex].value)" required>
-          <option value="default"></option>
-          <option value="scottishPower">Scottish Power</option>
-          <option value="britishGas">British Gas</option>
-          <option value="edfEnergy">EDF Energy</option>
-          <option value="eon">E.ON</option>
-        </select>
-      </form>
+
+      <a href="#/" class="btn btn-outline-primary" onclick="showForm()">Confirm</a>
 
       <div id="scottishPowerContent" style="display: none;">
         <h4 class="mt-2">Scottish Power WHD</h4>
@@ -240,7 +232,10 @@
 
 <script type="text/javascript">
 
-  function showApplciation(name){
+  function showForm(name){
+    function removeRow(input){
+      document.getElementById('content').removeChild(input.parentNode);
+    }
     if(name == 'scottishPower'){
       document.getElementById('scottishPowerContent').style.display = 'block';
     } else {
