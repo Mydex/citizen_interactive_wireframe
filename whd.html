@@ -116,136 +116,140 @@
           <h4 class="mt-4">New application</h4>
           <div class="container">
 
-            <h5 class="mt-4 mb-2">Personal</h5>
-            <table class="table table-striped table-bordered table-sm text-left">
-              <thead>
-                <th class="bg-primary"></th>
-                <th class="bg-primary">Data</th>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>Title</th>
-                  <td contenteditable="true" spellcheck="true">No data</td>
+            <button class="btn btn-primary btn-block" type="button" data-toggle="collapse" data-target="#collapsePersonal" aria-expanded="false" aria-controls="collapsePersonal">Personal Information</button><br>
+            <div class="collapse" id="collapsePersonal" aria-labelledby="headingPersonal">
+              <div class="card card-body">
+                <h5 class="mt-4 mb-2">Personal</h5>
+                <table class="table table-striped table-bordered table-sm text-left">
+                  <thead>
+                    <th class="bg-primary"></th>
+                    <th class="bg-primary">Data</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>Title</th>
+                      <td contenteditable="true" spellcheck="true">No data</td>
+                    </tr>
+                    <tr>
+                      <th>Forename</th>
+                      <td contenteditable="true" spellcheck="true">No data</td>
+                    </tr>
+                    <tr>
+                      <th>Surame</th>
+                      <td contenteditable="true" spellcheck="true">No data</td>
+                    </tr>
+                    <tr>
+                      <th>Address</th>
+                      <td contenteditable="true" spellcheck="true">No data</td>
+                    </tr>
+                    <tr>
+                      <th>Postcode</th>
+                      <td contenteditable="true" spellcheck="true">No data</td>
+                    </tr>
+                    <tr>
+                      <th>Telephone</th>
+                      <td contenteditable="true" spellcheck="true">No data</td>
+                    </tr>
+                    <tr>
+                      <th>Mobile</th>
+                      <td contenteditable="true" spellcheck="true">No data</td>
+                    </tr>
+                    <tr>
+                      <th>Email</th>
+                      <td contenteditable="true" spellcheck="true">No data</td>
+                    </tr>
+                    <tr>
+                      <th>Date of birth</th>
+                      <td><input type="date" name="dob"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h5 class="mt-4 mb-2">Income</h5>
+              <table class="table table-striped table-bordered table-sm text-left">
+                <thead>
+                  <th class="bg-primary"></th>
+                  <th class="bg-primary">Data</th>
+                </thead>
+                <tbody>
+                 <tr>
+                  <th>Your yearly income</th>
+                  <td class="text-right" contenteditable="true" spellcheck="true">No data</td>
                 </tr>
                 <tr>
-                  <th>Forename</th>
-                  <td contenteditable="true" spellcheck="true">No data</td>
+                  <th>Previous: your partner's yearly income</th>
+                  <td class="text-right" contenteditable="true" spellcheck="true">No data</td>
                 </tr>
                 <tr>
-                  <th>Surame</th>
-                  <td contenteditable="true" spellcheck="true">No data</td>
-                </tr>
-                <tr>
-                  <th>Address</th>
-                  <td contenteditable="true" spellcheck="true">No data</td>
-                </tr>
-                <tr>
-                  <th>Postcode</th>
-                  <td contenteditable="true" spellcheck="true">No data</td>
-                </tr>
-                <tr>
-                  <th>Telephone</th>
-                  <td contenteditable="true" spellcheck="true">No data</td>
-                </tr>
-                <tr>
-                  <th>Mobile</th>
-                  <td contenteditable="true" spellcheck="true">No data</td>
-                </tr>
-                <tr>
-                  <th>Email</th>
-                  <td contenteditable="true" spellcheck="true">No data</td>
-                </tr>
-                <tr>
-                  <th>Date of birth</th>
-                  <td><input type="date" name="dob"></td>
+                  <th>Previous: your totally weekly income</th>
+                  <td class="text-right" contenteditable="true" spellcheck="true">No data</td>
                 </tr>
               </tbody>
             </table>
 
-            <h5 class="mt-4 mb-2">Income</h5>
+            <h5 class="mt-4 mb-2">Fuel</h5>
             <table class="table table-striped table-bordered table-sm text-left">
               <thead>
                 <th class="bg-primary"></th>
                 <th class="bg-primary">Data</th>
               </thead>
               <tbody>
+                <tr>
+                 <th>Previous: your weekly spend on fuel</th>
+                 <td class="text-right" contenteditable="true" spellcheck="true">No data</td>
+               </tr>
                <tr>
-                <th>Your yearly income</th>
-                <td class="text-right" contenteditable="true" spellcheck="true">No data</td>
-              </tr>
-              <tr>
-                <th>Previous: your partner's yearly income</th>
-                <td class="text-right" contenteditable="true" spellcheck="true">No data</td>
-              </tr>
-              <tr>
-                <th>Previous: your totally weekly income</th>
-                <td class="text-right" contenteditable="true" spellcheck="true">No data</td>
-              </tr>
-            </tbody>
-          </table>
+                 <th>Previous: % on fuel</th>
+                 <td contenteditable="true" spellcheck="true">No data</td>
+               </tr>
+             </tbody>
+           </table>
 
-          <h5 class="mt-4 mb-2">Fuel</h5>
-          <table class="table table-striped table-bordered table-sm text-left">
+           <h5 class="mt-4 mb-2">Supplier</h5>
+           <table class="table table-striped table-bordered table-sm text-left">
             <thead>
-              <th class="bg-primary"></th>
-              <th class="bg-primary">Data</th>
+              <tr>
+                <th colspan="3" class="table-primary">Electricity</th>
+              </tr>
+              <tr>
+                <th class="bg-primary"></th>
+                <th class="bg-primary">Data</th>
+              </tr>
             </thead>
             <tbody>
-              <tr>
-               <th>Previous: your weekly spend on fuel</th>
-               <td class="text-right" contenteditable="true" spellcheck="true">No data</td>
-             </tr>
              <tr>
-               <th>Previous: % on fuel</th>
-               <td contenteditable="true" spellcheck="true">No data</td>
-             </tr>
-           </tbody>
-         </table>
-
-         <h5 class="mt-4 mb-2">Supplier</h5>
-         <table class="table table-striped table-bordered table-sm text-left">
-          <thead>
-            <tr>
-              <th colspan="3" class="table-primary">Electricity</th>
+              <th>MPAN</th>
+              <td contenteditable="true" spellcheck="true">No data</td>
             </tr>
             <tr>
-              <th class="bg-primary"></th>
-              <th class="bg-primary">Data</th>
+              <th>Supplier</th>
+              <td contenteditable="true" spellcheck="true">No data</td>
             </tr>
-          </thead>
-          <tbody>
-           <tr>
-            <th>MPAN</th>
-            <td contenteditable="true" spellcheck="true">No data</td>
-          </tr>
-          <tr>
-            <th>Supplier</th>
-            <td contenteditable="true" spellcheck="true">No data</td>
-          </tr>
-          <tr>
-            <th>Electric Account Number</th>
-            <td contenteditable="true" spellcheck="true">No data</td>
-          </tr>
-          <tr>
-            <th>Customer Reference Number (CRM)</th>
-            <td contenteditable="true" spellcheck="true">No data</td>
-          </tr>
-          <tr>
-            <th>Tariff</th>
-            <td contenteditable="true" spellcheck="true">No data</td>
-          </tr>
-          <tr>
-            <th>Meter Serial Number</th>
-            <td contenteditable="true" spellcheck="true">No data</td>
-          </tr>
-        </tbody>
-      </table>
+            <tr>
+              <th>Electric Account Number</th>
+              <td contenteditable="true" spellcheck="true">No data</td>
+            </tr>
+            <tr>
+              <th>Customer Reference Number (CRM)</th>
+              <td contenteditable="true" spellcheck="true">No data</td>
+            </tr>
+            <tr>
+              <th>Tariff</th>
+              <td contenteditable="true" spellcheck="true">No data</td>
+            </tr>
+            <tr>
+              <th>Meter Serial Number</th>
+              <td contenteditable="true" spellcheck="true">No data</td>
+            </tr>
+          </tbody>
+        </table>
 
-      <h4 class="mt-2 mb-2">Apply for WHD</h4>
-      <u><a id="linkIframe" href="https://www.scottishpower.co.uk/whd.process?execution=e1s1" target="_blank" class="text-info">Link to Scottish Power WHD page</a></u>
+        <h4 class="mt-2 mb-2">Apply for WHD</h4>
+        <u><a id="linkIframe" href="https://www.scottishpower.co.uk/whd.process?execution=e1s1" target="_blank" class="text-info">Link to Scottish Power WHD page</a></u>
+      </div>
     </div>
   </div>
-</div>
 </div>
 
 
