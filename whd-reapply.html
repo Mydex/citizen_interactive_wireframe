@@ -47,6 +47,9 @@
 
       <div class="mb-2">If your supplier has not changed, please confirm by clicking the button below</div>
       <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" onclick="showForm()">Confirm</a>
+      <div>If you have changed supplier, please click on the button below</div>
+      <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6)" onclick="showNewForms()">New supplier</a>
+
 
       <div id="scottishPowerContent" style="display: none;">
         <h4 class="mt-4">Scottish Power WHD</h4>
@@ -139,7 +142,7 @@
             </div>
           </div>
 
-          
+
           <button class="btn btn-primary btn-block" type="button" data-toggle="collapse" data-target="#collapseFuelSP" aria-expanded="false" aria-controls="collapseFuelSP">Fuel Information</button><br>
           <div class="collapse" id="collapseFuelSP" aria-labelledby="headingFuelSP">
             <div class="card card-body">
@@ -246,22 +249,37 @@
 </div>
 </div>
 
+
+<div class="mt-4" id="newSupplier">
+  <div>New supplier information</div>
+</div>
+
+</div>
+
 </main>
 
 
 <script type="text/javascript">
   function showForm(name){
     document.getElementById('scottishPowerContent').style.display = 'block';
-  }
-</script>
+    document.getElementById('newSupplier').style.display = "hidden"
+    ;  }
+  </script>
 
-<footer class="mt-2" style="height:30px; margin-top:-30px;">
-  <nav class="navbar navbar-expand-sm">  
-    <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
-    <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
-    <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/esf.png" alt="logo" width="250">
-  </nav>
-</footer>
+  <script type="text/javascript">
+    function showNewForms(name){
+      document.getElementById('scottishPowerContent').style.display = 'hidden';
+      document.getElementById('newSupplier').style.display = "block";
+    }
+  </script>
+
+  <footer class="mt-2" style="height:30px; margin-top:-30px;">
+    <nav class="navbar navbar-expand-sm">  
+      <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
+      <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
+      <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/esf.png" alt="logo" width="250">
+    </nav>
+  </footer>
 </body>
 
 <script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
