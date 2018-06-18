@@ -272,6 +272,35 @@
 </main>
 
 
+<style>
+#module {
+  width: 500px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+#module p.collapse[aria-expanded="false"] {
+  height: 42px !important;
+  overflow: hidden;
+  
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+}
+
+#module p.collapsing[aria-expanded="false"] {
+  height: 42px !important;
+}
+
+#module a.collapsed:after  {
+  content: '+ Show More';
+}
+
+#module a:not(.collapsed):after {
+  content: '- Show Less';
+}
+</style>
+
 <script>
  (function(document) {
    'use strict';
