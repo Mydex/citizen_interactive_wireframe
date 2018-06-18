@@ -192,76 +192,68 @@
                   <td>Citizen</td>
                   <td>Energy Advocate</td>
                   <td>
-                    <p>
-                      <button class="btn btn-outline-info" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" data-toggle="collapse" data-target="#collapseAssistance9" aria-expanded="false" aria-controls="collapseAssistance9">View</button>
-                    </p>     
-                    <div class="collapse" id="collapseAssistance9" aria-labelledby="headingAssistance9">
-                     <div class="card card-body">
-                      <h6>From : Citizen</h6>
-                      <i><p>Message</p></i>
-                      <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
-                      <p>
-                       <a href='#/' class='btn btn-outline-info mt-2 mb-0' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Reply</a>
-                     </p>
-                   </div>
-                 </div>
-               </td>
-               <td>04/04/2018</td>
-             </tr>
-             <tr>
-              <td>Energy Advocate</td>
-              <td>Citizen</td>
-              <td>
-                <p>
-                  <button class="btn btn-outline-info" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" data-toggle="collapse" data-target="#collapseAssistance10" aria-expanded="false" aria-controls="collapseAssistance10">View</button>
-                </p>     
-                <div class="collapse" id="collapseAssistance10" aria-labelledby="headingAssistance10">
-                 <div class="card card-body">
-                  <h6>From : Energy Advocate</h6>
-                  <i><p>Message</p></i>
-                  <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
-                  <p>
-                    <a href='#/' class='btn btn-outline-info mt-2 mb-0' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Reply</a>
-                  </p>
-                </div>
-              </div>
-            </td>
-            <td>01/01/2018</td>
-          </tr>
-        </tbody>
-      </table>
+                    <div id="module">
+                      <p class="collapse" id="collapseExample9" aria-expanded="false">
+                        <i>Message</i>
+                        <br><br>
+                        <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
+                        <button href='#/' class='btn btn-outline-info mt-2 mb-0' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Reply</button>
+                      </p>
+                      <a role="button" class="collapsed btn btn-outline-info" data-toggle="collapse" href="#collapseExample9" aria-expanded="false" aria-controls="collapseExample9"></a>
+                    </div>
+                  </td>
+                  <td>04/04/2018</td>
+                </tr>
+                <tr>
+                  <td>Energy Advocate</td>
+                  <td>Citizen</td>
+                  <td>
+                    <div id="module">
+                      <p class="collapse" id="collapseExample10" aria-expanded="false">
+                        <i>Message</i>
+                        <br><br>
+                        <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
+                        <button href='#/' class='btn btn-outline-info mt-2 mb-0' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Reply</button>
+                      </p>
+                      <a role="button" class="collapsed btn btn-outline-info" data-toggle="collapse" href="#collapseExample10" aria-expanded="false" aria-controls="collapseExample10"></a>
+                    </div>
+                  </td>
+                  <td>01/01/2018</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-</div>
-</main>
+  </main>
 
 
-<style>
-#module {
-  width: 400px;
-}
+  <style>
+  #module {
+    width: 400px;
+  }
 
-#module p.collapse[aria-expanded="false"] {
-  height: 43px !important;
-  overflow: hidden;
+  #module p.collapse[aria-expanded="false"] {
+    height: 43px !important;
+    overflow: hidden;
 
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;  
-}
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+  }
 
-#module p.collapsing[aria-expanded="false"] {
-  height: 43px !important;
-}
+  #module p.collapsing[aria-expanded="false"] {
+    height: 43px !important;
+  }
 
-#module a.collapsed:after  {
-  content: '+ Show More';
-}
+  #module a.collapsed:after  {
+    content: '+ Show More';
+  }
 
-#module a:not(.collapsed):after {
-  content: '- Show Less';
-}
+  #module a:not(.collapsed):after {
+    content: '- Show Less';
+  }
 </style>
 
 <script>
