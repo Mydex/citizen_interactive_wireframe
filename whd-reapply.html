@@ -262,24 +262,22 @@
 <script type="text/javascript">
   function showForm(name){
     document.getElementById('scottishPowerContent').style.display = 'block';
-    document.getElementById('newSupplier').style.display = "hidden"
-    ;  }
-  </script>
+    document.getElementById('newSupplier').style.display = 'none';
+  }
 
-  <script type="text/javascript">
-    function showNewForms(name){
-      document.getElementById('scottishPowerContent').style.display = 'hidden';
-      document.getElementById('newSupplier').style.display = "block";
-    }
-  </script>
+  function showNewForms(name){
+    document.getElementById('scottishPowerContent').style.display = 'none';
+    document.getElementById('newSupplier').style.display = "block";
+  }
+</script>
 
-  <footer class="mt-2" style="height:30px; margin-top:-30px;">
-    <nav class="navbar navbar-expand-sm">  
-      <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
-      <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
-      <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/esf.png" alt="logo" width="250">
-    </nav>
-  </footer>
+<footer class="mt-2" style="height:30px; margin-top:-30px;">
+  <nav class="navbar navbar-expand-sm">  
+    <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
+    <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
+    <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/esf.png" alt="logo" width="250">
+  </nav>
+</footer>
 </body>
 
 <script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
