@@ -40,16 +40,18 @@
     <div class="container">
 
       <h3 class="mt-4">How To:</h3>
-      <a class="btn btn-outline-primary col-12  mb-2" data-toggle="collapse" data-target="#collapseElecRead" aria-expanded="false" aria-controls="collapseElecRead">Electricity meter reading</a>
-      <div class="collapse" id="collapseElecRead" aria-labelledby="headingElecRead">
-        <div class="card card-body">
-          <h5 class="mb-2">How to take your electricity meter reading</h5>
-          <h6>Single rate digital meter</h6>
-          <p>Information here</p>
-          <h6>Two rate digital meter</h6>
-          <p>Information here</p>
-          <h6>Two rate single display meter</h6>
-          <p>Information here</p>
+      <div id="module">
+        <a class="btn btn-outline-primary col-12  mb-2" data-toggle="collapse" data-target="#collapseElecRead" aria-expanded="false" aria-controls="collapseElecRead">Electricity meter reading</a>
+        <div class="collapse" id="collapseElecRead" aria-labelledby="headingElecRead">
+          <div class="card card-body">
+            <h5 class="mb-2">How to take your electricity meter reading</h5>
+            <h6>Single rate digital meter</h6>
+            <p>Information here</p>
+            <h6>Two rate digital meter</h6>
+            <p>Information here</p>
+            <h6>Two rate single display meter</h6>
+            <p>Information here</p>
+          </div>
         </div>
       </div>
 
@@ -128,16 +130,27 @@
     </main>
 
 
-    <footer class="mt-2" style="height:30px; margin-top:-30px;">
-      <nav class="navbar navbar-expand-sm">  
-        <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
-        <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
-        <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/esf.png" alt="logo" width="250">
-      </nav>
-    </footer>
-  </body>
+    <style>
+    #module a.collapsed:after  {
+      content: '+';
+    }
 
-  <script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
-  <script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+    #module a:not(.collapsed):after {
+      content: '-';
+    }
+  </style>
+
+
+  <footer class="mt-2" style="height:30px; margin-top:-30px;">
+    <nav class="navbar navbar-expand-sm">  
+      <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
+      <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
+      <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/esf.png" alt="logo" width="250">
+    </nav>
+  </footer>
+</body>
+
+<script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
 </body>
 </html>
