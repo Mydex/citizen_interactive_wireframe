@@ -43,12 +43,12 @@
 
       <div class="mt-4">
        <p>
-        <u><a href="javascript:unhide('elecRead')" class="button">Electrcity reading</a></u> /
-        <u><a href="javascript:unhide('gasRead')" class="button">Gas reading</a></u>
+        <u><a href="javascript:unhide1('elecRead')" class="button">Electrcity reading</a></u> /
+        <u><a href="javascript:unhide1('gasRead')" class="button">Gas reading</a></u>
       </p>
     </div>
 
-    <section class="" id="elecRead">
+    <section id="elecRead">
       <h5 class="mt-4 mb-2">How to take your electricity reading</h5>
       <p>Information here</p>
     </section>
@@ -63,13 +63,18 @@
 
     <div class="mt-4">
      <p>
-      <u><a href="javascript:unhide('infoCall')" class="button">Information for calling</a></u>
+      <u><a href="javascript:unhide2('infoCall')" class="button">Information for calling</a></u> /
+      <u><a href="javascript:unhide2('infoCall2')" class="button">Information for calling 2</a></u>
     </p>
   </div>
 
-  <section class="hidden" id="infoCall">
+  <section id="infoCall">
     <h5 class="mt-4 mb-2">What information you will need BEFORE calling your energy supplier</h5>
     <p>Electricity Account Number: 000000000000<br>Address: 12 Fake Street, FakeTown, FA12 3KE</p>
+  </section>
+
+  <section class="hidden" id="infoCall2">
+    <h5 class="mt-4 mb-2">What information you will need BEFORE calling your energy supplier</h5>
   </section>
 
 
@@ -77,13 +82,13 @@
 
   <div class="mt-4">
    <p>
-    <u><a href="javascript:unhide('proofing')" class="button">Proofing</a></u> /
-    <u><a href="javascript:unhide('behavioural')" class="button">Behavioural</a></u> /
-    <u><a href="javascript:unhide('appliances')" class="button">Appliances</a></u>
+    <u><a href="javascript:unhide3('proofing')" class="button">Proofing</a></u> /
+    <u><a href="javascript:unhide3('behavioural')" class="button">Behavioural</a></u> /
+    <u><a href="javascript:unhide3('appliances')" class="button">Appliances</a></u>
   </p>
 </div>
 
-<section class="hidden" id="proofing">
+<section id="proofing">
 
   <h5 class="mt-4 mb-2">Insulation & Draught Proofing</h5>
   <ol>
@@ -135,10 +140,27 @@
 </style>
 
 <script type="text/javascript">
-  function unhide(divID) {
+  function unhide1(divID) {
     document.getElementById("elecRead").className = 'hidden';
     document.getElementById("gasRead").className = 'hidden';
+
+    var item = document.getElementById(divID);
+    if (item) {
+      item.className=(item.className=='hidden')?'unhidden':'hidden';
+    }
+  }
+
+  function unhide2(divID) {
     document.getElementById("infoCall").className = 'hidden';
+    document.getElementById("infoCall2").className = 'hidden';
+
+    var item = document.getElementById(divID);
+    if (item) {
+      item.className=(item.className=='hidden')?'unhidden':'hidden';
+    }
+  }
+
+  function unhide3(divID) {
     document.getElementById("proofing").className = 'hidden';
     document.getElementById("behavioural").className = 'hidden';
     document.getElementById("appliances").className = 'hidden';
