@@ -662,7 +662,8 @@
         if (table.rows[r].cells[c].innerHTML == "No data") {
           console.log('done this!');
         } else {
-          document.getElementById("personsalSP").style.content = "Completed";
+          document.getElementById("personsalSP").style.innerHTML = "#module a.collapsed:after  {content: 'Completed';float: right;color: black;}";
+          console.log("no data found");
         }
       }
     }
