@@ -660,12 +660,14 @@
     for (var r = 0, n = table.rows.length; r < n; r++) {
       for (var c = 0, m = table.rows[r].cells.length; c < m; c++) {
         if (table.rows[r].cells[c].innerHTML == "No data") {
+          item = 1;
           console.log('done this!');
-        } else {
-          document.getElementById("personsalSP").style.innerHTML = "#module a.collapsed:after  {content: 'Completed';float: right;color: black;}";
-          console.log("no data found");
         }
       }
+    }
+    if (item == 1) {
+      document.getElementById("personsalSP").style.innerHTML = "#module a.collapsed:after  {content: 'Completed';float: right;color: black;}";
+      console.log("no data found");
     }
   }
 </script>
