@@ -657,6 +657,7 @@
   function checkData(tableName) {
     console.log(tableName);
     var table = document.getElementById('tableName');
+    console.log(table.rows.length);
     var item = 0;
     for (var r = 0, n = table.rows.length; r < n; r++) {
       for (var c = 0, m = table.rows[r].cells.length; c < m; c++) {
