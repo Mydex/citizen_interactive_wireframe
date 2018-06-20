@@ -661,13 +661,13 @@
       for (var c = 0, m = table.rows[r].cells.length; c < m; c++) {
         if (table.rows[r].cells[c].innerHTML == "No data") {
           console.log('done this!');
-          item = 0;
+          item ++;
         } else {
-          item = 1;
+          item -- 1;
         }
       }
     }
-    if (item == 1) {
+    if (item <= 0) {
       document.getElementById("personsalSP").style.innerHTML = "#module a.collapsed:after {content: 'Completed';float: right;color: black;}";
       console.log("no data found");
     }
