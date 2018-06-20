@@ -656,28 +656,18 @@
 
   function checkData() {
     var table = document.getElementById('personalSP');
+    var item = 0;
     for (var r = 0, n = table.rows.length; r < n; r++) {
       for (var c = 0, m = table.rows[r].cells.length; c < m; c++) {
-        alert(table.rows[r].cells[c].innerHTML);
+        item = 1
       }
+    }
+    if (item == 1) {
+      console.log("change!");
     }
   }
 </script>
 
-<!-- <script>
-  $( "checkData" ).click(function() {
-    var table = $('#personalSP');
-    if( "No data" > table.find('tr').length - 1 ) {
-      console.log('No here');
-    } else
-    if( "No data" == ""){
-      console.log('Here');
-    }
-    else{
-      console.log("help");
-    }
-  });
-</script> -->
 
 <footer class="mt-2" style="height:30px; margin-top:-30px;">
   <nav class="navbar navbar-expand-sm">  
