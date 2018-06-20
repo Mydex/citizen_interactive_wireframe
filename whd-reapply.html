@@ -236,7 +236,7 @@
     <h4 class="mt-2">Scottish Power Warm Home Discount Application</h4>
     <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
     <div id="module" class="container row mt-4">
-      <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonalSP" aria-expanded="false" aria-controls="collapsePersonalSP" onclick="checkData();">Contact Details</a></h5>
+      <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonalSP" aria-expanded="false" aria-controls="collapsePersonalSP" id="personsalSP" onclick="checkData();">Contact Details</a></h5>
       <div class="collapse col-12" id="collapsePersonalSP" aria-labelledby="headingPersonalSP">
         <div class="table-responsive">
           <table class="table table-bordered table-sm text-left" id="personalSP">
@@ -663,9 +663,9 @@
       }
     }
     if (item == 1) {
-      console.log("change!");
-    }
-  }
+     document.getElementById("personsalSP").style.content = "Completed"
+   }
+ }
 </script>
 
 
