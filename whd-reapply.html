@@ -45,18 +45,18 @@
           Return to action plan <a href="https://mydex.github.io/citizen_interactive_wireframe/action_plan.html" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);"><img class="rounded" src="https://mydex.github.io/citizen_interactive_wireframe/images/double-arrow.png" alt="logo" width="15"></a>
         </p>
       </div>
-
-      <h4>Scottish Power</h4>
-      <div>Is this your current supplier?</div>
-      <div class="row mt-2">
-        <div class="col-3 col-mg-1 col-lg-1">
-          <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" onclick="showForm()">Yes</a>
-        </div>
-        <div class="col-3 col-mg-1 col-lg-1">
-          <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" onclick="showNewForms()">No</a>
+      <div id="checkSupplier" style="display: block;"> 
+        <h4>Scottish Power</h4>
+        <div>Is this your current supplier?</div>
+        <div class="row mt-2">
+          <div class="col-3 col-mg-1 col-lg-1">
+            <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" onclick="showForm()">Yes</a>
+          </div>
+          <div class="col-3 col-mg-1 col-lg-1">
+            <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" onclick="showNewForms()">No</a>
+          </div>
         </div>
       </div>
-
 
       <div id="currentSupplier" style="display: none;">
         <h4 class="mt-4">Scottish Power Warm Home Discount Application</h4>
@@ -769,11 +769,13 @@
   function showForm(name){
     document.getElementById('currentSupplier').style.display = 'block';
     document.getElementById('newSupplier').style.display = 'none';
+    document.getElementById('checkSupplier').style.display = 'none';
   }
 
   function showNewForms(name){
     document.getElementById('currentSupplier').style.display = 'none';
     document.getElementById('newSupplier').style.display = "block";
+    document.getElementById('checkSupplier').style.display = 'none';
   }
 
   function showApplciation(name){
