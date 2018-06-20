@@ -659,17 +659,11 @@
     var item = 0;
     for (var r = 0, n = table.rows.length; r < n; r++) {
       for (var c = 0, m = table.rows[r].cells.length; c < m; c++) {
-        item = 1
-        console.log(item);
-        change(item);
+       if (table.rows[r].cell == "No data") {
+        document.getElementById("personsalSP").style.content = "Completed"
+        console.log('done this!');
       }
     }
-  }
-
-  function change(item) {
-   if (item == 1) {
-    document.getElementById("personsalSP").style.content = "Completed"
-    console.log('done this!');
   }
 }
 </script>
