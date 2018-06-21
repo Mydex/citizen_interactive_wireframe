@@ -63,7 +63,7 @@
         <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
 
         <div id="module" class="container row mt-4">
-          <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonal" aria-expanded="false" aria-controls="collapsePersonal" id="personalButton" onclick="checkData('personal', 'personalButton');" data-text="Check">Contact Details</a></h5>
+          <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonal" aria-expanded="false" aria-controls="collapsePersonal" id="personalButton" onclick="checkData('personal', 'personalButton'); showSubmit();" data-text="Check">Contact Details</a></h5>
           <div class="collapse col-12" id="collapsePersonal" aria-labelledby="headingPersonal">
             <div class="table-responsive">
               <table class="table table-bordered table-sm text-left" id="personal">
@@ -115,7 +115,7 @@
         </div>
 
         <div id="module" class="container row mt-3">
-         <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplier" aria-expanded="false" aria-controls="collapseSupplier" id="supplierButton" onclick="checkData('supplier', 'supplierButton');" data-text="Check">Electricty Account</a></h5>
+         <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplier" aria-expanded="false" aria-controls="collapseSupplier" id="supplierButton" onclick="checkData('supplier', 'supplierButton'); showSubmit();" data-text="Check">Electricty Account</a></h5>
          <div class="collapse col-12" id="collapseSupplier" aria-labelledby="headingSupplier">
           <div class="table-responsive">
            <table class="table table-bordered table-sm text-left" id="supplier">
@@ -157,7 +157,7 @@
   </div>
 
   <div id="module" class="container row mt-3">
-    <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncome" aria-expanded="false" aria-controls="collapseIncome" id="incomeButton" onclick="checkData('income', 'incomeButton');" data-text="Check">Your Household Income</a></h5>
+    <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncome" aria-expanded="false" aria-controls="collapseIncome" id="incomeButton" onclick="checkData('income', 'incomeButton'); showSubmit();" data-text="Check">Your Household Income</a></h5>
     <div class="collapse col-12" id="collapseIncome" aria-labelledby="headingIncome">
       <div class="table-responsive">
         <table class="table table-bordered table-sm text-left" id="income">                
@@ -185,7 +185,7 @@
 </div>
 
 <div id="module" class="container row mt-3">
-  <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuel" aria-expanded="false" aria-controls="collapseFuel" id="fuelButton" onclick="checkData('fuel', 'fuelButton');" data-text="Check">Your Fuel Spend</a></h5>
+  <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuel" aria-expanded="false" aria-controls="collapseFuel" id="fuelButton" onclick="checkData('fuel', 'fuelButton'); showSubmit();" data-text="Check">Your Fuel Spend</a></h5>
   <div class="collapse col-12" id="collapseFuel" aria-labelledby="headingFuel">
     <div class="table-responsive">
       <table class="table table-bordered table-sm text-left" id="fuel">
@@ -377,7 +377,7 @@
  </div>
 </div>
 </div>
-<div class="row" id="submitToEA" style="display: none;">
+<div class="row" id="submitToEASP" style="display: none;">
   <div class="col-12 mt-2">
     Send to Energy Advocate to check & send application<br>
     <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button">Send</button>   
@@ -550,7 +550,7 @@
 </div>
 </div>
 </div>
-<div class="row" id="submitToEA" style="display: none;">
+<div class="row" id="submitToEABG" style="display: none;">
   <div class="col-12 mt-2">
     Send to Energy Advocate to check & send application<br>
     <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button">Send</button>   
@@ -562,7 +562,7 @@
 <div id="edfEnergyContent" style="display: none;">
   <h4 class="mt-2">EDF Energy Warm Home Discount Application</h4>
   <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
-  <div class="row" id="submitToEA" style="display: none;">
+  <div class="row" id="submitToEAEDF" style="display: none;">
     <div class="col-12 mt-2">
       Send to Energy Advocate to check & send application<br>
       <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button">Send</button>   
@@ -574,7 +574,7 @@
 <div id="eonContent" style="display: none;">
   <h4 class="mt-2">E.ON Warm Home Discount Application</h4>
   <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
-  <div class="row" id="submitToEA" style="display: none;">
+  <div class="row" id="submitToEAEON" style="display: none;">
     <div class="col-12 mt-2">
       Send to Energy Advocate to check & send application<br>
       <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button">Send</button>   
@@ -619,56 +619,64 @@
     document.getElementById('newSupplier').style.display = "block";
   }
 
-  function showApplciation(name){
-    if(name == 'scottishPower'){
-      document.getElementById('scottishPowerContent').style.display = 'block';
-      document.getElementById('britishGasContent').style.display = 'none';
-      document.getElementById('edfEnergyContent').style.display = 'none';
-      document.getElementById('eonContent').style.display = 'none';
-    } else if (name == 'britishGas'){
-      document.getElementById('britishGasContent').style.display = 'block';
-      document.getElementById('scottishPowerContent').style.display = 'none';
-      document.getElementById('edfEnergyContent').style.display = 'none';
-      document.getElementById('eonContent').style.display = 'none';
-    } else if (name == 'edfEnergy'){
-      document.getElementById('edfEnergyContent').style.display = 'block';
-      document.getElementById('scottishPowerContent').style.display = 'none';
-      document.getElementById('britishGasContent').style.display = 'none';
-      document.getElementById('eonContent').style.display = 'none';
-    } else if (name == 'eon'){
-      document.getElementById('eonContent').style.display = 'block';
-      document.getElementById('scottishPowerContent').style.display = 'none';
-      document.getElementById('britishGasContent').style.display = 'none';
-      document.getElementById('edfEnergyContent').style.display = 'none';
+  function showSubmit() {
+    if (document.getElementById('personalButton').dataset.text === 'Complete' && document.getElementById('supplierButton').dataset.text === 'Complete' && document.getElementById('incomeButton').dataset.text === 'Complete' && document.getElementById('fuelButton').dataset.text === 'Complete' ){
+      document.getElementById('submitToEA').style.display = 'block';
     } else {
-      document.getElementById('scottishPowerContent').style.display = 'none';
-      document.getElementById('britishGasContent').style.display = 'none';
-      document.getElementById('edfEnergyContent').style.display = 'none';
-      document.getElementById('eonContent').style.display = 'none';
-    };
-  }
+     document.getElementById('submitToEA').style.display = 'hidden'; 
+   }
+ }
 
-  function checkData(tableName, buttonName) {
-    var table = document.getElementById(tableName);
-    var counter = 0;
-    for (var r = 0, n = table.rows.length; r < n; r++) {
-      for (var c = 0, m = table.rows[r].cells.length; c < m; c++) {
-        if (table.rows[r].cells[c].innerHTML === "No data") {
-          counter ++;
-        } else if (table.rows[r].cells[c].innerHTML != "No data") {
-          counter --;
-        }
+ function showApplciation(name){
+  if(name == 'scottishPower'){
+    document.getElementById('scottishPowerContent').style.display = 'block';
+    document.getElementById('britishGasContent').style.display = 'none';
+    document.getElementById('edfEnergyContent').style.display = 'none';
+    document.getElementById('eonContent').style.display = 'none';
+  } else if (name == 'britishGas'){
+    document.getElementById('britishGasContent').style.display = 'block';
+    document.getElementById('scottishPowerContent').style.display = 'none';
+    document.getElementById('edfEnergyContent').style.display = 'none';
+    document.getElementById('eonContent').style.display = 'none';
+  } else if (name == 'edfEnergy'){
+    document.getElementById('edfEnergyContent').style.display = 'block';
+    document.getElementById('scottishPowerContent').style.display = 'none';
+    document.getElementById('britishGasContent').style.display = 'none';
+    document.getElementById('eonContent').style.display = 'none';
+  } else if (name == 'eon'){
+    document.getElementById('eonContent').style.display = 'block';
+    document.getElementById('scottishPowerContent').style.display = 'none';
+    document.getElementById('britishGasContent').style.display = 'none';
+    document.getElementById('edfEnergyContent').style.display = 'none';
+  } else {
+    document.getElementById('scottishPowerContent').style.display = 'none';
+    document.getElementById('britishGasContent').style.display = 'none';
+    document.getElementById('edfEnergyContent').style.display = 'none';
+    document.getElementById('eonContent').style.display = 'none';
+  };
+}
+
+function checkData(tableName, buttonName) {
+  var table = document.getElementById(tableName);
+  var counter = 0;
+  for (var r = 0, n = table.rows.length; r < n; r++) {
+    for (var c = 0, m = table.rows[r].cells.length; c < m; c++) {
+      if (table.rows[r].cells[c].innerHTML === "No data") {
+        counter ++;
+      } else if (table.rows[r].cells[c].innerHTML != "No data") {
+        counter --;
       }
     }
-    var check = 0 - table.rows.length*2;
-    if (counter === check) {
-      document.getElementById(buttonName).dataset.text = 'Complete';
-      counter = 0;
-    } else {
-      document.getElementById(buttonName).dataset.text = 'Check';
-      counter = 0;
-    }
   }
+  var check = 0 - table.rows.length*2;
+  if (counter === check) {
+    document.getElementById(buttonName).dataset.text = 'Complete';
+    counter = 0;
+  } else {
+    document.getElementById(buttonName).dataset.text = 'Check';
+    counter = 0;
+  }
+}
 </script>
 
 
