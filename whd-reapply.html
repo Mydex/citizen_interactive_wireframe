@@ -674,9 +674,9 @@
     var check = 0 - table.rows.length*2;
     console.log("check against " + check);
     if (counter === check) {
+      document.getElementById('personalSPButton').dataset.text = 'Check';
       counter = 0;
     } else {
-      var stylesheet = document.styleSheets[1];
       document.getElementById('personalSPButton').dataset.text = 'Complete';
       counter = 0;
     }
