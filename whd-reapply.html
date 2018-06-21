@@ -674,7 +674,7 @@
     console.log("check against " + check);
     if (counter === check) {
       // stylesheet.insertRule("#module a.collapsed:after {content: 'Completed'; float: right; color: black; }", 0);
-      document.getElementById( "moduleStyle" ).sheet.cssRules[0].style.color = blue;
+      document.getElementById( "moduleStyle" ).sheet.style.color = blue;
       // "#module a.collapsed:after {\
       //   content: 'Completed';\
       //   float: right;\
@@ -683,7 +683,7 @@
       counter = 0;
     } else {
       // stylesheet.insertRule("#module a.collapsed:after {content: 'Check'; float: right; color: black; }", 0);
-      document.getElementById( "moduleStyle" ).sheet.cssRules[0].style.color = red;
+      document.getElementById( "moduleStyle" ).sheet.style.color = red;
       // "#module a.collapsed:after  {\
       //   content: 'Check';\
       //   float: right;\
