@@ -663,13 +663,13 @@
           console.log(table.rows[r].cells[c].innerHTML);
           counter ++;
         } else if (table.rows[r].cells[c].innerHTML != "No data") {
-          console.log(table.rows[r].cells[c].innerHTML);
+          // console.log(table.rows[r].cells[c].innerHTML);
           counter --;
         }
       }
     }
     console.log("counter old " + counter);
-    var length = table.rows.length;
+    var length = table.rows.length*2;
     console.log("length " + length);
     if (counter != length) {
       document.getElementById( "personalSP" ).style.innerHTML =
