@@ -673,22 +673,10 @@
     var check = 0 - table.rows.length*2;
     console.log("check against " + check);
     if (counter === check) {
-      // stylesheet.insertRule("#module a.collapsed:after {content: 'Completed'; float: right; color: black; }", 0);
       document.getElementById( "moduleStyle" ).sheet.style.color = blue;
-      // "#module a.collapsed:after {\
-      //   content: 'Completed';\
-      //   float: right;\
-      //   color: black;\
-      // }";
       counter = 0;
     } else {
-      // stylesheet.insertRule("#module a.collapsed:after {content: 'Check'; float: right; color: black; }", 0);
-      document.getElementById( "moduleStyle" ).sheet.style.color = red;
-      // "#module a.collapsed:after  {\
-      //   content: 'Check';\
-      //   float: right;\
-      //   color: black;\
-      // }";
+      document.getElementById( "moduleStyle" ).sheet.style.color = green;
       counter = 0;
     }
     console.log("counter end " + counter);
