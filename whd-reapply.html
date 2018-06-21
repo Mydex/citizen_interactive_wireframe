@@ -657,7 +657,7 @@
   function checkData() {
     var table = document.getElementById("personalSP");
     var counter = 0;
-    // for (var r = 0, n = table.rows.length; r < n; r++) {
+    for (var r = 0, n = table.rows.length; r < n; r++) {
       for (var c = 0, m = table.rows[r].cells.length; c < m; c++) {
         if (table.rows[r].cells[c].innerHTML == "No data") {
           console.log(table.rows[r].cells[c].innerHTML);
@@ -666,9 +666,11 @@
           counter --;
         }
       }
-    // }
+    }
     console.log(counter);
-    if (counter != table.rows.length) {
+    var length = table.rows.length;
+    console.log(length);
+    if (counter != length) {
       document.getElementById( "personalSP" ).style.innerHTML =
       "#module a.collapsed:after {\
         content: 'Completed';\
