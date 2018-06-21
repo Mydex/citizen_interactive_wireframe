@@ -671,8 +671,8 @@
     var check = 0 - table.rows.length*2;
     console.log("check against " + check);
     if (counter === check) {
-      stylesheet.insertRule("#module a.collapsed:after {content: 'Completed'; float: right; color: black; }", 0);
-      // document.getElementById( "personalSP" ).style.innerHTML =
+      // stylesheet.insertRule("#module a.collapsed:after {content: 'Completed'; float: right; color: black; }", 0);
+      document.getElementById( "personalSP" ).style.content = 'Completed';
       // "#module a.collapsed:after {\
       //   content: 'Completed';\
       //   float: right;\
@@ -680,8 +680,8 @@
       // }";
       counter = 0;
     } else {
-      stylesheet.insertRule("#module a.collapsed:after {content: 'Check'; float: right; color: black; }", 0);
-      // document.getElementById( "personalSP" ).style.innerHTML =
+      // stylesheet.insertRule("#module a.collapsed:after {content: 'Check'; float: right; color: black; }", 0);
+      document.getElementById( "personalSP" ).style.content = 'Check';
       // "#module a.collapsed:after  {\
       //   content: 'Check';\
       //   float: right;\
