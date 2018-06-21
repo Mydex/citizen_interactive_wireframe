@@ -200,7 +200,7 @@
          </tr>
          <tr>
            <th>Previous: % on fuel</th>
-           <td contenteditable="true" spellcheck="true"></td>
+           <td contenteditable="true" spellcheck="true">No data</td>
          </tr>
        </tbody>
      </table>
@@ -623,23 +623,23 @@
     if (document.getElementById('personalButton').dataset.text === 'Complete' && document.getElementById('supplierButton').dataset.text === 'Complete' && document.getElementById('incomeButton').dataset.text === 'Complete' && document.getElementById('fuelButton').dataset.text === 'Complete'){
       document.getElementById('submitToEA').style.display = 'block';
     } else {
-     document.getElementById('submitToEA').style.display = 'hidden'; 
+      document.getElementById('submitToEA').style.display = 'none'; 
+    }
+  }
+
+  function showSubmitSP() {
+    if (document.getElementById('personalSPButton').dataset.text === 'Complete' && document.getElementById('supplierSPButton').dataset.text === 'Complete' && document.getElementById('incomeSPButton').dataset.text === 'Complete' && document.getElementById('fuelSPButton').dataset.text === 'Complete'){
+      document.getElementById('submitToEASP').style.display = 'block';
+    } else {
+     document.getElementById('submitToEASP').style.display = 'none'; 
    }
  }
 
- function showSubmitSP() {
-  if (document.getElementById('personalSPButton').dataset.text === 'Complete' && document.getElementById('supplierSPButton').dataset.text === 'Complete' && document.getElementById('incomeSPButton').dataset.text === 'Complete' && document.getElementById('fuelSPButton').dataset.text === 'Complete'){
-    document.getElementById('submitToEASP').style.display = 'block';
-  } else {
-   document.getElementById('submitToEASP').style.display = 'hidden'; 
- }
-}
-
-function showSubmitBG() {
+ function showSubmitBG() {
   if (document.getElementById('personalBGButton').dataset.text === 'Complete' && document.getElementById('supplierBGButton').dataset.text === 'Complete' && document.getElementById('incomeBGButton').dataset.text === 'Complete' && document.getElementById('fuelBGButton').dataset.text === 'Complete' && document.getElementById('benefitsBGButton').dataset.text === 'Complete'){
     document.getElementById('submitToEABG').style.display = 'block';
   } else {
-   document.getElementById('submitToEABG').style.display = 'hidden'; 
+   document.getElementById('submitToEABG').style.display = 'none'; 
  }
 }
 
