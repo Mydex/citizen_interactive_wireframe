@@ -488,8 +488,10 @@ function checkData(tableName, buttonName) {
     for (var c = 0, m = table.rows[r].cells.length; c < m; c++) {
       if (table.rows[r].cells[c].innerHTML === "No data") {
         counter ++;
+        table.rows[r].cells[c].style.color = "red";
       } else if (table.rows[r].cells[c].innerHTML != "No data") {
         counter --;
+        table.rows[r].cells[c].style.color = "black";
       }
     }
   }
