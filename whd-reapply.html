@@ -669,8 +669,20 @@
       }
     }
     if (counter < 0) {
-      document.getElementById( "personalSP" ).style.innerHTML = "#module a.collapsed:after {content: 'Completed';float: right;color: black;}";
+      document.getElementById( "personalSP" ).style.innerHTML =
+      "#module a.collapsed:after {\
+        content: 'Completed';\
+        float: right;\
+        color: black;\
+      }";
       console.log(counter);
+    } else {
+      document.getElementById( "personalSP" ).style.innerHTML =
+      "#module a.collapsed:after  {\
+        content: 'Check';\
+        float: right;\
+        color: black;\
+      }";
     }
   }
 </script>
