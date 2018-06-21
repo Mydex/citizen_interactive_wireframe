@@ -680,21 +680,23 @@ function checkData(tableName, buttonName) {
       if (table.rows[r].cells[c].innerHTML === "No data") {
         counter ++;
         table.rows[r].cells[c].style.color = "red";
-      } else if (table.rows[r].cells[c].innerHTML != "No data"
-        table.rows[r].cells[c].style.color = "black";
-        ) {
-        counter --;
-      }
-    }
-  }
-  var check = 0 - table.rows.length*2;
-  if (counter === check) {
-    document.getElementById(buttonName).dataset.text = 'Complete';
-    counter = 0;
-  } else {
-    document.getElementById(buttonName).dataset.text = 'Check';
-    counter = 0;
-  }
+        table.rows[r].cells[c].style.font-weight = "bold";
+      } else if (table.rows[r].cells[c].innerHTML != "No data")
+      table.rows[r].cells[c].style.color = "black";
+      table.rows[r].cells[c].style.font-weight = "normal";
+      ) {
+  counter --;
+}
+}
+}
+var check = 0 - table.rows.length*2;
+if (counter === check) {
+  document.getElementById(buttonName).dataset.text = 'Complete';
+  counter = 0;
+} else {
+  document.getElementById(buttonName).dataset.text = 'Check';
+  counter = 0;
+}
 }
 </script>
 
