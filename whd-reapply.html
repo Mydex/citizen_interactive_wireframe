@@ -236,7 +236,7 @@
     <h4 class="mt-2">Scottish Power Warm Home Discount Application</h4>
     <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
     <div id="module" class="container row mt-4">
-      <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonalSP" aria-expanded="false" aria-controls="collapsePersonalSP" id="personalSPButton" onclick="checkData();" data-text="Check">Contact Details</a></h5>
+      <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonalSP" aria-expanded="false" aria-controls="collapsePersonalSP" id="personalSPButton" onclick="checkData('personalSP', 'personalSPButton');" data-text="Check">Contact Details</a></h5>
       <div class="collapse col-12" id="collapsePersonalSP" aria-labelledby="headingPersonalSP">
         <div class="table-responsive">
           <table class="table table-bordered table-sm text-left" id="personalSP">
@@ -657,8 +657,8 @@
     };
   }
 
-  function checkData() {
-    var table = document.getElementById("personalSP");
+  function checkData(tableName, buttonName) {
+    var table = document.getElementById(tableName);
     var counter = 0;
     for (var r = 0, n = table.rows.length; r < n; r++) {
       for (var c = 0, m = table.rows[r].cells.length; c < m; c++) {
@@ -674,10 +674,10 @@
     var check = 0 - table.rows.length*2;
     console.log("check against " + check);
     if (counter === check) {
-      document.getElementById('personalSPButton').dataset.text = 'Complete';
+      document.getElementById(buttonName).dataset.text = 'Complete';
       counter = 0;
     } else {
-      document.getElementById('personalSPButton').dataset.text = 'Check';
+      document.getElementById(buttonName).dataset.text = 'Check';
       counter = 0;
     }
     console.log("counter end " + counter);
