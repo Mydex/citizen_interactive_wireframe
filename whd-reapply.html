@@ -680,10 +680,8 @@ function checkData(tableName, buttonName) {
       if (table.rows[r].cells[c].innerHTML === "No data") {
         counter ++;
         table.rows[r].cells[c].style.color = "red";
-        table.rows[r].cells[c].style.font-weight = "bold";
       } else if (table.rows[r].cells[c].innerHTML != "No data"
         table.rows[r].cells[c].style.color = "black";
-        table.rows[r].cells[c].style.font-weight = "normal";
         ) {
         counter --;
       }
