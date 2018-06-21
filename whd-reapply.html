@@ -600,13 +600,15 @@
 #line {
   border-bottom: 2px solid #2E8B57;
 }
-
+</style>
+<style id="moduleStyle">
 #module a.collapsed:after  {
   content: 'Check';
   float: right;
   color: black;
 }
-
+</style>
+<style>
 #module a:not(.collapsed):after {
   content: 'Confirm';
   float: right;
@@ -672,7 +674,7 @@
     console.log("check against " + check);
     if (counter === check) {
       // stylesheet.insertRule("#module a.collapsed:after {content: 'Completed'; float: right; color: black; }", 0);
-      document.getElementById( "personalSPButton" ).style.content = 'Completed';
+      document.getElementById( "moduleStyle" ).sheet.cssRules[0].style.content = 'Completed';
       // "#module a.collapsed:after {\
       //   content: 'Completed';\
       //   float: right;\
@@ -681,7 +683,7 @@
       counter = 0;
     } else {
       // stylesheet.insertRule("#module a.collapsed:after {content: 'Check'; float: right; color: black; }", 0);
-      document.getElementById( "personalSPButton" ).style.content = 'Check';
+      document.getElementById( "moduleStyle" ).sheet.cssRules[0].style.content = 'Check';
       // "#module a.collapsed:after  {\
       //   content: 'Check';\
       //   float: right;\
