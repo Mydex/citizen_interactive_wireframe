@@ -440,15 +440,15 @@
   if (document.getElementById('personalSPButton').dataset.text === 'Complete' && document.getElementById('supplierSPButton').dataset.text === 'Complete' && document.getElementById('incomeSPButton').dataset.text === 'Complete' && document.getElementById('fuelSPButton').dataset.text === 'Complete'){
     document.getElementById('submitToEASP').style.display = 'block';
   } else {
-   document.getElementById('submitToEASP').style.display = 'hidden'; 
- }
+    document.getElementById('submitToEASP').style.display = 'none'; 
+  }
 }
 
 function showSubmitBG() {
   if (document.getElementById('personalBGButton').dataset.text === 'Complete' && document.getElementById('supplierBGButton').dataset.text === 'Complete' && document.getElementById('incomeBGButton').dataset.text === 'Complete' && document.getElementById('fuelBGButton').dataset.text === 'Complete' && document.getElementById('benefitsBGButton').dataset.text === 'Complete'){
     document.getElementById('submitToEABG').style.display = 'block';
   } else {
-   document.getElementById('submitToEABG').style.display = 'hidden'; 
+   document.getElementById('submitToEABG').style.display = 'none'; 
  }
 }
 
