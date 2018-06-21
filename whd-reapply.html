@@ -63,10 +63,10 @@
         <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
 
         <div id="module" class="container row mt-4">
-          <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonal" aria-expanded="false" aria-controls="collapsePersonal">Contact Details</a></h5>
+          <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonal" aria-expanded="false" aria-controls="collapsePersonal" id="personalButton" onclick="checkData('personal', 'personalButton');" data-text="Check">Contact Details</a></h5>
           <div class="collapse col-12" id="collapsePersonal" aria-labelledby="headingPersonal">
             <div class="table-responsive">
-              <table class="table table-bordered table-sm text-left">
+              <table class="table table-bordered table-sm text-left" id="personal">
                 <thead>
                   <th class="bg-primary"></th>
                   <th class="bg-primary">Data</th>
@@ -115,10 +115,10 @@
         </div>
 
         <div id="module" class="container row mt-3">
-         <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplier" aria-expanded="false" aria-controls="collapseSupplier">Electricty Account</a></h5>
+         <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplier" aria-expanded="false" aria-controls="collapseSupplier" id="supplierButton" onclick="checkData('supplier', 'supplierButton');" data-text="Check">Electricty Account</a></h5>
          <div class="collapse col-12" id="collapseSupplier" aria-labelledby="headingSupplier">
           <div class="table-responsive">
-           <table class="table table-bordered table-sm text-left">
+           <table class="table table-bordered table-sm text-left" id="supplier">
             <thead>
               <tr>
                 <th colspan="3" class="table-primary">Electricity</th>
@@ -160,10 +160,10 @@
   </div>
 
   <div id="module" class="container row mt-3">
-    <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncome" aria-expanded="false" aria-controls="collapseIncome">Your Household Income</a></h5>
+    <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncome" aria-expanded="false" aria-controls="collapseIncome" id="incomeButton" onclick="checkData('income', 'incomeButton');" data-text="Check">Your Household Income</a></h5>
     <div class="collapse col-12" id="collapseIncome" aria-labelledby="headingIncome">
       <div class="table-responsive">
-        <table class="table table-bordered table-sm text-left">                
+        <table class="table table-bordered table-sm text-left" id="income">                
           <thead>
             <th class="bg-primary"></th>
             <th class="bg-primary">Data</th>
@@ -188,10 +188,10 @@
 </div>
 
 <div id="module" class="container row mt-3">
-  <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuel" aria-expanded="false" aria-controls="collapseFuel">Your Fuel Spend</a></h5>
+  <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuel" aria-expanded="false" aria-controls="collapseFuel" id="fuelButton" onclick="checkData('fuel', 'fuelButton');" data-text="Check">Your Fuel Spend</a></h5>
   <div class="collapse col-12" id="collapseFuel" aria-labelledby="headingFuel">
     <div class="table-responsive">
-      <table class="table table-bordered table-sm text-left">
+      <table class="table table-bordered table-sm text-left" id="fuel">
         <thead>
           <th class="bg-primary"></th>
           <th class="bg-primary">Data</th>
@@ -288,10 +288,10 @@
     </div>
 
     <div id="module" class="container row mt-3">
-      <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplierSP" aria-expanded="false" aria-controls="collapseSupplierSP" id="SupplierSPButton" onclick="checkData('SupplierSP', 'SupplierSPButton');" data-text="Check">Electricity Account</a></h5>
+      <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplierSP" aria-expanded="false" aria-controls="collapseSupplierSP" id="supplierSPButton" onclick="checkData('supplierSP', 'supplierSPButton');" data-text="Check">Electricity Account</a></h5>
       <div class="collapse col-12" id="collapseSupplierSP" aria-labelledby="headingSupplierSP">
         <div class="table-responsive">
-         <table class="table table-bordered table-sm text-left" id="SupplierSP">
+         <table class="table table-bordered table-sm text-left" id="supplierSP">
           <thead>
             <tr>
               <th class="bg-primary"></th>
@@ -330,10 +330,10 @@
 </div>
 
 <div id="module" class="container row mt-3">
-  <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncomeSP" aria-expanded="false" aria-controls="collapseIncomeSP" id="IncomeSPButton" onclick="checkData('IncomeSP', 'IncomeSPButton');" data-text="Check">Your Household Income</a></h5>
+  <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncomeSP" aria-expanded="false" aria-controls="collapseIncomeSP" id="incomeSPButton" onclick="checkData('incomeSP', 'incomeSPButton');" data-text="Check">Your Household Income</a></h5>
   <div class="collapse col-12" id="collapseIncomeSP" aria-labelledby="headingIncomeSP">
     <div class="table-responsive">
-      <table class="table table-bordered table-sm text-left" id="IncomeSP">
+      <table class="table table-bordered table-sm text-left" id="incomeSP">
         <thead>
           <th class="bg-primary"></th>
           <th class="bg-primary">Data</th>
@@ -358,10 +358,10 @@
 </div>
 
 <div id="module" class="container row mt-3">
- <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuelSP" aria-expanded="false" aria-controls="collapseFuelSP" id="FuelSPButton" onclick="checkData('FuelSP', 'FuelSPButton');" data-text="Check">Your Fuel Spend</a></h5>
+ <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuelSP" aria-expanded="false" aria-controls="collapseFuelSP" id="fuelSPButton" onclick="checkData('fuelSP', 'fuelSPButton');" data-text="Check">Your Fuel Spend</a></h5>
  <div class="collapse col-12" id="collapseFuelSP" aria-labelledby="headingFuelSP">
   <div class="table-responsive">
-    <table class="table table-bordered table-sm text-left"id="FuelSP">
+    <table class="table table-bordered table-sm text-left"id="fuelSP">
       <thead>
         <th class="bg-primary"></th>
         <th class="bg-primary">Data</th>
