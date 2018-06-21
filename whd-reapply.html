@@ -656,7 +656,6 @@
 
   function checkData() {
     var table = document.getElementById("personalSP");
-    console.log(table);
     var counter = 0;
     for (var r = 0, n = table.rows.length; r < n; r++) {
       for (var c = 0, m = table.rows[r].cells.length; c < m; c++) {
@@ -675,7 +674,6 @@
         float: right;\
         color: black;\
       }";
-      console.log(counter);
       counter = 0;
     } else {
       document.getElementById( "personalSP" ).style.innerHTML =
@@ -686,6 +684,7 @@
       }";
       counter = 0;
     }
+    console.log(counter);
   }
 </script>
 
