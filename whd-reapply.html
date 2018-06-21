@@ -601,20 +601,14 @@
   border-bottom: 2px solid #2E8B57;
 }
 </style>
-<style id="moduleStyleCheck" style="display: hidden;">
+<style id="moduleStyleCheck">
 #module a.collapsed:after  {
   content: 'Check';
   float: right;
   color: black;
 }
 </style>
-<style id="moduleStyleComplete" style="display: hidden;">
-#module a.collapsed:after  {
-  content: 'Complete';
-  float: right;
-  color: black;
-}
-</style>
+
 <style>
 #module a:not(.collapsed):after {
   content: 'Confirm';
@@ -680,12 +674,10 @@
     var check = 0 - table.rows.length*2;
     console.log("check against " + check);
     if (counter === check) {
-      document.getElementById("moduleStyleCheck").style.display = "block";
-      document.getElementById("moduleStyleComplete").style.display = "hidden";
       counter = 0;
     } else {
-      document.getElementById("moduleStyleComplete").style.color = "block";
-      document.getElementById("moduleStyleCheck").style.color = "hidden";
+      var stylesheet = document.styleSheets[1];
+      stylesheet.cssRules[0].style.content="Complete";
       counter = 0;
     }
     console.log("counter end " + counter);
