@@ -470,16 +470,13 @@
     for (var r = 0, n = table.rows.length; r < n; r++) {
       for (var c = 0, m = table.rows[r].cells.length; c < m; c++) {
         if (table.rows[r].cells[c].innerHTML === "No data") {
-          console.log(table.rows[r].cells[c].innerHTML);
           counter ++;
         } else if (table.rows[r].cells[c].innerHTML != "No data") {
           counter --;
         }
       }
     }
-    console.log("counter old " + counter);
     var check = 0 - table.rows.length*2;
-    console.log("check against " + check);
     if (counter === check) {
       document.getElementById(buttonName).dataset.text = 'Complete';
       counter = 0;
@@ -487,7 +484,6 @@
       document.getElementById(buttonName).dataset.text = 'Check';
       counter = 0;
     }
-    console.log("counter end " + counter);
   }
 </script>
 
