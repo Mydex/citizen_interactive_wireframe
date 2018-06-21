@@ -677,6 +677,8 @@
       counter = 0;
     } else {
       var stylesheet = document.styleSheets[1];
+      console.log(stylesheet);
+      console.log(stylesheet.cssRules[0].style.content);
       stylesheet.cssRules[0].style.content="Complete";
       counter = 0;
     }
