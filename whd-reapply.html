@@ -601,9 +601,16 @@
   border-bottom: 2px solid #2E8B57;
 }
 </style>
-<style id="moduleStyle">
+<style id="moduleStyleCheck" style="display: hidden;">
 #module a.collapsed:after  {
   content: 'Check';
+  float: right;
+  color: black;
+}
+</style>
+<style id="moduleStyleComplete" style="display: hidden;">
+#module a.collapsed:after  {
+  content: 'Complete';
   float: right;
   color: black;
 }
@@ -673,10 +680,12 @@
     var check = 0 - table.rows.length*2;
     console.log("check against " + check);
     if (counter === check) {
-      document.getElementById("moduleStyle").style.color = "blue";
+      document.getElementById("moduleStyleCheck").style.display = "block";
+      document.getElementById("moduleStyleComplete").style.display = "hidden";
       counter = 0;
     } else {
-      document.getElementById("moduleStyle").style.color = "green";
+      document.getElementById("moduleStyleComplete").style.color = "block";
+      document.getElementById("moduleStyleCheck").style.color = "hidden";
       counter = 0;
     }
     console.log("counter end " + counter);
