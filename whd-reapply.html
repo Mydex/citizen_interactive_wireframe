@@ -677,7 +677,7 @@
       counter = 0;
     } else {
       var stylesheet = document.styleSheets[1];
-      document.getElementById('personalSPButton').attr('data-text', 'Complete');
+      document.getElementById('personalSPButton').dataset.text = 'Complete';
       counter = 0;
     }
     console.log("counter end " + counter);
