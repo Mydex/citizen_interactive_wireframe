@@ -1,0 +1,349 @@
+<!DOCTYPE>
+<html lang="en">  
+<head>
+  <meta http-equiv="Content-type" content="text/html">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" >
+  <title>Citizen Interactive Wireframe</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="screen" title="master">
+  <link rel="stylesheet" href="css/custom.css" type="text/css" media="screen" title="master">
+  <script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
+</head>
+
+<body style="height:100%;">
+  <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand mx-auto" href="https://mydex.github.io/citizen_interactive_wireframe/home_loggedin.html">
+      <img class="rounded" src="https://mydex.github.io/citizen_interactive_wireframe/images/EPCAS-square.jpg" alt="logo" width="40">
+    </a>
+    <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav-content">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item"><a href="https://mydex.github.io/citizen_interactive_wireframe/home_loggedin.html" class="nav-link text-white font-weight-light">Home</a></li>
+        <li class="nav-item"><a href="https://mydex.github.io/citizen_interactive_wireframe/action_plan.html" class="nav-link text-white font-weight-light">Action Plan</a></li>
+        <li class="nav-item"><a href="https://mydex.github.io/citizen_interactive_wireframe/messages.html" class="nav-link text-white font-weight-bold font-italic">Messages</a></li>
+        <li class="nav-item"><a href="https://mydex.github.io/citizen_interactive_wireframe/tips.html" class="nav-link text-white font-weight-light">Tips</a></li>
+        <li class="nav-item"><a href="https://mydex.github.io/citizen_interactive_wireframe/information.html" class="nav-link text-white font-weight-light">Your Data</a></li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
+      </form class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <ul class="navbar-nav my-2 my-lg-0">
+        <li class="nav-item"><a href="https://mydex.github.io/citizen_interactive_wireframe/index.html" class="nav-link text-white font-weight-light">Log Out</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main style=" min-height:73%;">
+    <div class="container">
+      <h3 class="mt-4 mb-4">Messages</h3>
+      <h5 class="mb-2">Send a message to your energy advocate</h5>
+      <div class="row">
+        <form action="#/" class="col-md-6 col-md-6">
+          <textarea class="form-control form-control-sm" id="textarea1" rows="3" spellcheck="true"></textarea>
+        </form>
+      </div>
+      <a href="#" class="btn btn-outline-primary m-0" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Send</a>
+      <div class="row mt-4">
+        <div class="col-12">
+          <input type="search" class="tableFilter form-control col-11 col-md-9 col-lg-7 mb-2" data-table="order-table" placeholder="Filter table here...">
+          <div class="table-responsive">
+            <table class="order-table table table-sm text-left sortable" id="messageTable">
+              <thead class="table-info">
+                <tr>
+                  <th data-sort="name">From <img class="rounded" src="https://mydex.github.io/ea_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
+                  <th data-sort="name">To <img class="rounded" src="https://mydex.github.io/ea_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
+                  <th>View Message</th>
+                  <th data-sort="date">Date Created <img class="rounded" src="https://mydex.github.io/ea_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>System generated</td>
+                  <td>Citizen</td>
+                  <td>
+                    <div id="module" class="row">
+                      <p class="collapse col-10" id="collapseExample1" aria-expanded="false">
+                        <i>You have created an account. You are able to view and update your information.</i>
+                      </p>
+                      <a role="button" class="collapsed btn btn-outline-info" data-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1"></a>
+                    </td>
+                    <td>01/01/2018</td>
+                  </tr>
+                  <tr>
+                    <td>System generated</td>
+                    <td>Citizen</td>
+                    <td>
+                      <div id="module" class="row">
+                        <p class="collapse col-10" id="collapseExample2" aria-expanded="false">
+                          <i>You have given Energy Advocate permission to view and update your information.</i>
+                        </p>
+                        <a role="button" class="collapsed btn btn-outline-info" data-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2"></a>
+                      </div>
+                    </td>
+                    <td>01/01/2018</td>
+                  </tr>
+                  <tr>
+                    <td>Energy Advocate</td>
+                    <td>Citizen</td>
+                    <td>
+                      <div id="module" class="row">
+                        <p class="collapse col-10" id="collapseExample3" aria-expanded="false">
+                          <i>Hi, looking forward to seeing you for the home visit next week, if you’d like you can check and update information about your home and energy supply, or we can just go through that when I get there</i>
+                          <br>
+                          <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
+                          <button href='#/' class='btn btn-outline-info mt-2 mb-0' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Reply</button>
+                        </p>
+                        <a role="button" class="collapsed btn btn-outline-info" data-toggle="collapse" href="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3"></a>
+                      </div>
+                    </td>
+                    <td>04/01/2018</td>
+                  </tr>
+                  <tr>
+                    <td>System generated</td>
+                    <td>Citizen</td>
+                    <td>
+                      <div id="module" class="row">
+                        <p class="collapse col-10" id="collapseExample4" aria-expanded="false">
+                          <i>Energy Advocate has added an application to your account.</i>
+                        </p>
+                        <a role="button" class="collapsed btn btn-outline-info" data-toggle="collapse" href="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4"></a>
+                      </div>
+                    </td>
+                    <td>05/01/2018</td>
+                  </tr>
+                  <tr>
+                    <td>Citizen</td>
+                    <td>Energy Advocate</td>
+                    <td>
+                      <div id="module" class="row">
+                        <p class="collapse col-10" id="collapseExample5" aria-expanded="false">
+                          <i>Can you please call me? I would like to arrange another visit. Thanks</i>
+                        </p>
+                        <a role="button" class="collapsed btn btn-outline-info" data-toggle="collapse" href="#collapseExample5" aria-expanded="false" aria-controls="collapseExample5"></a>
+                      </div>
+                    </td>
+                    <td>05/02/2018</td>
+                  </tr>
+                  <tr>
+                    <td>Energy Advocate</td>
+                    <td>Citizen</td>
+                    <td>
+                      <div id="module" class="row">
+                        <p class="collapse col-10" id="collapseExample6" aria-expanded="false">
+                          <i>Good morning Citizen, your Warm Home Discount is due soon, will need to finish application during next home visit.</i>
+                          <br>
+                          <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
+                          <button href='#/' class='btn btn-outline-info mt-2 mb-0' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Reply</button>
+                        </p>
+                        <a role="button" class="collapsed btn btn-outline-info" data-toggle="collapse" href="#collapseExample6" aria-expanded="false" aria-controls="collapseExample6"></a>
+                      </div>
+                    </td>
+                    <td>13/02/2018</td>
+                  </tr>
+                  <tr>
+                    <td>Energy Advocate</td>
+                    <td>Citizen</td>
+                    <td>
+                      <div id="module" class="row">
+                        <p class="collapse col-10" id="collapseExample7" aria-expanded="false">
+                          <i>Just to let you know that your complaint has been closed by your energy supplier. They will be sending you a letter via the post. Can you please let me know when you get it?</i>
+                          <br>
+                          <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
+                          <button href='#/' class='btn btn-outline-info mt-2 mb-0' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Reply</button>
+                        </p>
+                        <a role="button" class="collapsed btn btn-outline-info" data-toggle="collapse" href="#collapseExample7" aria-expanded="false" aria-controls="collapseExample7"></a>
+                      </div>
+                    </td>
+                    <td>21/02/2018</td>
+                  </tr>
+                  <tr>
+                    <td>Citizen</td>
+                    <td>Energy Advocate</td>
+                    <td>
+                      <div id="module" class="row">
+                        <p class="collapse col-10" id="collapseExample8" aria-expanded="false">
+                          <i>Okay, thank you for letting me know.</i>
+                        </p>
+                        <a role="button" class="collapsed btn btn-outline-info" data-toggle="collapse" href="#collapseExample8" aria-expanded="false" aria-controls="collapseExample8"></a>
+                      </div>
+                    </td>
+                    <td>21/02/2018</td>
+                  </tr>
+                  <tr>
+                    <td>Citizen</td>
+                    <td>Energy Advocate</td>
+                    <td>
+                      <div id="module" class="row">
+                        <p class="collapse col-10" id="collapseExample9" aria-expanded="false">
+                          <i>I haven't received my letter yet regarding my complaint, did they say how long it would take?</i>
+                        </p>
+                        <a role="button" class="collapsed btn btn-outline-info" data-toggle="collapse" href="#collapseExample9" aria-expanded="false" aria-controls="collapseExample9"></a>
+                      </div>
+                    </td>
+                    <td>25/02/2018</td>
+                  </tr>
+                  <tr>
+                    <td>Energy Advocate</td>
+                    <td>Citizen</td>
+                    <td>
+                      <div id="module" class="row">
+                        <p class="collapse col-10" id="collapseExample10" aria-expanded="false">
+                          <i>There is no need to worry about it, sometimes they take a few days to send the letter in the first place.</i>
+                          <br>
+                          <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
+                          <button href='#/' class='btn btn-outline-info mt-2 mb-0' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Reply</button>
+                        </p>
+                        <a role="button" class="collapsed btn btn-outline-info" data-toggle="collapse" href="#collapseExample10" aria-expanded="false" aria-controls="collapseExample10"></a>
+                      </div>
+                    </td>
+                    <td>25/02/2018</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+    <style>
+    #module {
+      width: 400px;
+    }
+
+    #module p.collapse[aria-expanded="false"] {
+      height: 21px !important;
+      overflow: hidden;
+
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;  
+    }
+
+    #module p.collapsing[aria-expanded="false"] {
+      height: 21px !important;
+    }
+
+    #module a.collapsed:after  {
+      content: '+';
+    }
+
+    #module a:not(.collapsed):after {
+      content: '-';
+    }
+  </style>
+
+  <script>
+   (function(document) {
+     'use strict';
+     var TableFilter = (function(Arr) {
+       var input;
+
+       function onInputEvent(e) {
+         input = e.target;
+         var tables = document.getElementsByClassName(input.getAttribute('data-table'));
+         Arr.forEach.call(tables, function(table) {
+           Arr.forEach.call(table.tBodies, function(tbody) {
+             Arr.forEach.call(tbody.rows, filterRow);
+           });
+         });
+       }
+
+       function filterRow(row) {
+         var text = row.textContent.toLowerCase(), val = input.value.toLowerCase();
+         row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+       }
+
+       return {
+         init: function() {
+           var inputs = document.getElementsByClassName('tableFilter');
+           Arr.forEach.call(inputs, function(input) {
+             input.oninput = onInputEvent;
+           });
+         }
+       };
+     })(Array.prototype);
+
+     document.addEventListener('readystatechange', function() {
+       if (document.readyState === 'complete') {
+         TableFilter.init();
+       }
+     });
+
+   })(document);
+
+   //sort tables
+   var compare = {
+     name: function(a, b) {
+       a = a.replace(/^the /i, '');
+       b = b.replace(/^the /i, '');
+       if (a < b) {
+         return -1;
+       } else {
+         return a > b ? 1 : 0;
+       }
+     },
+     duration: function(a, b) {
+       a = a.split(':');
+       b = b.split(':');
+       a = Number(a[0]) * 60 + Number(a[1]);
+       b = Number(b[0]) * 60 + Number(b[1]);
+       return a - b;
+     },
+     date: function(a, b) {
+       a = new Date(a);
+       b = new Date(b);
+       return a - b;
+     }
+   };
+
+   $('.sortable').each(function(){
+     var $table = $(this);
+     var $tbody = $table.find('tbody');
+     var $controls = $table.find('th');
+     var rows = $tbody.find('tr').toArray();
+
+     $controls.on('click', function() {
+       var $header = $(this);
+       var order = $header.data('sort');
+       var column;
+
+       if ($header.is('.ascending') || $header.is('.descending')) {
+         $header.toggleClass('ascending descending');
+         $tbody.append(rows.reverse());
+       } else {
+         $header.addClass('ascending');
+         $header.siblings().removeClass('ascending descending');
+         if (compare.hasOwnProperty(order)) {
+           column = $controls.index(this);
+           rows.sort(function(a, b){
+             a = $(a).find('td').eq(column).text();
+             b = $(b).find('td').eq(column).text();
+             return compare[order](a, b);
+           });
+           $tbody.append(rows);
+         }
+       }
+     });
+   });
+ </script>
+
+
+ <footer class="mt-2" style="height:30px; margin-top:-30px;">
+  <nav class="navbar navbar-expand-sm">  
+    <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
+    <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
+    <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/esf.png" alt="logo" width="250">
+  </nav>
+</footer>
+</body>
+
+<script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+<script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+</body>
+</html>
