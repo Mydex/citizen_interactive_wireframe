@@ -586,6 +586,14 @@ function showSubmitBG() {
  }
 }
 
+function showSubmitEDF() {
+  if (document.getElementById('personalEDFButton').dataset.text === 'Complete' && document.getElementById('supplierEDFButton').dataset.text === 'Complete' && document.getElementById('incomeEDFButton').dataset.text === 'Complete' && document.getElementById('fuelEDFButton').dataset.text === 'Complete' && document.getElementById('benefitsEDFButton').dataset.text === 'Complete'){
+    document.getElementById('submitToEAEDF').style.display = 'block';
+  } else {
+   document.getElementById('submitToEAEDF').style.display = 'none'; 
+ }
+}
+
 function showApplciation(name){
   if(name == 'scottishPower'){
     document.getElementById('scottishPowerContent').style.display = 'block';
