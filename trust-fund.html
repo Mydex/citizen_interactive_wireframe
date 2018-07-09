@@ -309,6 +309,60 @@
 </div>
 </main>
 
+<style id="moduleStyleCheck">
+#module a.collapsed:after  {
+  content: attr(data-text);
+  float: right;
+  display:inline-block;
+  font-weight:400;
+  text-align:center;
+  white-space:nowrap;
+  vertical-align:middle;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  border:1px solid transparent;
+  padding:.3rem .3rem;
+  font-size:1rem;
+  line-height:1.5;
+  border-radius:.25rem;
+  transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
+  color:#2E8B57;
+  background-color:transparent;
+  background-image:none;
+  border-color:#2E8B57;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
+}
+</style>
+
+<style>
+#module a:not(.collapsed):after {
+  content: 'Confirm';
+  float: right;
+  display:inline-block;
+  font-weight:400;
+  text-align:center;
+  white-space:nowrap;
+  vertical-align:middle;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  border:1px solid transparent;
+  padding:.375rem .75rem;
+  font-size:1rem;
+  line-height:1.5;
+  border-radius:.25rem;
+  transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
+  color:#2E8B57;
+  background-color:transparent;
+  background-image:none;
+  border-color:#2E8B57;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
+}
+</style>
+
 <script>
   
   var dobCounter = 2;
