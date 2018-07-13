@@ -204,8 +204,96 @@
    <div class="row" id="submitToEASP" style="display: none;">
     <div class="col-12 mt-2">
       Send to Energy Advocate to check & send application<br>
-      <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button">Send</button>   
+      <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" onclick="showEvidence('spEvicence')">Send</button>   
     </div>
+  </div>
+
+  <div id="spEvidence" style="display: none;">
+    <h6 class="mt-4 mb-2">Reference number for application</h6>
+    <input type="text" class="form-contro col-md-6 col-lg-6 mb-2" id="name0" name="name"/><br>
+    <h6 class="mt-4 mb-2">Successful?</h6>
+    <div>Yes <input class="form-check-label" type="checkbox" id="inlineCheckbox" value="Yes">   No <input class="form-check-label" type="checkbox" id="inlineCheckbox" value="No"></div>
+    <h6 class="mt-4 mb-2">Notes</h6>
+    <textarea class="form-control mb-2" rows="3"></textarea>
+    <button class="btn btn-outline-primary" onclick="showAudit()" style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Audit</button>
+  </div>
+
+  <div id="audit" style="display: none;">
+    <h4 class="mt-4">Evidence required:</h4>
+    <div> <input class="form-check-label ml-2 mr-3" type="checkbox" id="inlineCheckbox" value="benefit"> Benefit letters</div>
+    <div> <input class="form-check-label ml-2 mr-3" type="checkbox" id="inlineCheckbox" value="home"> Proof of home address</div>
+    <div> <input class="form-check-label ml-2 mr-3" type="checkbox" id="inlineCheckbox" value="birth"> Birth certificate</div>
+    <div> <input class="form-check-label ml-2 mr-3" type="checkbox" id="inlineCheckbox" value="pay"> Pay slips</div>
+    <h4 class="mt-4 mb-2">Gathered evidence</h4>
+    <div class="table-responsive">
+      <table class="table table-bordered table-sm">
+        <thead class="bg-primary">
+          <tr>
+            <th>Document required</th>
+            <th>File</th>
+            <th>File Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Benefit letters</td>
+            <td>
+              <input type="file" class='mb-2' id="pic" name="pic0" accept="image/*"/>
+              <div id="benefitLetters"></div>
+              <button onclick="addImage('benefitLetters', 'benefitLettersNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+            </td>
+            <td>
+              <input type="text" class="form-control" id="picName0" name="picName" value="Display name:"/>
+              <div id="benefitLettersNames"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>Home Address</td>
+            <td>
+              <input type="file" class='mb-2' id="pic" name="pic1" accept="image/*"/>
+              <div id="homeLetters"></div>
+              <button onclick="addImage('homeLetters', 'homeLettersNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+            </td>
+            <td>
+              <input type="text" class="form-control" id="picName1" name="picName" value="Display name:"/>
+              <div id="homeLettersNames"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>Birth certificate</td>
+            <td>
+              <input type="file" class='mb-2' id="pic" name="pic2" accept="image/*"/>
+              <div id="birthCert"></div>
+              <button onclick="addImage('birthCert', 'birthCertNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+            </td>
+            <td>
+              <input type="text" class="form-control" id="picName2" name="picName" value="Display name:"/>
+              <div id="birthCertNames"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>Pay slips</td>
+            <td>
+              <input type="file" class='mb-2' id="pic" name="pic3" accept="image/*"/>
+              <div id="paySlips"></div>
+              <button onclick="addImage('paySlips', 'paySlipsNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+            </td>
+            <td>
+              <input type="text" class="form-control" id="picName3" name="picName" value="Display name:"/>
+              <div id="paySlipsNames"></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- <div class="mt-2 mb-3">Image name : 'BenefitLetter2018'</div> -->
+    <!-- <a href="#img1"><img src="https://via.placeholder.com/400X600" class="thumbnail"></a><br> -->
+    <button class='btn btn-outline-primary mt-2 mb-4' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Submit</button>
+
+  <!--   <a href="#_" class="lightbox" id="img1">
+      <img src="https://via.placeholder.com/400X600">
+    </a> -->
   </div>
 </div>
 
@@ -632,7 +720,7 @@
 
 <div id="module" class="container row mt-3">
   <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncomeEON" aria-expanded="false" aria-controls="collapseIncomeEON" id="incomeEONButton" onclick="checkData('incomeEON', 'incomeEONButton'); showSubmitEON();" data-text="Check">Household Income</a></h5>
- <div class="collapse col-12" id="collapseIncomeEON" aria-labelledby="headingIncomeEON">
+  <div class="collapse col-12" id="collapseIncomeEON" aria-labelledby="headingIncomeEON">
    <div class="table-responsive">
      <table class="table table-bordered table-sm text-left"id="incomeEON">
        <thead>
@@ -833,6 +921,30 @@ function checkData(tableName, buttonName) {
     counter = 0;
   }
 }
+
+function showEvidence(name) {
+  document.getElementById(name).style.display = 'block';
+}
+
+function showAudit() {
+  document.getElementById('audit').style.display = 'block';
+}
+
+var imageCounter = 4;
+function addImage(divFile, divName){
+  var newDivFile = document.createElement('div');
+  newDivFile.innerHTML = 
+  "<input type='file' class='mb-2' id='pic' name='pic"+ imageCounter + "' accept='image/*'/>";
+  document.getElementById(divFile).appendChild(newDivFile);
+  var newDivName = document.createElement('div');
+  newDivName.innerHTML = 
+  "<input type='text' class='form-control' id='picName"+ imageCounter + "' name='picName' value='Display name:'/>";
+  document.getElementById(divName).appendChild(newDivName);
+  imageCounter ++;
+}
+
+
+
 </script>
 
 <footer class="mt-2" style="height:30px; margin-top:-30px;">
