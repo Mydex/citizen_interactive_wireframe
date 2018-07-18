@@ -119,6 +119,29 @@
     </div>
   </main>
 
+  <style>
+    .weekDays-selector input {
+      display: none!important;
+    }
+
+    .weekDays-selector input[type=checkbox] + label {
+      display: inline-block;
+      border-radius: 6px;
+      background: #dddddd;
+      height: 40px;
+      width: 30px;
+      margin-right: 3px;
+      line-height: 40px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .weekDays-selector input[type=checkbox]:checked + label {
+      background: #2AD705;
+      color: #ffffff;
+    }
+  </style>
+
   <footer class="mt-2" style="height:30px; margin-top:-30px;">
     <nav class="navbar navbar-expand-sm">  
       <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
