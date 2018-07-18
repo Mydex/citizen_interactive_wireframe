@@ -75,21 +75,21 @@
 
         <div class="col-md-5 col-lg-5">
           <h5 class="mt-4 mb-2">Home Visit Preferences</h5>
-          <div class="weekDays-selector">
-            <input type="checkbox" id="weekday-mon" class="weekday" />
-            <label for="weekday-mon">M</label>
-            <input type="checkbox" id="weekday-tue" class="weekday" />
-            <label for="weekday-tue">T</label>
-            <input type="checkbox" id="weekday-wed" class="weekday" />
-            <label for="weekday-wed">W</label>
-            <input type="checkbox" id="weekday-thu" class="weekday" />
-            <label for="weekday-thu">T</label>
-            <input type="checkbox" id="weekday-fri" class="weekday" />
-            <label for="weekday-fri">F</label>
-            <input type="checkbox" id="weekday-sat" class="weekday" />
-            <label for="weekday-sat">S</label>
-            <input type="checkbox" id="weekday-sun" class="weekday" />
-            <label for="weekday-sun">S</label>
+          <div class="homeVisit-selector">
+            <input type="checkbox" id="mon" />
+            <label for="mon">M</label>
+            <input type="checkbox" id="tue"/>
+            <label for="tue">T</label>
+            <input type="checkbox" id="wed"/>
+            <label for="wed">W</label>
+            <input type="checkbox" id="thu"/>
+            <label for="thu">T</label>
+            <input type="checkbox" id="fri"/>
+            <label for="fri">F</label>
+            <input type="checkbox" id="sat"/>
+            <label for="sat">S</label>
+            <input type="checkbox" id="sun"/>
+            <label for="sun">S</label>
           </div>
           <p class="m-1">Time: 10:00am</p>
           <h5 class="mt-4 mb-2">Next Visit</h5>
@@ -120,11 +120,11 @@
   </main>
 
   <style>
-    .weekDays-selector input {
+    .homeVisit-selector input {
       display: none!important;
     }
 
-    .weekDays-selector input[type=checkbox] + label {
+    .homeVisit-selector input[type=checkbox] + label {
       display: inline-block;
       border-radius: 6px;
       background: #dddddd;
@@ -136,7 +136,7 @@
       cursor: pointer;
     }
 
-    .weekDays-selector input[type=checkbox]:checked + label {
+    .homeVisit-selector input[type=checkbox]:checked + label {
       background: #2AD705;
       color: #ffffff;
     }
