@@ -99,7 +99,7 @@
             <h5 id="line" class="col-12 pl-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePreferences" aria-expanded="false" aria-controls="collapsePreferences">Preferences</a></h5>
             <div class="collapse col-12" id="collapsePreferences" aria-labelledby="headingPreferences">
               <h6>Contact Preferences</h6>
-              <div class="homeVisit-selector mt-2">
+              <div class="contact-selector mt-2">
                 <input type="checkbox" id="Text" checked/>
                 <label for="Text">Text</label>
                 <input type="checkbox" id="Message"/>
@@ -150,6 +150,7 @@
     float: right;
     color: black;
   }
+
   .homeVisit-selector input {
     display: none!important;
   }
@@ -168,6 +169,28 @@
   }
 
   .homeVisit-selector input[type=checkbox]:checked + label {
+    background: #2AD705;
+    color: #ffffff;
+  }
+
+  .contact-selector input {
+    display: none!important;
+  }
+
+  .contact-selector input[type=checkbox] + label {
+    display: inline-block;
+    border-radius: 6px;
+    background: #dddddd;
+    height: 45px;
+    width: 80px;
+    margin-right: 3px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .contact-selector input[type=checkbox]:checked + label {
     background: #2AD705;
     color: #ffffff;
   }
