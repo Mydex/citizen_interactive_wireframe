@@ -201,7 +201,7 @@
        </div>
      </div>
    </div>
-   <div class="row" id="submitToEA" style="display: none;">
+   <div class="row" id="submitToEASP" style="display: none;">
      <div class="col-12 mt-4">
        Send to Energy Advocate to check & send application<br>
        <button class="btn btn-outline-primary mt-2 mb-4 " style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" onclick="showEvidence('afterSubmit')">Send</button>   
@@ -372,7 +372,7 @@
 </div>
 </div>
 </div>
-<div class="row" id="submitToEA" style="display: none;">
+<div class="row" id="submitToEABG" style="display: none;">
   <div class="col-12 mt-4">
     Send to Energy Advocate to check & send application<br>
     <button class="btn btn-outline-primary mt-2 mb-4 " style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" onclick="showEvidence('afterSubmit')">Send</button>   
@@ -525,7 +525,7 @@
   </div>
 </div>
 </div>
-<div class="row" id="submitToEA" style="display: none;">
+<div class="row" id="submitToEAEDF" style="display: none;">
   <div class="col-12 mt-4">
     Send to Energy Advocate to check & send application<br>
     <button class="btn btn-outline-primary mt-2 mb-4 " style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" onclick="showEvidence('afterSubmit')">Send</button>   
@@ -678,7 +678,7 @@
   </div>
 </div>
 </div>
-<div class="row" id="submitToEA" style="display: none;">
+<div class="row" id="submitToEAEON" style="display: none;">
   <div class="col-12 mt-4">
     Send to Energy Advocate to check & send application<br>
     <button class="btn btn-outline-primary mt-2 mb-4 " style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" onclick="showEvidence('afterSubmit')">Send</button>   
@@ -910,33 +910,33 @@
 
  function submitSP() {
   if (document.getElementById('personalSPButton').dataset.text === 'Complete' && document.getElementById('supplierSPButton').dataset.text === 'Complete' && document.getElementById('incomeSPButton').dataset.text === 'Complete' && document.getElementById('fuelSPButton').dataset.text === 'Complete'){
-    document.getElementById('submitToEA').style.display = 'block';
+    document.getElementById('submitToEASP').style.display = 'block';
   } else {
-    document.getElementById('submitToEA').style.display = 'none'; 
+    document.getElementById('submitToEASP').style.display = 'none'; 
   }
 }
 
 function submitBG() {
   if (document.getElementById('personalBGButton').dataset.text === 'Complete' && document.getElementById('supplierBGButton').dataset.text === 'Complete' && document.getElementById('incomeBGButton').dataset.text === 'Complete' && document.getElementById('fuelBGButton').dataset.text === 'Complete' && document.getElementById('benefitsBGButton').dataset.text === 'Complete'){
-    document.getElementById('submitToEA').style.display = 'block';
+    document.getElementById('submitToEABG').style.display = 'block';
   } else {
-   document.getElementById('submitToEA').style.display = 'none'; 
+   document.getElementById('submitToEABG').style.display = 'none'; 
  }
 }
 
 function submitEDF() {
   if (document.getElementById('personalEDFButton').dataset.text === 'Complete' && document.getElementById('supplierEDFButton').dataset.text === 'Complete' && document.getElementById('incomeEDFButton').dataset.text === 'Complete' && document.getElementById('fuelEDFButton').dataset.text === 'Complete'){
-    document.getElementById('submitToEA').style.display = 'block';
+    document.getElementById('submitToEAEDF').style.display = 'block';
   } else {
-   document.getElementById('submitToEA').style.display = 'none'; 
+   document.getElementById('submitToEAEDF').style.display = 'none'; 
  }
 }
 
 function submitEON() {
   if (document.getElementById('personalEONButton').dataset.text === 'Complete' && document.getElementById('supplierEONButton').dataset.text === 'Complete' && document.getElementById('incomeEONButton').dataset.text === 'Complete' && document.getElementById('fuelEONButton').dataset.text === 'Complete'){
-    document.getElementById('submitToEA').style.display = 'block';
+    document.getElementById('submitToEAEON').style.display = 'block';
   } else {
-   document.getElementById('submitToEA').style.display = 'none'; 
+   document.getElementById('submitToEAEON').style.display = 'none'; 
  }
 }
 
