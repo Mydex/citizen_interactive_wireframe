@@ -208,111 +208,6 @@
     </div>
   </div>
 
-  <div id="spEvidence" style="display: none;">
-    <h6 class="mt-4 mb-2">Reference number for application</h6>
-    <h6 id="name0" name="name">Unknown</h6>
-    <h6 class="mt-4 mb-2">Success status : 'unknown'</h6>
-    <h6 class="mt-4 mb-2">Add letters from your energy supplier here</h6>
-    <input type="text" class="form-control col-12 col-md-6 col-lg-6" id="picName0" name="picName" value="Display name:"/>
-    <input type="file" class='mb-2' id="pic" name="pic0" accept="image/*"/>
-    <div class="mt-2 mb-3">Image name : 'WHDLetter2018'</div>
-    <a href="#img1"><img src="https://via.placeholder.com/400X600" class="thumbnail"></a>
-    <a href="#_" class="lightbox" id="img1">
-      <img src="https://via.placeholder.com/400X600">
-    </a>
-    <h6 class="mt-4 mb-2">Notes from your energy advocate</h6>
-    <div>No notes.</div>
-    <button class="btn btn-outline-primary mt-4" onclick="showAudit()" style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Audit</button>
-  </div>
-
-  <div id="audit" style="display: none;">
-    <h4 class="mt-4 mb-2">Audit</h4>
-    <p>Please add a copy of the audit request letter above for your energy advocate to view.</p>
-    <h4 class="mt-4 mb-2">Gather Evidence</h4>
-    <p>Your energy advocate has asked for the following evidence</p>
-    <div class="table-responsive">
-      <table class="table table-bordered table-sm">
-        <thead class="bg-primary">
-          <tr>
-            <th style="width: 250px;">Document required</th>
-            <th>File</th>
-            <th style="width: 500px;">File Name</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Benefit letters
-              <li>Please include all of your benefit letters; JSA, disability etc.</li>
-            </td>
-            <td>
-              <input type="file" class='mb-2' id="pic" name="pic0" accept="image/*"/>
-              <div id="benefitLetters"></div>
-              <button onclick="addImage('benefitLetters', 'benefitLettersNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
-            </td>
-            <td>
-              <input type="text" class="form-control" id="picName0" name="picName" value="Display name:"/>
-              <div id="benefitLettersNames"></div>
-            </td>
-          </tr>
-          <tr>
-            <td>Home Address
-              <li></li>
-            </td>
-            <td>
-              <input type="file" class='mb-2' id="pic" name="pic1" accept="image/*"/>
-              <div id="homeLetters"></div>
-              <button onclick="addImage('homeLetters', 'homeLettersNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
-            </td>
-            <td>
-              <input type="text" class="form-control" id="picName1" name="picName" value="Display name:"/>
-              <div id="homeLettersNames"></div>
-            </td>
-          </tr>
-          <tr>
-            <td>Birth certificate
-              <li></li>
-            </td>
-            <td>
-              <input type="file" class='mb-2' id="pic" name="pic2" accept="image/*"/>
-              <div id="birthCert"></div>
-              <button onclick="addImage('birthCert', 'birthCertNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
-            </td>
-            <td>
-              <input type="text" class="form-control" id="picName2" name="picName" value="Display name:"/>
-              <div id="birthCertNames"></div>
-            </td>
-          </tr>
-          <tr>
-            <td>Pay slips
-              <li style="width: 250px;"></li>
-            </td>
-            <td>
-              <input type="file" class='mb-2' id="pic" name="pic3" accept="image/*"/>
-              <div id="paySlips"></div>
-              <button onclick="addImage('paySlips', 'paySlipsNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
-            </td>
-            <td>
-              <input type="text" class="form-control" id="picName3" name="picName" value="Display name:"/>
-              <div id="paySlipsNames"></div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h6 class="mt-4 mb-2">Date evidence sent by energy advocate</h6>
-    <div>Not sent yet</div>
-    <h6 class="mt-4 mb-2">Notes regarding WHD audit</h6>
-    <div>No notes.</div>
-
-    <!-- <div class="mt-2 mb-3">Image name : 'BenefitLetter2018'</div> -->
-    <!-- <a href="#img1"><img src="https://via.placeholder.com/400X600" class="thumbnail"></a><br> -->
-    <button class='btn btn-outline-primary mt-2 mb-4' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Submit</button>
-
-  <!--   <a href="#_" class="lightbox" id="img1">
-      <img src="https://via.placeholder.com/400X600">
-    </a> -->
-  </div>
 </div>
 
 
@@ -790,6 +685,115 @@
   </div>
 </div>
 </div>
+
+
+
+<div id="evidence" style="display: none;">
+  <h6 class="mt-4 mb-2">Reference number for application</h6>
+  <h6 id="name0" name="name">Unknown</h6>
+  <h6 class="mt-4 mb-2">Success status : 'unknown'</h6>
+  <h6 class="mt-4 mb-2">Add letters from your energy supplier here</h6>
+  <input type="text" class="form-control col-12 col-md-6 col-lg-6" id="picName0" name="picName" value="Display name:"/>
+  <input type="file" class='mb-2' id="pic" name="pic0" accept="image/*"/>
+  <div class="mt-2 mb-3">Image name : 'WHDLetter2018'</div>
+  <a href="#img1"><img src="https://via.placeholder.com/400X600" class="thumbnail"></a>
+  <a href="#_" class="lightbox" id="img1">
+    <img src="https://via.placeholder.com/400X600">
+  </a>
+  <h6 class="mt-4 mb-2">Notes from your energy advocate</h6>
+  <div>No notes.</div>
+  <button class="btn btn-outline-primary mt-4" onclick="showAudit()" style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Audit</button>
+</div>
+
+<div id="audit" style="display: none;">
+  <h4 class="mt-4 mb-2">Audit</h4>
+  <p>Please add a copy of the audit request letter above for your energy advocate to view.</p>
+  <h4 class="mt-4 mb-2">Gather Evidence</h4>
+  <p>Your energy advocate has asked for the following evidence</p>
+  <div class="table-responsive">
+    <table class="table table-bordered table-sm">
+      <thead class="bg-primary">
+        <tr>
+          <th style="width: 250px;">Document required</th>
+          <th>File</th>
+          <th style="width: 500px;">File Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Benefit letters
+            <li>Please include all of your benefit letters; JSA, disability etc.</li>
+          </td>
+          <td>
+            <input type="file" class='mb-2' id="pic" name="pic0" accept="image/*"/>
+            <div id="benefitLetters"></div>
+            <button onclick="addImage('benefitLetters', 'benefitLettersNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+          </td>
+          <td>
+            <input type="text" class="form-control" id="picName0" name="picName" value="Display name:"/>
+            <div id="benefitLettersNames"></div>
+          </td>
+        </tr>
+        <tr>
+          <td>Home Address
+            <li></li>
+          </td>
+          <td>
+            <input type="file" class='mb-2' id="pic" name="pic1" accept="image/*"/>
+            <div id="homeLetters"></div>
+            <button onclick="addImage('homeLetters', 'homeLettersNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+          </td>
+          <td>
+            <input type="text" class="form-control" id="picName1" name="picName" value="Display name:"/>
+            <div id="homeLettersNames"></div>
+          </td>
+        </tr>
+        <tr>
+          <td>Birth certificate
+            <li></li>
+          </td>
+          <td>
+            <input type="file" class='mb-2' id="pic" name="pic2" accept="image/*"/>
+            <div id="birthCert"></div>
+            <button onclick="addImage('birthCert', 'birthCertNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+          </td>
+          <td>
+            <input type="text" class="form-control" id="picName2" name="picName" value="Display name:"/>
+            <div id="birthCertNames"></div>
+          </td>
+        </tr>
+        <tr>
+          <td>Pay slips
+            <li style="width: 250px;"></li>
+          </td>
+          <td>
+            <input type="file" class='mb-2' id="pic" name="pic3" accept="image/*"/>
+            <div id="paySlips"></div>
+            <button onclick="addImage('paySlips', 'paySlipsNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+          </td>
+          <td>
+            <input type="text" class="form-control" id="picName3" name="picName" value="Display name:"/>
+            <div id="paySlipsNames"></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h6 class="mt-4 mb-2">Date evidence sent by energy advocate</h6>
+  <div>Not sent yet</div>
+  <h6 class="mt-4 mb-2">Notes regarding WHD audit</h6>
+  <div>No notes.</div>
+
+  <!-- <div class="mt-2 mb-3">Image name : 'BenefitLetter2018'</div> -->
+  <!-- <a href="#img1"><img src="https://via.placeholder.com/400X600" class="thumbnail"></a><br> -->
+  <button class='btn btn-outline-primary mt-2 mb-4' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Submit</button>
+
+<!--   <a href="#_" class="lightbox" id="img1">
+    <img src="https://via.placeholder.com/400X600">
+  </a> -->
+</div>
+
 
 </main>
 
