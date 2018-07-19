@@ -989,9 +989,7 @@
   border-color:#2E8B57;
   box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
 }
-</style>
 
-<style>
 #module a:not(.collapsed):after {
   content: 'Confirm';
   float: right;
@@ -1015,6 +1013,29 @@
   background-image:none;
   border-color:#2E8B57;
   box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+}
+
+.lightbox img {
+  max-width: 97%;
+  max-height: 97%;
+  margin-top: 2%;
+}
+
+.lightbox:target {
+  outline: none;
+  display: block;
 }
 </style>
 
