@@ -39,7 +39,7 @@
       <h3 class="mt-4">Your Dashboard</h3>
 
       <div id="module" class="container row mt-4 m-0 p-0">
-        <h5 id="line" class="col-12 col-md-6 col-lg-6 pl-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePreferences" aria-expanded="false" aria-controls="collapsePreferences">Preferences</a></h5>
+        <h5 id="line" class="col-12 col-md-6 col-lg-6 pl-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePreferences" aria-expanded="false" aria-controls="collapsePreferences">Preferences</a></h5>
         <div class="collapse col-12 col-md-7 col-lg-7" id="collapsePreferences" aria-labelledby="headingPreferences">
           <form action="/#">
             <div class="form-group">
@@ -115,7 +115,7 @@
           <p class="m-1">Time: 10:00am</p>
           
           <div id="module" class="container row mt-4 m-0 p-0">
-            <h5 id="line" class="col-12 pl-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseStatus" aria-expanded="false" aria-controls="collapseStatus">Status Overview</a></h5>
+            <h5 id="line" class="col-12 pl-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseStatus" aria-expanded="false" aria-controls="collapseStatus">Status Overview</a></h5>
             <div class="collapse col-12 p-0 m-0" id="collapseStatus" aria-labelledby="headingStatus">
               <h5 class="mt-4 mb-2">Applications & Services Status Overview</h5>
               <p>There are no ongoing applications or services at the moment.</p>
@@ -123,7 +123,7 @@
           </div>
 
           <div id="module" class="container row mt-4 m-0 p-0">
-            <h5 id="line" class="col-12 pl-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePreferences" aria-expanded="false" aria-controls="collapsePreferences">Preferences</a></h5>
+            <h5 id="line" class="col-12 pl-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePreferences" aria-expanded="false" aria-controls="collapsePreferences">Preferences</a></h5>
             <div class="collapse col-12" id="collapsePreferences" aria-labelledby="headingPreferences">
               <h6>Contact Preferences</h6>
               <div class="contact-selector mt-2">
@@ -166,13 +166,13 @@
     border-bottom: 2px solid #2E8B57;
   }
 
-  #module a.collapsed:after  {
+  #module #accordionHeading.collapsed:after  {
     content: '+';
     float: right;
     color: black;
   }
 
-  #module a:not(.collapsed):after {
+  #module #accordionHeading :not(.collapsed):after {
     content: '-';
     float: right;
     color: black;
