@@ -131,6 +131,24 @@
 </div>
 </main>
 
+<style>
+#line {
+  border-bottom: 2px solid #2E8B57;
+}
+
+#module #accordionHeading.collapsed:after  {
+  content: '+';
+  float: right;
+  color: black;
+}
+
+#module #accordionHeading:not(.collapsed):after {
+  content: '-';
+  float: right;
+  color: black;
+}
+</style>
+
 <footer class="mt-2" style="height:30px; margin-top:-30px;">
   <nav class="navbar navbar-expand-sm">  
     <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
