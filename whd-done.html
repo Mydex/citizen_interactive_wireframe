@@ -1,0 +1,691 @@
+<!DOCTYPE>
+<html lang="en">  
+<head>
+  <meta http-equiv="Content-type" content="text/html">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" >
+  <title>Citizen Interactive Wireframe</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="screen" title="master">
+  <link rel="stylesheet" href="css/custom.css" type="text/css" media="screen" title="master">
+  <script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
+</head>
+
+<body style="height:100%;">
+  <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand mx-auto" href="https://mydex.github.io/citizen_interactive_wireframe/home_loggedin.html">
+      <img class="rounded" src="https://mydex.github.io/citizen_interactive_wireframe/images/EPCAS-square.jpg" alt="logo" width="40">
+    </a>
+    <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav-content">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item"><a href="https://mydex.github.io/citizen_interactive_wireframe/home_loggedin.html" class="nav-link text-white font-weight-light">Home</a></li>
+        <li class="nav-item"><a href="https://mydex.github.io/citizen_interactive_wireframe/action_plan.html" class="nav-link text-white font-weight-light">Action Plan</a></li>
+        <li class="nav-item"><a href="https://mydex.github.io/citizen_interactive_wireframe/messages_v2.html" class="nav-link text-white font-weight-light">Messages</a></li>
+        <li class="nav-item"><a href="https://mydex.github.io/citizen_interactive_wireframe/tips.html" class="nav-link text-white font-weight-light">Advice</a></li>
+        <li class="nav-item"><a href="https://mydex.github.io/citizen_interactive_wireframe/information.html" class="nav-link text-white font-weight-light">Your Data</a></li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
+      </form class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <ul class="navbar-nav my-2 my-lg-0">
+        <li class="nav-item"><a href="https://mydex.github.io/citizen_interactive_wireframe/index.html" class="nav-link text-white font-weight-light">Log Out</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main style=" min-height:75%;">
+    <div class="container">
+      <h3 class="mt-4 mb-4">Apply for Warm Home Discount</h3>
+      <div class="mt-4">In order to receive Warm Home Discount you will need to submit an application for each year that you are eligible. You can review and update the information required to check and demonstrate eligibility in this section.</div>
+      <div class="row">
+        <p class="mt-2 col-12 col-md-6 col-lg-6">
+          Return to action plan <a href="https://mydex.github.io/citizen_interactive_wireframe/action_plan_v2.html" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);"><img class="rounded" src="https://mydex.github.io/citizen_interactive_wireframe/images/double-arrow.png" alt="logo" width="15"></a>
+        </p>
+      </div>
+      <div id="checkSupplier" style="display: block;"> 
+        <h4>Scottish Power</h4>
+        <div>Is this your current electricity supplier?</div>
+        <div class="row mt-2">
+          <div class="col-3 col-mg-1 col-lg-1">
+            <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" onclick="showForm()">Yes</a>
+          </div>
+          <div class="col-3 col-mg-1 col-lg-1">
+            <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" onclick="showNewForms()">No</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="currentSupplier" style="display: none;">
+        <h4 class="mt-4">Scottish Power Warm Home Discount Application</h4>
+        <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
+
+        <div id="module" class="container row mt-4">
+          <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonal" aria-expanded="false" aria-controls="collapsePersonal" id="personalButton" onclick="checkData('personal', 'personalButton'); showSubmit();" data-text="Check">Contact Details</a></h5>
+          <div class="collapse col-12" id="collapsePersonal" aria-labelledby="headingPersonal">
+            <div class="table-responsive">
+              <table class="table table-bordered table-sm text-left" id="personal">
+                <thead>
+                  <th class="bg-primary"></th>
+                  <th class="bg-primary text-white">Data</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>Title</th>
+                    <td contenteditable="true" spellcheck="true">Mrs</td>
+                  </tr>
+                  <tr>
+                    <th>Forename</th>
+                    <td contenteditable="true" spellcheck="true">Citizen</td>
+                  </tr>
+                  <tr>
+                    <th>Surame</th>
+                    <td contenteditable="true" spellcheck="true">Twenty</td>
+                  </tr>
+                  <tr>
+                    <th>Address</th>
+                    <td contenteditable="true" spellcheck="true">12 Fake Street <br>FakeTown</td>
+                  </tr>
+                  <tr>
+                    <th>Postcode</th>
+                    <td contenteditable="true" spellcheck="true">FA12 3KE</td>
+                  </tr>
+                  <tr>
+                    <th>Telephone</th>
+                    <td contenteditable="true" spellcheck="true">012345 678901</td>
+                  </tr>
+                  <tr>
+                    <th>Mobile</th>
+                    <td contenteditable="true" spellcheck="true">077123456789</td>
+                  </tr>
+                  <tr>
+                    <th>Email</th>
+                    <td contenteditable="true" spellcheck="true">citizen@twenty.com</td>
+                  </tr>
+                  <tr>
+                    <th>Date of birth</th>
+                    <td><input type="date" name="dob" value="1980-01-01"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div id="module" class="container row mt-3">
+         <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplier" aria-expanded="false" aria-controls="collapseSupplier" id="supplierButton" onclick="checkData('supplier', 'supplierButton'); showSubmit();" data-text="Check">Electricty Account</a></h5>
+         <div class="collapse col-12" id="collapseSupplier" aria-labelledby="headingSupplier">
+          <div class="table-responsive">
+           <table class="table table-bordered table-sm text-left" id="supplier">
+            <thead>
+              <tr>
+                <th class="bg-primary"></th>
+                <th class="bg-primary text-white">Data</th>
+              </tr>
+            </thead>
+            <tbody>
+             <tr>
+              <th>MPAN</th>
+              <td contenteditable="true" spellcheck="true">987654321</td>
+            </tr>
+            <tr>
+              <th>Supplier</th>
+              <td contenteditable="true" spellcheck="true">Scottish Power</td>
+            </tr>
+            <tr>
+              <th>Electric Account Number</th>
+              <td contenteditable="true" spellcheck="true">987654321</td>
+            </tr>
+            <tr>
+              <th>Customer Reference Number (CRM)</th>
+              <td contenteditable="true" spellcheck="true">987654321</td>
+            </tr>
+            <tr>
+              <th>Tariff</th>
+              <td contenteditable="true" spellcheck="true">987654321</td>
+            </tr>
+            <tr>
+              <th>Meter Serial Number</th>
+              <td contenteditable="true" spellcheck="true">987654321</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div id="module" class="container row mt-3">
+    <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncome" aria-expanded="false" aria-controls="collapseIncome" id="incomeButton" onclick="checkData('income', 'incomeButton'); showSubmit();" data-text="Check">Household Income</a></h5>
+    <div class="collapse col-12" id="collapseIncome" aria-labelledby="headingIncome">
+      <div class="table-responsive">
+        <table class="table table-bordered table-sm text-left" id="income">                
+          <thead>
+            <th class="bg-primary"></th>
+            <th class="bg-primary text-white">Data</th>
+          </thead>
+          <tbody>
+           <tr>
+            <th>Your yearly income</th>
+            <td class="text-right" contenteditable="true" spellcheck="true">£12,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="module" class="container row mt-3">
+  <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuel" aria-expanded="false" aria-controls="collapseFuel" id="fuelButton" onclick="checkData('fuel', 'fuelButton'); showSubmit();" data-text="Check">Fuel Spend</a></h5>
+  <div class="collapse col-12" id="collapseFuel" aria-labelledby="headingFuel">
+    <div class="table-responsive">
+      <table class="table table-bordered table-sm text-left" id="fuel">
+        <thead>
+          <th class="bg-primary"></th>
+          <th class="bg-primary text-white">Data</th>
+        </thead>
+        <tbody>
+         <tr>
+           <th>Your weekly spend on electricity</th>
+           <td class="text-right" contenteditable="true" spellcheck="true">£20</td>
+         </tr>
+         <tr>
+          <th>Your weekly spend on gas</th>
+          <td class="text-right" contenteditable="true" spellcheck="true">£10</td>
+        </tr>
+        <tr>
+          <th>Percentage of income spent on fuel</th>
+          <td class="text-right"">13%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+<div class="row" id="submitToEA" style="display: none;">
+  <div class="col-12 mt-4">
+    Send to Energy Advocate to check & send application<br>
+    <button class="btn btn-outline-primary mt-2 mb-4 " style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" onclick="showEvidence('afterSubmit')">Send</button>   
+  </div>
+</div>
+</div>
+
+
+
+<div id="newSupplier"  style="display: none;">
+  <p class="mt-2 mb-2">Who is your new electricity supplier?</p>
+  <form action="#/">
+    <select name="energySupplier" onchange="showApplciation(this.options[this.selectedIndex].value)" required>
+      <option value="default"></option>
+      <option value="scottishPower">Scottish Power</option>
+      <option value="britishGas">Bulb</option>
+      <option value="edfEnergy">EDF Energy</option>
+      <option value="eon">E.ON</option>
+    </select>
+  </form>
+
+  <div id="scottishPowerContent" style="display: none;">
+    <h4 class="mt-2">Scottish Power Warm Home Discount Application</h4>
+    <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
+    <div id="module" class="container row mt-4">
+      <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonalSP" aria-expanded="false" aria-controls="collapsePersonalSP" id="personalSPButton" onclick="checkData('personalSP', 'personalSPButton'); submitSP();" data-text="Check">Contact Details</a></h5>
+      <div class="collapse col-12" id="collapsePersonalSP" aria-labelledby="headingPersonalSP">
+        <div class="table-responsive">
+          <table class="table table-bordered table-sm text-left" id="personalSP">
+            <thead>
+              <th class="bg-primary"></th>
+              <th class="bg-primary text-white">Data</th>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Title</th>
+                <td contenteditable="true" spellcheck="true">Mrs</td>
+              </tr>
+              <tr>
+                <th>Forename</th>
+                <td contenteditable="true" spellcheck="true">Citizen</td>
+              </tr>
+              <tr>
+                <th>Surame</th>
+                <td contenteditable="true" spellcheck="true">Twenty</td>
+              </tr>
+              <tr>
+                <th>Address</th>
+                <td contenteditable="true" spellcheck="true">12 Fake Street <br>FakeTown</td>
+              </tr>
+              <tr>
+                <th>Postcode</th>
+                <td contenteditable="true" spellcheck="true">FA12 3KE</td>
+              </tr>
+              <tr>
+                <th>Telephone</th>
+                <td contenteditable="true" spellcheck="true">012345 678901</td>
+              </tr>
+              <tr>
+                <th>Mobile</th>
+                <td contenteditable="true" spellcheck="true">077123456789</td>
+              </tr>
+              <tr>
+                <th>Email</th>
+                <td contenteditable="true" spellcheck="true">citizen@twenty.com</td>
+              </tr>
+              <tr>
+                <th>Date of birth</th>
+                <td><input type="date" name="dob" value="1980-01-01"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div id="module" class="container row mt-3">
+      <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplierSP" aria-expanded="false" aria-controls="collapseSupplierSP" id="supplierSPButton" onclick="checkData('supplierSP', 'supplierSPButton'); submitSP();" data-text="Check">Electricity Account</a></h5>
+      <div class="collapse col-12" id="collapseSupplierSP" aria-labelledby="headingSupplierSP">
+        <div class="table-responsive">
+         <table class="table table-bordered table-sm text-left" id="supplierSP">
+          <thead>
+            <tr>
+              <th class="bg-primary"></th>
+              <th class="bg-primary text-white">Data</th>
+            </tr>
+          </thead>
+          <tbody>
+           <tr>
+             <th>MPAN</th>
+             <td contenteditable="true" spellcheck="true">987654321</td>
+           </tr>
+           <tr>
+             <th>Supplier</th>
+             <td contenteditable="true" spellcheck="true">Scottish Power</td>
+           </tr>
+           <tr>
+             <th>Electric Account Number</th>
+             <td contenteditable="true" spellcheck="true">987654321</td>
+           </tr>
+           <tr>
+             <th>Customer Reference Number (CRM)</th>
+             <td contenteditable="true" spellcheck="true">987654321</td>
+           </tr>
+           <tr>
+             <th>Tariff</th>
+             <td contenteditable="true" spellcheck="true">987654321</td>
+           </tr>
+           <tr>
+             <th>Meter Serial Number</th>
+             <td contenteditable="true" spellcheck="true">987654321</td>
+           </tr>
+         </tbody>
+       </table>
+     </div>
+   </div>
+ </div>
+
+ <div id="module" class="container row mt-3">
+  <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncomeSP" aria-expanded="false" aria-controls="collapseIncomeSP" id="incomeSPButton" onclick="checkData('incomeSP', 'incomeSPButton'); submitSP();" data-text="Check">Household Income</a></h5>
+  <div class="collapse col-12" id="collapseIncomeSP" aria-labelledby="headingIncomeSP">
+    <div class="table-responsive">
+      <table class="table table-bordered table-sm text-left" id="incomeSP">
+        <thead>
+          <th class="bg-primary"></th>
+          <th class="bg-primary text-white">Data</th>
+        </thead>
+        <tbody>
+         <tr>
+          <th>Your yearly income</th>
+          <td class="text-right" contenteditable="true" spellcheck="true">£12,000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+
+<div id="module" class="container row mt-3">
+ <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuelSP" aria-expanded="false" aria-controls="collapseFuelSP" id="fuelSPButton" onclick="checkData('fuelSP', 'fuelSPButton'); submitSP();" data-text="Check">Fuel Spend</a></h5>
+ <div class="collapse col-12" id="collapseFuelSP" aria-labelledby="headingFuelSP">
+  <div class="table-responsive">
+    <table class="table table-bordered table-sm text-left" id="fuelSP">
+      <thead>
+        <th class="bg-primary"></th>
+        <th class="bg-primary text-white">Data</th>
+      </thead>
+      <tbody>
+       <tr>
+         <th>Your weekly spend on electricity</th>
+         <td class="text-right" contenteditable="true" spellcheck="true">£20</td>
+       </tr>
+       <tr>
+        <th>Your weekly spend on gas</th>
+        <td class="text-right" contenteditable="true" spellcheck="true">£10</td>
+      </tr>
+      <tr>
+        <th>Percentage of income spent on fuel</th>
+        <td class="text-right"">13%</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+</div>
+<div class="row" id="submitToEASP" style="display: none;">
+  <div class="col-12 mt-4">
+    Send to Energy Advocate to check & send application<br>
+    <button class="btn btn-outline-primary mt-2 mb-4 " style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" onclick="showEvidence('afterSubmit')">Send</button>   
+  </div>
+</div>
+</div>
+
+
+<div id="afterSubmit">
+  <h6 class="mt-4 mb-2">Reference number for application</h6>
+  <h6 id="name0" name="name">Unknown</h6>
+  <h6 class="mt-4 mb-2">Success status : 'unknown'</h6>
+  <h6 class="mt-4 mb-2">Add letters from your energy supplier here</h6>
+  <input type="text" class="form-control col-12 col-md-6 col-lg-6" id="picName0" name="picName" value="Display name:"/>
+  <input type="file" class='mb-2' id="pic" name="pic0" accept="image/*"/>
+  <div class="mt-2 mb-3">Image name : 'WHDLetter2018'</div>
+  <a href="#_" class="lightbox" id="img1">
+    <img src="https://via.placeholder.com/400X600">
+  </a>
+  <h6 class="mt-4 mb-2">Notes from your energy advocate</h6>
+  <div>No notes.</div>
+  <button class="btn btn-outline-primary mt-4" onclick="showAudit()" style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Audit</button>
+</div>
+
+<div id="audit" style="display: none;">
+  <h4 class="mt-4 mb-2">Audit</h4>
+  <p>Please add a copy of the audit request letter above for your energy advocate to view.</p>
+  <h4 class="mt-4 mb-2">Gather Evidence</h4>
+  <p>Your energy advocate has asked for the following evidence</p>
+  <div class="table-responsive">
+    <table class="table table-bordered table-sm">
+      <thead class="bg-primary">
+        <tr>
+          <th>Document required</th>
+          <th>File</th>
+          <th>File Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Benefit letters
+            <li>Please include all of your benefit letters; JSA, disability etc.</li>
+          </td>
+          <td>
+            <input type="file" class='mb-2' id="pic" name="pic0" accept="image/*"/>
+            <div id="benefitLetters"></div>
+            <button onclick="addImage('benefitLetters', 'benefitLettersNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+          </td>
+          <td>
+            <input style="width: auto;" type="text" class="form-control" id="picName0" name="picName" value="Display name:"/>
+            <div id="benefitLettersNames"></div>
+          </td>
+        </tr>
+        <tr>
+          <td>Home Address
+            <li></li>
+          </td>
+          <td>
+            <input type="file" class='mb-2' id="pic" name="pic1" accept="image/*"/>
+            <div id="homeLetters"></div>
+            <button onclick="addImage('homeLetters', 'homeLettersNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+          </td>
+          <td>
+            <input style="width: auto;" type="text" class="form-control" id="picName1" name="picName" value="Display name:"/>
+            <div id="homeLettersNames"></div>
+          </td>
+        </tr>
+        <tr>
+          <td>Birth certificate
+            <li></li>
+          </td>
+          <td>
+            <input type="file" class='mb-2' id="pic" name="pic2" accept="image/*"/>
+            <div id="birthCert"></div>
+            <button onclick="addImage('birthCert', 'birthCertNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+          </td>
+          <td>
+            <input style="width: auto;" type="text" class="form-control" id="picName2" name="picName" value="Display name:"/>
+            <div id="birthCertNames"></div>
+          </td>
+        </tr>
+        <tr>
+          <td>Pay slips
+            <li style="width: 250px;"></li>
+          </td>
+          <td>
+            <input type="file" class='mb-2' id="pic" name="pic3" accept="image/*"/>
+            <div id="paySlips"></div>
+            <button onclick="addImage('paySlips', 'paySlipsNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+          </td>
+          <td>
+            <input style="width: auto;" type="text" class="form-control" id="picName3" name="picName" value="Display name:"/>
+            <div id="paySlipsNames"></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h6 class="mt-4 mb-2">Date evidence sent by energy advocate</h6>
+  <div>Not sent yet</div>
+  <h6 class="mt-4 mb-2">Notes regarding WHD audit</h6>
+  <div>No notes.</div>
+
+  <button class='btn btn-outline-primary mt-2 mb-4' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Submit</button>
+
+</div>
+
+</div>
+
+</main>
+
+<style >
+#line {
+  border-bottom: 2px solid #2E8B57;
+}
+</style>
+<style id="moduleStyleCheck">
+#module a.collapsed:after  {
+  content: attr(data-text);
+  float: right;
+  display:inline-block;
+  font-weight:400;
+  text-align:center;
+  white-space:nowrap;
+  vertical-align:middle;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  border:1px solid transparent;
+  padding:.3rem .3rem;
+  font-size:1rem;
+  line-height:1.5;
+  border-radius:.25rem;
+  transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
+  color:#2E8B57;
+  background-color:transparent;
+  background-image:none;
+  border-color:#2E8B57;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
+}
+
+#module a:not(.collapsed):after {
+  content: 'Confirm';
+  float: right;
+  display:inline-block;
+  font-weight:400;
+  text-align:center;
+  white-space:nowrap;
+  vertical-align:middle;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  border:1px solid transparent;
+  padding:.375rem .75rem;
+  font-size:1rem;
+  line-height:1.5;
+  border-radius:.25rem;
+  transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
+  color:#2E8B57;
+  background-color:transparent;
+  background-image:none;
+  border-color:#2E8B57;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+}
+
+.lightbox img {
+  max-width: 97%;
+  max-height: 97%;
+  margin-top: 2%;
+}
+
+.lightbox:target {
+  outline: none;
+  display: block;
+}
+</style>
+
+<script type="text/javascript">
+  function showForm(name){
+    document.getElementById('currentSupplier').style.display = 'block';
+    document.getElementById('newSupplier').style.display = 'none';
+    document.getElementById('afterSubmit').style.display = 'none';
+    document.getElementById('audit').style.display = 'none'
+  }
+
+  function showNewForms(name){
+    document.getElementById('currentSupplier').style.display = 'none';
+    document.getElementById('newSupplier').style.display = "block";
+    document.getElementById('afterSubmit').style.display = 'none';
+    document.getElementById('audit').style.display = 'none'
+  }
+
+  function showSubmit() {
+    if (document.getElementById('personalButton').dataset.text === 'Complete' && document.getElementById('supplierButton').dataset.text === 'Complete' && document.getElementById('incomeButton').dataset.text === 'Complete' && document.getElementById('fuelButton').dataset.text === 'Complete'){
+      document.getElementById('submitToEA').style.display = 'block';
+    } else {
+      document.getElementById('submitToEA').style.display = 'none'; 
+    }
+  }
+
+  function submitSP() {
+    if (document.getElementById('personalSPButton').dataset.text === 'Complete' && document.getElementById('supplierSPButton').dataset.text === 'Complete' && document.getElementById('incomeSPButton').dataset.text === 'Complete' && document.getElementById('fuelSPButton').dataset.text === 'Complete'){
+      document.getElementById('submitToEASP').style.display = 'block';
+    } else {
+     document.getElementById('submitToEASP').style.display = 'none'; 
+   }
+ }
+
+ function submitBG() {
+  if (document.getElementById('personalBGButton').dataset.text === 'Complete' && document.getElementById('supplierBGButton').dataset.text === 'Complete' && document.getElementById('incomeBGButton').dataset.text === 'Complete' && document.getElementById('fuelBGButton').dataset.text === 'Complete' && document.getElementById('benefitsBGButton').dataset.text === 'Complete'){
+    document.getElementById('submitToEABG').style.display = 'block';
+  } else {
+   document.getElementById('submitToEABG').style.display = 'none'; 
+ }
+}
+
+function showApplciation(name){
+  if(name == 'scottishPower'){
+    document.getElementById('scottishPowerContent').style.display = 'block';
+    document.getElementById('britishGasContent').style.display = 'none';
+    document.getElementById('edfEnergyContent').style.display = 'none';
+    document.getElementById('eonContent').style.display = 'none';
+    document.getElementById('afterSubmit').style.display = 'none';
+    document.getElementById('audit').style.display = 'none'
+  } else if (name == 'britishGas'){
+    document.getElementById('britishGasContent').style.display = 'block';
+    document.getElementById('scottishPowerContent').style.display = 'none';
+    document.getElementById('edfEnergyContent').style.display = 'none';
+    document.getElementById('eonContent').style.display = 'none';
+    document.getElementById('afterSubmit').style.display = 'none';
+    document.getElementById('audit').style.display = 'none'
+  } else if (name == 'edfEnergy'){
+    document.getElementById('edfEnergyContent').style.display = 'block';
+    document.getElementById('scottishPowerContent').style.display = 'none';
+    document.getElementById('britishGasContent').style.display = 'none';
+    document.getElementById('eonContent').style.display = 'none';
+    document.getElementById('afterSubmit').style.display = 'none';
+    document.getElementById('audit').style.display = 'none'
+  } else if (name == 'eon'){
+    document.getElementById('eonContent').style.display = 'block';
+    document.getElementById('scottishPowerContent').style.display = 'none';
+    document.getElementById('britishGasContent').style.display = 'none';
+    document.getElementById('edfEnergyContent').style.display = 'none';
+    document.getElementById('afterSubmit').style.display = 'none';
+    document.getElementById('audit').style.display = 'none'
+  } else {
+    document.getElementById('scottishPowerContent').style.display = 'none';
+    document.getElementById('britishGasContent').style.display = 'none';
+    document.getElementById('edfEnergyContent').style.display = 'none';
+    document.getElementById('eonContent').style.display = 'none';
+    document.getElementById('afterSubmit').style.display = 'none';
+    document.getElementById('audit').style.display = 'none'
+  };
+}
+
+function showEvidence(name) {
+  document.getElementById(name).style.display = 'block';
+}
+
+function showAudit() {
+  document.getElementById('audit').style.display = 'block';
+}
+
+function checkData(tableName, buttonName) {
+  var table = document.getElementById(tableName);
+  var counter = 0;
+  for (var r = 0, n = table.rows.length; r < n; r++) {
+    for (var c = 0, m = table.rows[r].cells.length; c < m; c++) {
+      if (table.rows[r].cells[c].innerHTML === "No data") {
+        counter ++;
+        table.rows[r].cells[c].style.color = "red";
+      } else if (table.rows[r].cells[c].innerHTML != "No data"){
+        table.rows[r].cells[c].style.color = "black";
+        counter --;
+      }
+    }
+  }
+  var check = 0 - table.rows.length*2;
+  if (counter === check) {
+    document.getElementById(buttonName).dataset.text = 'Complete';
+    counter = 0;
+  } else {
+    document.getElementById(buttonName).dataset.text = 'Check';
+    counter = 0;
+  }
+}
+</script>
+
+
+<footer class="mt-2" style="height:30px; margin-top:-30px;">
+  <nav class="navbar navbar-expand-sm">  
+    <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
+    <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
+    <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/esf.png" alt="logo" width="250">
+  </nav>
+</footer>
+</body>
+
+<script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+<script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+</body>
+</html>
