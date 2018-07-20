@@ -107,40 +107,60 @@
         </div>
 
         <div id="module" class="container row mt-3">
-          <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplier" aria-expanded="false" aria-controls="collapseSupplier" id="supplierButton" onclick="checkData('supplier', 'supplierButton'); showSubmit();" data-text="Complete">Electricty Account</a></h5>
-         <div class="collapse col-12" id="collapseSupplier" aria-labelledby="headingSupplier">
-          <div class="table-responsive">
-           <table class="table table-bordered table-sm text-left" id="supplier">
-            <thead>
-              <tr>
-                <th class="bg-primary"></th>
-                <th class="bg-primary text-white">Data</th>
+          <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplier" aria-expanded="false" aria-controls="collapseSupplier" id="supplierButton" onclick="checkData('supplier', 'supplierButton');" data-text="Complete">Electricty Account</a></h5>
+          <div class="collapse col-12" id="collapseSupplier" aria-labelledby="headingSupplier">
+            <div class="table-responsive">
+             <table class="table table-bordered table-sm text-left" id="supplier">
+              <thead>
+                <tr>
+                  <th class="bg-primary"></th>
+                  <th class="bg-primary text-white">Data</th>
+                </tr>
+              </thead>
+              <tbody>
+               <tr>
+                <th>MPAN</th>
+                <td contenteditable="true" spellcheck="true">987654321</td>
               </tr>
+              <tr>
+                <th>Supplier</th>
+                <td contenteditable="true" spellcheck="true">Scottish Power</td>
+              </tr>
+              <tr>
+                <th>Electric Account Number</th>
+                <td contenteditable="true" spellcheck="true">987654321</td>
+              </tr>
+              <tr>
+                <th>Customer Reference Number (CRM)</th>
+                <td contenteditable="true" spellcheck="true">987654321</td>
+              </tr>
+              <tr>
+                <th>Tariff</th>
+                <td contenteditable="true" spellcheck="true">987654321</td>
+              </tr>
+              <tr>
+                <th>Meter Serial Number</th>
+                <td contenteditable="true" spellcheck="true">987654321</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div id="module" class="container row mt-3">
+      <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncome" aria-expanded="false" aria-controls="collapseIncome" id="incomeButton" onclick="checkData('income', 'incomeButton');" data-text="Complete">Household Income</a></h5>
+      <div class="collapse col-12" id="collapseIncome" aria-labelledby="headingIncome">
+        <div class="table-responsive">
+          <table class="table table-bordered table-sm text-left" id="income">                
+            <thead>
+              <th class="bg-primary"></th>
+              <th class="bg-primary text-white">Data</th>
             </thead>
             <tbody>
              <tr>
-              <th>MPAN</th>
-              <td contenteditable="true" spellcheck="true">987654321</td>
-            </tr>
-            <tr>
-              <th>Supplier</th>
-              <td contenteditable="true" spellcheck="true">Scottish Power</td>
-            </tr>
-            <tr>
-              <th>Electric Account Number</th>
-              <td contenteditable="true" spellcheck="true">987654321</td>
-            </tr>
-            <tr>
-              <th>Customer Reference Number (CRM)</th>
-              <td contenteditable="true" spellcheck="true">987654321</td>
-            </tr>
-            <tr>
-              <th>Tariff</th>
-              <td contenteditable="true" spellcheck="true">987654321</td>
-            </tr>
-            <tr>
-              <th>Meter Serial Number</th>
-              <td contenteditable="true" spellcheck="true">987654321</td>
+              <th>Your yearly income</th>
+              <td class="text-right" contenteditable="true" spellcheck="true">£12,000</td>
             </tr>
           </tbody>
         </table>
@@ -149,56 +169,36 @@
   </div>
 
   <div id="module" class="container row mt-3">
-    <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncome" aria-expanded="false" aria-controls="collapseIncome" id="incomeButton" onclick="checkData('income', 'incomeButton'); showSubmit();" data-text="Complete">Household Income</a></h5>
-    <div class="collapse col-12" id="collapseIncome" aria-labelledby="headingIncome">
+    <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuel" aria-expanded="false" aria-controls="collapseFuel" id="fuelButton" onclick="checkData('fuel', 'fuelButton');" data-text="Complete">Fuel Spend</a></h5>
+    <div class="collapse col-12" id="collapseFuel" aria-labelledby="headingFuel">
       <div class="table-responsive">
-        <table class="table table-bordered table-sm text-left" id="income">                
+        <table class="table table-bordered table-sm text-left" id="fuel">
           <thead>
             <th class="bg-primary"></th>
             <th class="bg-primary text-white">Data</th>
           </thead>
           <tbody>
            <tr>
-            <th>Your yearly income</th>
-            <td class="text-right" contenteditable="true" spellcheck="true">£12,000</td>
+             <th>Your weekly spend on electricity</th>
+             <td class="text-right" contenteditable="true" spellcheck="true">£20</td>
+           </tr>
+           <tr>
+            <th>Your weekly spend on gas</th>
+            <td class="text-right" contenteditable="true" spellcheck="true">£10</td>
+          </tr>
+          <tr>
+            <th>Percentage of income spent on fuel</th>
+            <td class="text-right"">13%</td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
 </div>
-
-<div id="module" class="container row mt-3">
-  <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuel" aria-expanded="false" aria-controls="collapseFuel" id="fuelButton" onclick="checkData('fuel', 'fuelButton'); showSubmit();" data-text="Complete">Fuel Spend</a></h5>
-  <div class="collapse col-12" id="collapseFuel" aria-labelledby="headingFuel">
-    <div class="table-responsive">
-      <table class="table table-bordered table-sm text-left" id="fuel">
-        <thead>
-          <th class="bg-primary"></th>
-          <th class="bg-primary text-white">Data</th>
-        </thead>
-        <tbody>
-         <tr>
-           <th>Your weekly spend on electricity</th>
-           <td class="text-right" contenteditable="true" spellcheck="true">£20</td>
-         </tr>
-         <tr>
-          <th>Your weekly spend on gas</th>
-          <td class="text-right" contenteditable="true" spellcheck="true">£10</td>
-        </tr>
-        <tr>
-          <th>Percentage of income spent on fuel</th>
-          <td class="text-right"">13%</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-</div>
 <div class="row" id="submitToEA">
   <div class="col-12 mt-4">
     Send to Energy Advocate to check & send application<br>
-    <button class="btn btn-outline-primary mt-2 mb-4 " style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" onclick="showEvidence('afterSubmit')">Send</button>   
+    <button class="btn btn-outline-primary mt-2 mb-4 " style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button">Send</button>   
   </div>
 </div>
 </div>
@@ -403,100 +403,33 @@
     document.getElementById('audit').style.display = 'none'
   }
 
-  function showSubmit() {
-    if (document.getElementById('personalButton').dataset.text === 'Complete' && document.getElementById('supplierButton').dataset.text === 'Complete' && document.getElementById('incomeButton').dataset.text === 'Complete' && document.getElementById('fuelButton').dataset.text === 'Complete'){
-      document.getElementById('submitToEA').style.display = 'block';
-    } else {
-      document.getElementById('submitToEA').style.display = 'none'; 
-    }
+  function showAudit() {
+    document.getElementById('audit').style.display = 'block';
   }
 
-  function submitSP() {
-    if (document.getElementById('personalSPButton').dataset.text === 'Complete' && document.getElementById('supplierSPButton').dataset.text === 'Complete' && document.getElementById('incomeSPButton').dataset.text === 'Complete' && document.getElementById('fuelSPButton').dataset.text === 'Complete'){
-      document.getElementById('submitToEASP').style.display = 'block';
-    } else {
-     document.getElementById('submitToEASP').style.display = 'none'; 
-   }
- }
-
- function submitBG() {
-  if (document.getElementById('personalBGButton').dataset.text === 'Complete' && document.getElementById('supplierBGButton').dataset.text === 'Complete' && document.getElementById('incomeBGButton').dataset.text === 'Complete' && document.getElementById('fuelBGButton').dataset.text === 'Complete' && document.getElementById('benefitsBGButton').dataset.text === 'Complete'){
-    document.getElementById('submitToEABG').style.display = 'block';
-  } else {
-   document.getElementById('submitToEABG').style.display = 'none'; 
- }
-}
-
-function showApplciation(name){
-  if(name == 'scottishPower'){
-    document.getElementById('scottishPowerContent').style.display = 'block';
-    document.getElementById('britishGasContent').style.display = 'none';
-    document.getElementById('edfEnergyContent').style.display = 'none';
-    document.getElementById('eonContent').style.display = 'none';
-    document.getElementById('afterSubmit').style.display = 'none';
-    document.getElementById('audit').style.display = 'none'
-  } else if (name == 'britishGas'){
-    document.getElementById('britishGasContent').style.display = 'block';
-    document.getElementById('scottishPowerContent').style.display = 'none';
-    document.getElementById('edfEnergyContent').style.display = 'none';
-    document.getElementById('eonContent').style.display = 'none';
-    document.getElementById('afterSubmit').style.display = 'none';
-    document.getElementById('audit').style.display = 'none'
-  } else if (name == 'edfEnergy'){
-    document.getElementById('edfEnergyContent').style.display = 'block';
-    document.getElementById('scottishPowerContent').style.display = 'none';
-    document.getElementById('britishGasContent').style.display = 'none';
-    document.getElementById('eonContent').style.display = 'none';
-    document.getElementById('afterSubmit').style.display = 'none';
-    document.getElementById('audit').style.display = 'none'
-  } else if (name == 'eon'){
-    document.getElementById('eonContent').style.display = 'block';
-    document.getElementById('scottishPowerContent').style.display = 'none';
-    document.getElementById('britishGasContent').style.display = 'none';
-    document.getElementById('edfEnergyContent').style.display = 'none';
-    document.getElementById('afterSubmit').style.display = 'none';
-    document.getElementById('audit').style.display = 'none'
-  } else {
-    document.getElementById('scottishPowerContent').style.display = 'none';
-    document.getElementById('britishGasContent').style.display = 'none';
-    document.getElementById('edfEnergyContent').style.display = 'none';
-    document.getElementById('eonContent').style.display = 'none';
-    document.getElementById('afterSubmit').style.display = 'none';
-    document.getElementById('audit').style.display = 'none'
-  };
-}
-
-function showEvidence(name) {
-  document.getElementById(name).style.display = 'block';
-}
-
-function showAudit() {
-  document.getElementById('audit').style.display = 'block';
-}
-
-function checkData(tableName, buttonName) {
-  var table = document.getElementById(tableName);
-  var counter = 0;
-  for (var r = 0, n = table.rows.length; r < n; r++) {
-    for (var c = 0, m = table.rows[r].cells.length; c < m; c++) {
-      if (table.rows[r].cells[c].innerHTML === "No data") {
-        counter ++;
-        table.rows[r].cells[c].style.color = "red";
-      } else if (table.rows[r].cells[c].innerHTML != "No data"){
-        table.rows[r].cells[c].style.color = "black";
-        counter --;
+  function checkData(tableName, buttonName) {
+    var table = document.getElementById(tableName);
+    var counter = 0;
+    for (var r = 0, n = table.rows.length; r < n; r++) {
+      for (var c = 0, m = table.rows[r].cells.length; c < m; c++) {
+        if (table.rows[r].cells[c].innerHTML === "No data") {
+          counter ++;
+          table.rows[r].cells[c].style.color = "red";
+        } else if (table.rows[r].cells[c].innerHTML != "No data"){
+          table.rows[r].cells[c].style.color = "black";
+          counter --;
+        }
       }
     }
+    var check = 0 - table.rows.length*2;
+    if (counter === check) {
+      document.getElementById(buttonName).dataset.text = 'Complete';
+      counter = 0;
+    } else {
+      document.getElementById(buttonName).dataset.text = 'Check';
+      counter = 0;
+    }
   }
-  var check = 0 - table.rows.length*2;
-  if (counter === check) {
-    document.getElementById(buttonName).dataset.text = 'Complete';
-    counter = 0;
-  } else {
-    document.getElementById(buttonName).dataset.text = 'Check';
-    counter = 0;
-  }
-}
 </script>
 
 
