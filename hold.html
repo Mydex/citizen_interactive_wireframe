@@ -1,0 +1,134 @@
+<!DOCTYPE>
+<html lang="en">  
+<head>
+  <meta http-equiv="Content-type" content="text/html">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" >
+  <title>Citizen Interactive Wireframe</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="screen" title="master">
+  <link rel="stylesheet" href="css/custom.css" type="text/css" media="screen" title="master">
+
+</head>
+
+<body style="height:100%;">
+  <nav class="navbar sticky-top navbar-dark navbar-expand-md bg-primary">
+    <a class="navbar-brand mx-auto" href="https://mydex.github.io/citizen_interactive_wireframe/home_loggedin.html">
+      <img class="rounded" src="https://mydex.github.io/citizen_interactive_wireframe/images/EPCAS-square.jpg" alt="logo" width="40">
+    </a>
+    <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="nav-content">
+      <ul class="nav navbar-nav mr-auto">
+        <li class="nav-item"><a href="https://mydex.github.io/citizen_interactive_wireframe/home_loggedin.html" class="nav-link text-white font-weight-bold font-italic">Home</a></li>
+        <li class="nav-item"><a href="https://mydex.github.io/citizen_interactive_wireframe/action_plan.html" class="nav-link text-white font-weight-light">Action Plan</a></li>
+        <li class="nav-item"><a href="https://mydex.github.io/citizen_interactive_wireframe/messages.html" class="nav-link text-white font-weight-light">Messages</a></li>
+        <li class="nav-item"><a href="https://mydex.github.io/citizen_interactive_wireframe/tips.html" class="nav-link text-white font-weight-light">Advice</a></li>
+        <li class="nav-item"><a href="https://mydex.github.io/citizen_interactive_wireframe/information.html" class="nav-link text-white font-weight-light">Your Data</a></li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
+      </form class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <ul class="navbar-nav my-2 my-lg-0">
+        <li class="nav-item"><a href="https://mydex.github.io/citizen_interactive_wireframe/index.html" class="nav-link text-white font-weight-light">Log Out</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main style=" min-height:75%;">
+    <div class="container">
+      <h3 class="mt-4">Your Dashboard</h3>
+
+      <div id="module" class="container row mt-4 m-0 p-0">
+        <h5 id="line" class="col-12 col-md-6 col-lg-6 pl-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSignUp" aria-expanded="false" aria-controls="collapseSignUp">Please add here first</a></h5>
+        <div class="collapse col-12 col-md-7 col-lg-7" id="collapseSignUp" aria-labelledby="headingSignUp">
+          <p>Fill in the information below. This is collected so that we can contact you, to assist us with assigning you to an Energy Advocate and help set up your first Home Visit with them.</p>
+          <form action="/#">
+            <div class="form-group">
+              <label>Forename</label>
+              <input type="text" class="form-control" id="forename" name="forename" spellcheck="true">
+            </div>
+            <div class="form-group">
+              <label>Surname</label>
+              <input type="text" class="form-control" id="surname" name="surname" spellcheck="true">
+            </div>
+            <div class="form-group">
+              <label>Contact method</label>
+              <select name="select_opt" id="select_opt" class="form-control" onchange="showField(this.options[this.selectedIndex].value)" required>
+                <option value="default"></option>
+                <option value="cit1">Mobile</option>
+                <option value="cit2">Email</option>
+                <option value="cit3">Mobile & Email</option>
+              </select>
+              <div id="input1"></div>
+            </div>
+            <div class="form-group">
+              <label>Address</label>
+              <input type="text" class="form-control" id="address" name="address" spellcheck="true">
+            </div>
+            <div class="form-group">
+              <label>Postcode</label>
+              <input type="text" class="form-control" id="postcode" name="postcode" spellcheck="true">
+            </div>
+            <div class="form-group">
+              <label>How did you find out about the service?</label>
+              <select name="select_found" id="select_found" class="form-control" required>
+                <option value="default"></option>
+                <option value="opt1">I was sent a link</option>
+                <option value="opt2">I was referred</option>
+                <option value="opt3">Came across online</option>
+                <option value="opt4">Leaflet</option>
+                <option value="opt5">Word of mouth</option>
+              </select>
+              <div id="input1"></div>
+            </div>
+            <div class="form-group">
+              <label>Contact Preferences</label>
+              <div class="contact-selector mt-2">
+                <input type="checkbox" id="Text"/>
+                <label for="Text">Text</label>
+                <input type="checkbox" id="Message"/>
+                <label for="Message">App Messages</label>
+                <input type="checkbox" id="Phonecall"/>
+                <label for="Phonecall">Phonecall</label>
+              </div>
+              <label class="mt-4 mb-2">Home Visit Preferences</label>
+              <div class="homeVisit-selector">
+                <input type="checkbox" id="mon" />
+                <label for="mon">M</label>
+                <input type="checkbox" id="tue"/>
+                <label for="tue">T</label>
+                <input type="checkbox" id="wed"/>
+                <label for="wed">W</label>
+                <input type="checkbox" id="thu"/>
+                <label for="thu">T</label>
+                <input type="checkbox" id="fri"/>
+                <label for="fri">F</label>
+              </div>
+              <div class="homeVisit-selector mt-2">
+                <input type="checkbox" id="am" />
+                <label for="am">AM</label>
+                <input type="checkbox" id="pm"/>
+                <label for="pm">PM</label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+
+  <footer class="mt-2" style="height:30px; margin-top:-30px;">
+    <nav class="navbar navbar-expand-sm">  
+      <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
+      <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
+      <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/esf.png" alt="logo" width="250">
+    </nav>
+  </footer>
+</body>
+
+<script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+</body>
+</html>
