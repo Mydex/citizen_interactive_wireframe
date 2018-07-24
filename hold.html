@@ -118,14 +118,32 @@
     </div>
   </main>
 
+  <style>
+  #line {
+    border-bottom: 2px solid #2E8B57;
+  }
 
-  <footer class="mt-2" style="height:30px; margin-top:-30px;">
-    <nav class="navbar navbar-expand-sm">  
-      <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
-      <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
-      <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/esf.png" alt="logo" width="250">
-    </nav>
-  </footer>
+  #module #accordionHeading.collapsed:after  {
+    content: '+';
+    float: right;
+    color: black;
+  }
+
+  #module #accordionHeading:not(.collapsed):after {
+    content: '-';
+    float: right;
+    color: black;
+  }
+</style>
+
+
+<footer class="mt-2" style="height:30px; margin-top:-30px;">
+  <nav class="navbar navbar-expand-sm">  
+    <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
+    <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
+    <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/esf.png" alt="logo" width="250">
+  </nav>
+</footer>
 </body>
 
 <script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
