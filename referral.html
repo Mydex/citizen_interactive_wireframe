@@ -37,40 +37,47 @@
         <h3 class="mt-4">Referral form</h3>
         <p>Fill in the information below. This is collected so that we can contact you, to assist us with assigning you to an Energy Advocate and help set up your first Home Visit with them.</p>
         <form action="/#">
-              <div class="form-group">
-                <label>Title</label>
-                <input type="text" class="form-control" id="title" name="title" spellcheck="true">
-            </div>
           <div class="form-group">
-            <label>Forename</label>
-            <input type="text" class="form-control" id="forename" name="forename" spellcheck="true">
+            <label>Title</label>
+            <div>
+              <select name="title">
+                <option value="title1">Ms</option>
+                <option value="title2">Mr</option>
+                <option value="title3">Mrs</option>
+                <option value="title4">Dr</option>
+            </select>
         </div>
-        <div class="form-group">
-            <label>Surname</label>
-            <input type="text" class="form-control" id="surname" name="surname" spellcheck="true">
-        </div>
-        <div class="form-group">
-            <label>Contact method</label>
-            <select name="select_opt" id="select_opt" class="form-control" onchange="showField(this.options[this.selectedIndex].value)" required>
-              <option value="default"></option>
-              <option value="cit1">Mobile</option>
-              <option value="cit2">Email</option>
-              <option value="cit3">Mobile & Email</option>
-          </select>
-          <div id="input1"></div>
-      </div>
-      <div class="form-group">
-        <label>Referral from</label>
-        <div>
-          <select name="referral">
-            <option value="referral1">Advice works</option>
-            <option value="referral2">C4R</option>
-            <option value="referral3">Council</option>
-            <option value="referral4">Family First</option>
-            <option value="referral5">Food bank</option>
-            <option value="referral6">RAMH</option>
-        </select>
     </div>
+    <div class="form-group">
+        <label>Forename</label>
+        <input type="text" class="form-control" id="forename" name="forename" spellcheck="true">
+    </div>
+    <div class="form-group">
+        <label>Surname</label>
+        <input type="text" class="form-control" id="surname" name="surname" spellcheck="true">
+    </div>
+    <div class="form-group">
+        <label>Contact method</label>
+        <select name="select_opt" id="select_opt" class="form-control" onchange="showField(this.options[this.selectedIndex].value)" required>
+          <option value="default"></option>
+          <option value="cit1">Mobile</option>
+          <option value="cit2">Email</option>
+          <option value="cit3">Mobile & Email</option>
+      </select>
+      <div id="input1"></div>
+  </div>
+  <div class="form-group">
+    <label>Referral from</label>
+    <div>
+      <select name="referral">
+        <option value="referral1">Advice works</option>
+        <option value="referral2">C4R</option>
+        <option value="referral3">Council</option>
+        <option value="referral4">Family First</option>
+        <option value="referral5">Food bank</option>
+        <option value="referral6">RAMH</option>
+    </select>
+</div>
 </div>
 <div class="form-group">
     <label>Person referring citizen</label>
