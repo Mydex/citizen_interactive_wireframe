@@ -215,6 +215,47 @@
 }
 </style>
 
+<script type="text/javascript">
+  function showField(name){
+    if(name == 'cit1') {
+      document.getElementById('input1').innerHTML = 'Mobile:<br> <input type="text" class="form-control" id="mobile" name="mobile"/>';
+  } else if (name == 'cit2') {
+      document.getElementById('input1').innerHTML = 'Email:<br> <input type="text" class="form-control" id="email" name="email"/>';
+  } else if (name == 'cit3') {
+      document.getElementById('input1').innerHTML = 'Mobile:<br> <input type="text" class="form-control" id="mobile" name="mobile"/> Email:<br> <input type="text" class="form-control" id="email" name="email"/>';
+  } else {
+      document.getElementById('input1').innerHTML='';
+  } 
+}
+
+function showRefField(name){
+    if (name =='ref1') {
+      document.getElementById('input2').innerHTML = 'No contact information will be saved for referrer';
+  } else if(name == 'ref2') {
+      document.getElementById('input2').innerHTML = 'Referrer mobile:<br> <input type="text" class="form-control" id="mobile" name="mobile"/>';
+  } else if (name == 'ref3') {
+      document.getElementById('input2').innerHTML = 'Referrer email:<br> <input type="text" class="form-control" id="email" name="email"/>';
+  } else if (name == 'ref4') {
+      document.getElementById('input2').innerHTML = 'Referrer mobile:<br> <input type="text" class="form-control" id="mobile" name="mobile"/> Referrer email:<br> <input type="text" class="form-control" id="email" name="email"/>';
+  } else {
+      document.getElementById('input2').innerHTML='';
+  } 
+}
+
+function showfield(name){
+    if(name == 'ea1') {
+      document.getElementById('input').innerHTML = 'Mobile:<br> <input type="text" class="form-control" id="mobile" name="mobile"/>';
+  } else if (name == 'ea2') {
+      document.getElementById('input').innerHTML = 'Email:<br> <input type="text" class="form-control" id="email" name="email"/>';
+  } else if (name == 'ea3') {
+      document.getElementById('input').innerHTML = 'Mobile:<br> <input type="text" class="form-control" id="mobile" name="mobile"/> Email:<br> <input type="text" class="form-control" id="email" name="email"/>';
+  }
+  else {
+      document.getElementById('input').innerHTML='';
+  } 
+}
+</script>
+
 <footer class="mt-2" style="height:30px; margin-top:-30px;">
   <nav class="navbar navbar-expand-sm">  
     <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
