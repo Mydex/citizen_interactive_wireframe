@@ -37,72 +37,71 @@
         <h3 class="mt-4">Referral form</h3>
         <p>The information below will be used to contact you and to help set up your first home visit with and energy advocate.</p>
         <form action="/#">
-
-            <div class="form-group">
-                <label>Person referring citizen</label>
-                <input type="text" class="form-control" id="referee" name="referee" spellcheck="true">
-            </div>
-            <div class="form-group">
-                <label>Contact method</label>
-                <div>
-                  <select id="select_opt" class="form-control" onchange="showRefField(this.options[this.selectedIndex].value)" required>
-                    <option value="default"></option>
-                    <option value="ref1">None</option>
-                    <option value="ref2">Mobile</option>
-                    <option value="ref3">Email</option>
-                    <option value="ref4">Mobile & Email</option>
-                </select>
-            </div>
-            <div id="input2"></div>
-            <div><div class="update-selector mt-2"><label class="form-check-label"> Requested an <input type="checkbox" id="update"/><label for="update">update</label></label></div></div>
-        </div>
-
-        <div class="form-group">
-            <label>Add notes</label>
-            <textarea type="text" class="form-control" spellcheck="true" rows="3"></textarea>
-        </div>
-        <div class="form-group">
-            <label>Title</label>
+          <div class="form-group">
+            <label>Referral from</label>
             <div>
-              <select name="title">
-                <option value="title0"></option>
-                <option value="title1">Ms</option>
-                <option value="title2">Mr</option>
-                <option value="title3">Mrs</option>
-                <option value="title4">Dr</option>
+              <select name="referral">
+                <option value="referral1">Advice works</option>
+                <option value="referral2">C4R</option>
+                <option value="referral3">Council</option>
+                <option value="referral4">Family First</option>
+                <option value="referral5">Food bank</option>
+                <option value="referral6">RAMH</option>
             </select>
         </div>
     </div>
     <div class="form-group">
-        <label>Forename</label>
-        <input type="text" class="form-control" id="forename" name="forename" spellcheck="true">
-    </div>
-    <div class="form-group">
-        <label>Surname</label>
-        <input type="text" class="form-control" id="surname" name="surname" spellcheck="true">
+        <label>Person referring citizen</label>
+        <input type="text" class="form-control" id="referee" name="referee" spellcheck="true">
     </div>
     <div class="form-group">
         <label>Contact method</label>
-        <select name="select_opt" id="select_opt" class="form-control" onchange="showField(this.options[this.selectedIndex].value)" required>
-          <option value="default"></option>
-          <option value="cit1">Mobile</option>
-          <option value="cit2">Email</option>
-          <option value="cit3">Mobile & Email</option>
-      </select>
-      <div id="input1"></div>
-  </div>
-  <div class="form-group">
-    <label>Referral from</label>
+        <div>
+          <select id="select_opt" class="form-control" onchange="showRefField(this.options[this.selectedIndex].value)" required>
+            <option value="default"></option>
+            <option value="ref1">None</option>
+            <option value="ref2">Mobile</option>
+            <option value="ref3">Email</option>
+            <option value="ref4">Mobile & Email</option>
+        </select>
+    </div>
+    <div id="input2"></div>
+    <div><div class="update-selector mt-2"><label class="form-check-label"> Requested an <input type="checkbox" id="update"/><label for="update">update</label></label></div></div>
+</div>
+
+<div class="form-group">
+    <label>Add notes</label>
+    <textarea type="text" class="form-control" spellcheck="true" rows="3"></textarea>
+</div>
+<div class="form-group">
+    <label>Title</label>
     <div>
-      <select name="referral">
-        <option value="referral1">Advice works</option>
-        <option value="referral2">C4R</option>
-        <option value="referral3">Council</option>
-        <option value="referral4">Family First</option>
-        <option value="referral5">Food bank</option>
-        <option value="referral6">RAMH</option>
+      <select name="title">
+        <option value="title0"></option>
+        <option value="title1">Ms</option>
+        <option value="title2">Mr</option>
+        <option value="title3">Mrs</option>
+        <option value="title4">Dr</option>
     </select>
 </div>
+</div>
+<div class="form-group">
+    <label>Forename</label>
+    <input type="text" class="form-control" id="forename" name="forename" spellcheck="true">
+</div>
+<div class="form-group">
+    <label>Surname</label>
+    <input type="text" class="form-control" id="surname" name="surname" spellcheck="true">
+</div>
+<div class="form-group">
+    <label>Contact method</label>
+    <select name="select_opt" id="select_opt" class="form-control" onchange="showField(this.options[this.selectedIndex].value)" required>
+      <option value="default"></option>
+      <option value="cit1">Mobile</option>
+      <option value="cit2">Email</option>
+      <option value="cit3">Mobile & Email</option>
+  </select>
+  <div id="input1"></div>
 </div>
 <div class="form-group">
     <label>Address</label>
