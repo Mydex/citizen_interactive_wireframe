@@ -131,8 +131,10 @@
     <input type="checkbox" id="name2"/>
     <label for="name2">Forename</label>
     <input type="checkbox" id="name3"/>
-    <label for="name3">Nickname</label>
+    <label for="name3" onclick="addNickname()">Nickname</label>
+    <div id="nickname"></div>
 </div>
+<div>E.g. Mrs Smith, Margaret, Maggie</div>
 <label class="mt-4 mb-2">Contact Preferences</label>
 <div class="contact-selector">
   <input type="checkbox" id="Text"/>
@@ -274,6 +276,10 @@ function showfield(name){
   else {
       document.getElementById('input').innerHTML='';
   } 
+}
+
+function showNickname(){
+  document.getElementById('nickname').innerHTML = 'Nickname:<br> <input type="text" class="form-control" id="nicknameInput" name="nickname"/>';
 }
 </script>
 
