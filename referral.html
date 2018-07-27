@@ -36,45 +36,46 @@
     <div class="container">
         <h3 class="mt-4">Referral form</h3>
         <p>The information below will be used to contact you if there are any problems. It will also help us contact the citizen that you are referring and to help set up their first home visit with an energy advocate.</p>
+        
         <form action="/#">
-          <div class="form-group">
-            <label>Referral from</label>
+            <h4>Referrer details</h4>
+            <div class="form-group">
+                <label>Referral from</label>
+                <div>
+                  <select name="referral">
+                    <option value="referral1">Advice works</option>
+                    <option value="referral2">C4R</option>
+                    <option value="referral3">Council</option>
+                    <option value="referral4">Family First</option>
+                    <option value="referral5">Food bank</option>
+                    <option value="referral6">RAMH</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Person referring citizen</label>
+            <input type="text" class="form-control" id="referee" name="referee" spellcheck="true">
+        </div>
+        <div class="form-group">
+            <label>Referrer contact</label>
             <div>
-              <select name="referral">
-                <option value="referral1">Advice works</option>
-                <option value="referral2">C4R</option>
-                <option value="referral3">Council</option>
-                <option value="referral4">Family First</option>
-                <option value="referral5">Food bank</option>
-                <option value="referral6">RAMH</option>
+              <select id="select_opt" class="form-control" onchange="showRefField(this.options[this.selectedIndex].value)" required>
+                <option value="default"></option>
+                <option value="ref1">None</option>
+                <option value="ref2">Mobile</option>
+                <option value="ref3">Email</option>
+                <option value="ref4">Mobile & Email</option>
             </select>
         </div>
     </div>
-    <h4>Referrer details</h4>
     <div class="form-group">
-        <label>Person referring citizen</label>
-        <input type="text" class="form-control" id="referee" name="referee" spellcheck="true">
-    </div>
-    <div class="form-group">
-        <label>Referrer contact</label>
-        <div>
-          <select id="select_opt" class="form-control" onchange="showRefField(this.options[this.selectedIndex].value)" required>
-            <option value="default"></option>
-            <option value="ref1">None</option>
-            <option value="ref2">Mobile</option>
-            <option value="ref3">Email</option>
-            <option value="ref4">Mobile & Email</option>
-        </select>
-    </div>
-</div>
-<div class="form-group">
- <div id="input2"></div>
+       <div id="input2"></div>
 
- <div class="update-selector">
-    <label class="form-check-label"> Would you like to be kept updated re this citizen? </label>
-    <input type="radio" id="yes" name="update" /><label for="yes">Yes</label>
-    <input type="radio" id="no" name="update" /><label for="no">No</label>
-</div>
+       <div class="update-selector">
+        <label class="form-check-label"> Would you like to be kept updated re this citizen? </label>
+        <input type="radio" id="yes" name="update" /><label for="yes">Yes</label>
+        <input type="radio" id="no" name="update" /><label for="no">No</label>
+    </div>
 </div>
 
 <div class="form-group">
