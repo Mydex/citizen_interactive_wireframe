@@ -279,7 +279,11 @@ function showfield(name){
 }
 
 function addNickname(){
-  document.getElementById('nickname').innerHTML = 'Nickname:<br> <input type="text" class="form-control" id="nicknameInput" name="nickname"/>';
+  document.getElementById('nickname').innerHTML = 
+  '<div class="form-group">\
+  <label>Nickname</label>\
+  <input type="text" class="form-control" id="nicknameInput" name="nickname" spellcheck="true">\
+  </div>';
 }
 </script>
 
