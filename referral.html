@@ -125,12 +125,12 @@
 </div>
 <div class="form-group">
   <label class="mt-2 mb-2">Preferred name</label>
-  <div class="contact-selector">
-    <input type="checkbox" id="name1"/>
+  <div class="name-selector">
+    <input type="radio" id="name1"/>
     <label for="name1">Title Surname</label>
-    <input type="checkbox" id="name2"/>
+    <input type="radio" id="name2"/>
     <label for="name2">Forename</label>
-    <input type="checkbox" id="name3"/>
+    <input type="radio" id="name3"/>
     <label for="name3" onclick="addNickname()">Nickname</label>
 </div>
 <div  class="form-group"id="nickname"></div>
@@ -190,6 +190,28 @@
 }
 
 .homeVisit-selector input[type=checkbox]:checked + label {
+    background: #2AD705;
+    color: #ffffff;
+}
+
+.name-selector input {
+    display: none!important;
+}
+
+.name-selector input[type=radio] + label {
+    display: inline-block;
+    border-radius: 6px;
+    background: #dddddd;
+    height: 45px;
+    width: 130px;
+    margin-right: 3px;
+    line-height: 45px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.name-selector input[type=radio]:checked + label {
     background: #2AD705;
     color: #ffffff;
 }
