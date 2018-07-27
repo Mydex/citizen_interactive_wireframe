@@ -37,7 +37,31 @@
         <h3 class="mt-4">Referral form</h3>
         <p>The information below will be used to contact you and to help set up your first home visit with and energy advocate.</p>
         <form action="/#">
-          <div class="form-group">
+
+            <div class="form-group">
+                <label>Person referring citizen</label>
+                <input type="text" class="form-control" id="referee" name="referee" spellcheck="true">
+            </div>
+            <div class="form-group">
+                <label>Contact method</label>
+                <div>
+                  <select id="select_opt" class="form-control" onchange="showRefField(this.options[this.selectedIndex].value)" required>
+                    <option value="default"></option>
+                    <option value="ref1">None</option>
+                    <option value="ref2">Mobile</option>
+                    <option value="ref3">Email</option>
+                    <option value="ref4">Mobile & Email</option>
+                </select>
+            </div>
+            <div id="input2"></div>
+            <div><div class="update-selector mt-2"><label class="form-check-label"> Requested an <input type="checkbox" id="update"/><label for="update">update</label></label></div></div>
+        </div>
+
+        <div class="form-group">
+            <label>Add notes</label>
+            <textarea type="text" class="form-control" spellcheck="true" rows="3"></textarea>
+        </div>
+        <div class="form-group">
             <label>Title</label>
             <div>
               <select name="title">
@@ -79,29 +103,6 @@
         <option value="referral6">RAMH</option>
     </select>
 </div>
-</div>
-<div class="form-group">
-    <label>Person referring citizen</label>
-    <input type="text" class="form-control" id="referee" name="referee" spellcheck="true">
-</div>
-<div class="form-group">
-    <label>Contact method</label>
-    <div>
-      <select id="select_opt" class="form-control" onchange="showRefField(this.options[this.selectedIndex].value)" required>
-        <option value="default"></option>
-        <option value="ref1">None</option>
-        <option value="ref2">Mobile</option>
-        <option value="ref3">Email</option>
-        <option value="ref4">Mobile & Email</option>
-    </select>
-</div>
-<div id="input2"></div>
-<div><div class="update-selector mt-2"><label class="form-check-label"> Requested an <input type="checkbox" id="update"/><label for="update">update</label></label></div></div>
-</div>
-
-<div class="form-group">
-    <label>Add notes</label>
-    <textarea type="text" class="form-control" spellcheck="true" rows="3"></textarea>
 </div>
 <div class="form-group">
     <label>Address</label>
