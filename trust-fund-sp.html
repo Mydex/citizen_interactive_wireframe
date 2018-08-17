@@ -722,9 +722,7 @@
             border-color:#2E8B57;
             box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
           }
-        </style>
 
-        <style>
         #module a:not(.collapsed):after {
           content: 'Confirm';
           float: right;
@@ -748,6 +746,73 @@
           background-image:none;
           border-color:#2E8B57;
           box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
+        }
+
+        .selector1 input {
+          display: none!important;
+        }
+
+        .selector11 input[type=radio] + label {
+          display: inline-block;
+          border-radius: 6px;
+          background: #dddddd;
+          height: 40px;
+          width: 40px;
+          margin-right: 3px;
+          line-height: 40px;
+          text-align: center;
+          cursor: pointer;
+          font-weight: bold;
+        }
+
+        .selector1 input[type=radio]:checked + label {
+          background: #2AD705;
+          color: #ffffff;
+        }
+
+
+        .selector12 input[type=radio] + label {
+          display: inline-block;
+          border-radius: 6px;
+          background: #dddddd;
+          height: 40px;
+          width: 240px;
+          margin-right: 3px;
+          line-height: 40px;
+          text-align: center;
+          cursor: pointer;
+          font-weight: bold;
+        }
+
+        .selector13 input[type=radio] + label {
+          display: inline-block;
+          border-radius: 6px;
+          background: #dddddd;
+          height: 40px;
+          width: 340px;
+          margin-right: 3px;
+          line-height: 40px;
+          text-align: center;
+          cursor: pointer;
+          font-weight: bold;
+        }
+        
+        .selector14 input[type=checkbox] + label {
+          display: inline-block;
+          border-radius: 6px;
+          background: #dddddd;
+          height: 45px;
+          width: 230px;
+          margin-right: 3px;
+          line-height: 45px;
+          text-align: center;
+          cursor: pointer;
+          font-weight: bold;
+        }
+
+        .selector14 input[type=checkbox]:checked + label {
+          background: #2AD705;
+          color: #ffffff;
         }
       </style>
 
