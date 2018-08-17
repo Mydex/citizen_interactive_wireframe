@@ -641,7 +641,7 @@
                       </td>
                     </tr>
 
-                    <tr id="childBenLetter" style="display: none;">
+                    <tr>
                       <td>Child Benefit</td>
                       <td>
                         <label class="btn btn-outline-primary mb-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image0">
@@ -927,24 +927,6 @@
               document.getElementById('auditButton').style.display = "none";
             }
           }
-
-          function showRow(cb, name) {
-            var checkBox = document.getElementById(cb);
-            if (checkBox.checked == true){
-              document.getElementById(name).style.display = "table-row";
-            } else {
-              document.getElementById(name).style.display = "none";
-            }
-          }
-
-          function start(){
-            showRow('workPen','workPenLetter'),
-            showRow('address', 'homeAddress'),
-            showRow('cert', 'birthCertificate'),
-            showRow('paySlips', 'paySlipsLetter')
-          }
-
-          window.onload = start();
 
           var imageCounter = 4;
           function addImage(divFile, divName){
