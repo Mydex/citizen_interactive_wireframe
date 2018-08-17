@@ -723,135 +723,271 @@
             box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
           }
 
-        #module a:not(.collapsed):after {
-          content: 'Confirm';
-          float: right;
-          display:inline-block;
-          font-weight:400;
-          text-align:center;
-          white-space:nowrap;
-          vertical-align:middle;
-          -webkit-user-select:none;
-          -moz-user-select:none;
-          -ms-user-select:none;
-          user-select:none;
-          border:1px solid transparent;
-          padding:.375rem .75rem;
-          font-size:1rem;
-          line-height:1.5;
-          border-radius:.25rem;
-          transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
-          color:#2E8B57;
-          background-color:transparent;
-          background-image:none;
-          border-color:#2E8B57;
-          box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
-        }
+          #module a:not(.collapsed):after {
+            content: 'Confirm';
+            float: right;
+            display:inline-block;
+            font-weight:400;
+            text-align:center;
+            white-space:nowrap;
+            vertical-align:middle;
+            -webkit-user-select:none;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            user-select:none;
+            border:1px solid transparent;
+            padding:.375rem .75rem;
+            font-size:1rem;
+            line-height:1.5;
+            border-radius:.25rem;
+            transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
+            color:#2E8B57;
+            background-color:transparent;
+            background-image:none;
+            border-color:#2E8B57;
+            box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
+          }
 
-        .selector1 input {
-          display: none!important;
-        }
+          .selector1 input {
+            display: none!important;
+          }
 
-        .selector11 input[type=radio] + label {
-          display: inline-block;
-          border-radius: 6px;
-          background: #dddddd;
-          height: 40px;
-          width: 40px;
-          margin-right: 3px;
-          line-height: 40px;
-          text-align: center;
-          cursor: pointer;
-          font-weight: bold;
-        }
+          .selector11 input[type=radio] + label {
+            display: inline-block;
+            border-radius: 6px;
+            background: #dddddd;
+            height: 40px;
+            width: 40px;
+            margin-right: 3px;
+            line-height: 40px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+          }
 
-        .selector1 input[type=radio]:checked + label {
-          background: #2AD705;
-          color: #ffffff;
-        }
+          .selector1 input[type=radio]:checked + label {
+            background: #2AD705;
+            color: #ffffff;
+          }
 
 
-        .selector12 input[type=radio] + label {
-          display: inline-block;
-          border-radius: 6px;
-          background: #dddddd;
-          height: 40px;
-          width: 240px;
-          margin-right: 3px;
-          line-height: 40px;
-          text-align: center;
-          cursor: pointer;
-          font-weight: bold;
-        }
+          .selector12 input[type=radio] + label {
+            display: inline-block;
+            border-radius: 6px;
+            background: #dddddd;
+            height: 40px;
+            width: 240px;
+            margin-right: 3px;
+            line-height: 40px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+          }
 
-        .selector13 input[type=radio] + label {
-          display: inline-block;
-          border-radius: 6px;
-          background: #dddddd;
-          height: 40px;
-          width: 340px;
-          margin-right: 3px;
-          line-height: 40px;
-          text-align: center;
-          cursor: pointer;
-          font-weight: bold;
-        }
-        
-        .selector14 input[type=checkbox] + label {
-          display: inline-block;
-          border-radius: 6px;
-          background: #dddddd;
-          height: 45px;
-          width: 230px;
-          margin-right: 3px;
-          line-height: 45px;
-          text-align: center;
-          cursor: pointer;
-          font-weight: bold;
-        }
+          .selector13 input[type=radio] + label {
+            display: inline-block;
+            border-radius: 6px;
+            background: #dddddd;
+            height: 40px;
+            width: 340px;
+            margin-right: 3px;
+            line-height: 40px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+          }
 
-        .selector14 input[type=checkbox]:checked + label {
-          background: #2AD705;
-          color: #ffffff;
-        }
-      </style>
+          .selector14 input[type=checkbox] + label {
+            display: inline-block;
+            border-radius: 6px;
+            background: #dddddd;
+            height: 45px;
+            width: 230px;
+            margin-right: 3px;
+            line-height: 45px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+          }
 
-      <script>
+          .selector14 input[type=checkbox]:checked + label {
+            background: #2AD705;
+            color: #ffffff;
+          }
+        </style>
 
-        var dobCounter = 2;
-        function addDOB(){
-          var newDiv = document.createElement('div');
-          newDiv.innerHTML =
-          "<input type='date' name='dob" + dobCounter+ "' class='mb-2' >\
-          <input type='button' class='btn btn-outline-primary' value='-' onclick='removeRow(this)' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>";
-          document.getElementById('content').appendChild(newDiv);
-          dobCounter ++;
-        }
-        function removeRow(input){
-          document.getElementById('content').removeChild(input.parentNode);
-        }
+        <script>
 
-      </script>
+          var dobCounter = 2;
+          function addDOB(){
+            var newDiv = document.createElement('div');
+            newDiv.innerHTML =
+            "<input type='date' name='dob" + dobCounter+ "' class='mb-2' >\
+            <input type='button' class='btn btn-outline-primary' value='-' onclick='removeRow(this)' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>";
+            document.getElementById('content').appendChild(newDiv);
+            dobCounter ++;
+          }
+          function removeRow(input){
+            document.getElementById('content').removeChild(input.parentNode);
+          }
 
-      <script>
-        $(document).ready(function () {
-          $("button").click(function(){
-            $("a").removeClass("active");
+          function showRef() {
+            document.getElementById('refInfo').style.display = "block";
+          }
+
+          function checkData(tableName, buttonName) {
+            var table = document.getElementById(tableName);
+            var counter = 0;
+            for (var r = 0, n = table.rows.length; r < n; r++) {
+              for (var c = 0, m = table.rows[r].cells.length; c < m; c++) {
+                if (table.rows[r].cells[c].innerHTML === "No data") {
+                  counter ++;
+                  table.rows[r].cells[c].style.color = "red";
+                } else if (table.rows[r].cells[c].innerHTML != "No data") {
+                  counter --;
+                  table.rows[r].cells[c].style.color = "black";
+                }
+              }
+            }
+            var check = 0 - table.rows.length*2;
+            if (counter === check) {
+              document.getElementById(buttonName).dataset.text = 'Complete';
+              counter = 0;
+            } else {
+              document.getElementById(buttonName).dataset.text = 'Complete';
+              counter = 0;
+            }
+          }
+
+          function otherDisplay(name, id){
+            if(name != 'notname') {
+              document.getElementById(id).style.display = 'block';
+            } else {
+              document.getElementById(id).style.display = 'none';
+            }
+          }
+
+          function showMore(name){
+            if(name != 'noDisplay') {
+              document.getElementById("notHolder1").style.display = 'table-row';
+              document.getElementById("notHolder2").style.display = 'table-row';
+              document.getElementById("notHolder3").style.display = 'table-row';
+              document.getElementById("notHolder4").style.display = 'table-row';
+              document.getElementById("notHolder5").style.display = 'table-row';
+            } else {
+              document.getElementById("notHolder1").style.display = 'none';
+              document.getElementById("notHolder2").style.display = 'none';
+              document.getElementById("notHolder3").style.display = 'none';
+              document.getElementById("notHolder4").style.display = 'none';
+              document.getElementById("notHolder5").style.display = 'none';
+            }
+          }
+
+          function showMoreTwo(name){
+            if(name == 'displayOne') {
+              document.getElementById("currentSP1").style.display = 'table-row';
+              document.getElementById("currentSP2").style.display = 'table-row';
+              document.getElementById("currentSP3").style.display = 'table-row';
+              document.getElementById("currentSP4").style.display = 'table-row';
+              document.getElementById("currentSP5").style.display = 'table-row';
+              document.getElementById("currentSP6").style.display = 'table-row';
+              document.getElementById("currentSP7").style.display = 'table-row';
+              document.getElementById("currentSP8").style.display = 'table-row';
+              document.getElementById("notCurrentSP1").style.display = 'none';
+              document.getElementById("notCurrentSP2").style.display = 'none';
+              document.getElementById("notCurrentSP3").style.display = 'none';
+            } else if (name == 'displayTwo') {
+              document.getElementById("notCurrentSP1").style.display = 'table-row';
+              document.getElementById("notCurrentSP2").style.display = 'table-row';
+              document.getElementById("notCurrentSP3").style.display = 'table-row';
+              document.getElementById("currentSP1").style.display = 'none';
+              document.getElementById("currentSP2").style.display = 'none';
+              document.getElementById("currentSP3").style.display = 'none';
+              document.getElementById("currentSP4").style.display = 'none';
+              document.getElementById("currentSP5").style.display = 'none';
+              document.getElementById("currentSP6").style.display = 'none';
+              document.getElementById("currentSP7").style.display = 'none';
+              document.getElementById("currentSP8").style.display = 'none';
+            }
+            else {
+              document.getElementById("currentSP1").style.display = 'none';
+              document.getElementById("currentSP2").style.display = 'none';
+              document.getElementById("currentSP3").style.display = 'none';
+              document.getElementById("currentSP4").style.display = 'none';
+              document.getElementById("currentSP5").style.display = 'none';
+              document.getElementById("currentSP6").style.display = 'none';
+              document.getElementById("currentSP7").style.display = 'none';
+              document.getElementById("currentSP8").style.display = 'none';
+              document.getElementById("notCurrentSP1").style.display = 'none';
+              document.getElementById("notCurrentSP2").style.display = 'none';
+              document.getElementById("notCurrentSP3").style.display = 'none';
+            }
+          }
+
+          function showDebt(name, id){
+            if(name == 'yes' ) {
+              document.getElementById(id).style.display = 'table-row';
+              document.getElementById('debtNo').style.display = 'none';
+            } else if (name == 'no') {
+              document.getElementById(id).style.display = 'table-row';
+              document.getElementById('debtYes').style.display = 'none';
+            } else {
+              document.getElementById(id).style.display = 'none';
+            }
+          }
+
+          function showAudit() {
+            document.getElementById('audit').style.display = "block";
+          }
+
+          function showAuditButton(cb) {
+            var checkBox = document.getElementById(cb);
+            if (checkBox.checked == true){
+              document.getElementById('auditButton').style.display = "block";
+            } else {
+              document.getElementById('auditButton').style.display = "none";
+            }
+          }
+
+          function showRow(cb, name) {
+            var checkBox = document.getElementById(cb);
+            if (checkBox.checked == true){
+              document.getElementById(name).style.display = "table-row";
+            } else {
+              document.getElementById(name).style.display = "none";
+            }
+          }
+
+          function start(){
+            showRow('workPen','workPenLetter'),
+            showRow('address', 'homeAddress'),
+            showRow('cert', 'birthCertificate'),
+            showRow('paySlips', 'paySlipsLetter')
+          }
+
+          window.onload = start();
+
+        </script>
+
+        <script>
+          $(document).ready(function () {
+            $("button").click(function(){
+              $("a").removeClass("active");
+            });
           });
-        });
-      </script>
+        </script>
 
-      <footer class="mt-2" style="height:30px; margin-top:-30px;">
-        <nav class="navbar navbar-expand-sm">  
-          <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
-          <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
-          <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/esf.png" alt="logo" width="250">
-        </nav>
-      </footer>
+        <footer class="mt-2" style="height:30px; margin-top:-30px;">
+          <nav class="navbar navbar-expand-sm">  
+            <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
+            <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
+            <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/esf.png" alt="logo" width="250">
+          </nav>
+        </footer>
+      </body>
+
+
+      <script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
+      <script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
     </body>
-
-
-    <script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
-  </body>
-  </html>
+    </html>
