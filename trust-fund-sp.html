@@ -167,251 +167,608 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="container">
-          <nav class="nav nav-tabs active" id="nav-tab" role="tablist">
-            <div class="dropdown">
-              <button class="nav-item nav-link dropdown-toggle btn btn-outline-primary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Choose here</button>
-              <div class="dropdown-menu">
-                <!-- page 1 -->
-                <a class="dropdown-item" id="pageone-tab" href="#pageone" role="tab" data-toggle="tab" aria-controls="pageone">Personal & household</a>
-                <!-- page 2 -->
-                <a class="dropdown-item" id="pagetwo-tab" href="#pagetwo" role="tab" data-toggle="tab" aria-controls="pagetwo">Income</a>
-                <!-- page 3 -->
-                <a class="dropdown-item" id="pagethree-tab" href="#pagethree" role="tab" data-toggle="tab" aria-controls="pagethree">Fuel Spend</a>
-                <!-- page 4 -->
-                <a class="dropdown-item" id="pagefour-tab" href="#pagefour" role="tab" data-toggle="tab" aria-controls="pagefour">Benefits</a>
-                <!-- pafe 5 -->
-                <a class="dropdown-item" id="pagefive-tab" href="#pagefive" role="tab" data-toggle="tab" aria-controls="pagefive">Suppliers</a>
-              </div>   
-            </div>
-          </nav>
 
-          <!-- table content -->
-          <div id="information-nav-content" class="tab-content">
-            <!-- page one informaiton table -->
-            <div role="tadpanel" class="tab-pane fade show active" id="pageone" aria-labelledby="pageone-tab">
-              <table class="table table-striped table-bordered table-sm text-left">
-                <thead>
-                  <tr>
-                    <th colspan="2" class="bg-primary">Personal and Household</th>
-                  </tr>
-                </thead>
-                <tbody>
-                 <tr>
-                   <th>Title</th>
-                   <td contenteditable="true" spellcheck="true">Ms</td>
-                 </tr>
-                 <tr>
-                   <th>Forename</th>
-                   <td contenteditable="true" spellcheck="true">Citizen</td>
-                 </tr>
-                 <tr>
-                   <th>Surame</th>
-                   <td contenteditable="true" spellcheck="true">Twenty</td>
-                 </tr>
-                 <tr>
-                   <th>Address</th>
-                   <td contenteditable="true" spellcheck="true">12 Fake Street<br>FakeTown</td>
-                 </tr>
-                 <tr>
-                   <th>Postcode</th>
-                   <td contenteditable="true" spellcheck="true">FA12 3KE</td>
-                 </tr>
-                 <tr>
-                   <th>Telephone</th>
-                   <td contenteditable="true" spellcheck="true">012345 678901</td>
-                 </tr>
-                 <tr>
-                   <th>Mobile</th>
-                   <td contenteditable="true" spellcheck="true">077123456789</td>
-                 </tr>
-                 <tr>
-                   <th>How many people live in the house?
-                     <br>
-                     <ul class="m-0">Adults</ul>
-                     <ul class="m-0">Chilrden</ul>
-                   </th>
-                   <td class="font-italic">
-                     <br>
-                     <div>
-                      <form action="#" class="m-0">
-                       <select name="adultOne">
-                         <option value="adultZero">0</option>
-                         <option value="adultOne">1</option>
-                         <option value="adultTwo">2</option>
-                         <option value="adultThree">3</option>
-                         <option value="adultFour">4</option>
-                       </select>
-                     </form>
-                   </div>
-                   <div>
-                    <form action="#" class="m-0">
-                     <select name="childrenOne">
-                       <option value="childrenZero">0</option>
-                       <option value="childrenOne">1</option>
-                       <option value="childrenTwo">2</option>
-                       <option value="childrenThree">3</option>
-                       <option value="childrenFour">4</option>
-                     </select>
-                   </form>
+      <div id="module" class="container row mt-3">
+       <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseBills" aria-expanded="false" aria-controls="collapseBills" id="billsButton" onclick="checkData('bills', 'billsButton'); showSubmit();" data-text="Complete">Your Bills</a></h5>
+       <div class="collapse col-12" id="collapseBills" aria-labelledby="headingBills">
+         <div class="table-responsive">
+           <table class="table table-bordered table-sm text-left" id="bills">
+             <thead>
+               <tr>
+                 <th class="bg-primary text-white"></th>
+                 <th class="bg-primary text-white">Data</th>
+               </tr>
+             </thead>
+             <tbody>
+              <tr>
+                <th>Are you currently supplied by ScottishPower?</th>
+                <td>
+                  <div class="selector1 selector11">
+                    <input type="radio" id="yes3" name="yesno3" />
+                    <label for="yes3" onclick="showMoreTwo('displayOne');">Yes</label>
+                    <input type="radio" id="no4" name="yesno3" />
+                    <label for="no4" onclick="showMoreTwo('displayTwo');">No</label>
+                  </div>
+                </td>
+              </tr>
+              <tr id="currentSP1" style="display: none;">
+                <th>What types of meters do you have?*</th>
+                <td>
+                  <div class="selector1 selector13">
+                    <input type="radio" id="standard" name="meters" />
+                    <label for="standard">Standard Meters</label>
+                    <input type="radio" id="prepayment" name="meters" />
+                    <label for="prepayment">Prepayment Meters</label>
+                    <input type="radio" id="combination" name="meters" />
+                    <label for="combination">Combination of Standard & Prepayment</label>
+                  </div>
+                </td>
+              </tr>
+              <tr id="currentSP2" style="display: none;">
+                <th>Can you please state what services ScottishPower supply to you?</th>
+                <td>
+                  <div class="selector1 selector12">
+                    <input type="radio" id="gas" name="supply" />
+                    <label for="gas">Gas</label>
+                    <input type="radio" id="electricity" name="supply" />
+                    <label for="electricity">Electricity</label>
+                    <input type="radio" id="both" name="supply" />
+                    <label for="both">Both Gas and Electricity</label>
+                  </div>
+                </td>
+              </tr>
+              <tr id="currentSP3" style="display: none;">
+                <th>Can you please provide us with your Account Number? Your Account Number can be found in the top right hand corner of your latest statement. It is a ten or eleven digit number.</th>
+                <td contenteditable="true" spellcheck="true"></td>
+              </tr>
+              <tr id="currentSP4" style="display: none;">
+                <th>Can you please provide us with the value of your last bill? Your current balance is in the black box in the middle of the first page of your bill.</th>
+                <td contenteditable="true" spellcheck="true"></td>
+              </tr>
+              <tr id="currentSP5" style="display: none;">
+                <th>If you are currently supplied by ScottishPower, please provide us with your current electricity meter reading?</th>
+                <td contenteditable="true" spellcheck="true"></td>
+              </tr>
+              <tr id="currentSP6" style="display: none;">
+                <th>What date was this current electricity meter reading taken?</th>
+                <td contenteditable="true" spellcheck="true">Date</td>
+              </tr>
+              <tr id="currentSP7" style="display: none;">
+                <th>If you are currently supplied by ScottishPower please provide us with your current gas meter reading?</th>
+                <td contenteditable="true" spellcheck="true"></td>
+              </tr>
+              <tr id="currentSP8" style="display: none;">
+                <th>What date was this current gas meter reading taken?</th>
+                <td contenteditable="true" spellcheck="true">Date</td>
+              </tr>
+              <tr id="notCurrentSP1" style="display: none;">
+                <th>Were you previously supplied by ScottishPower and you were unable to pay some of your final bill?</th>
+                <td>
+                  <div class="selector1 selector11">
+                    <input type="radio" id="yes4" name="yesno4" />
+                    <label for="yes4">Yes</label>
+                    <input type="radio" id="no5" name="yesno4" />
+                    <label for="no5">No</label>
+                  </div>
+                </td>
+              </tr>
+              <tr id="notCurrentSP2" style="display: none;">
+                <th>Can you please provide us with the Account Number of your final bill with Scottish Power? Your Account Number can be found in the top right hand corner of your final statement. It is a ten or eleven digit number.</th>
+                <td contenteditable="true" spellcheck="true"></td>
+              </tr>
+              <tr id="notCurrentSP3" style="display: none;">
+                <th>Can you please provide us with the value of your final bill with ScottishPower? Your final balance is in the black box in the middle of the first page of your bill.</th>
+                <td contenteditable="true" spellcheck="true"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div id="module" class="container row mt-3">
+      <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseEligibility" aria-expanded="false" aria-controls="collapseEligibility" id="eligibilityButton" onclick="checkData('eligibility', 'eligibilityButton'); showSubmit();" data-text="Complete">Eligibility</a></h5>
+      <div class="collapse col-12" id="collapseEligibility" aria-labelledby="headingEligibility">
+       <div class="table-responsive">
+         <table class="table table-bordered table-sm text-left"id="eligibility">
+           <thead>
+             <th class="bg-primary text-white"></th>
+             <th class="bg-primary text-white">Data</th>
+           </thead>
+           <tbody>
+            <tr>
+              <th>Has the Account Holder obtained money or debt advice within the last 3 months?</th>
+              <td>
+                <div class="selector1 selector11">
+                  <input type="radio" id="yes5" name="yesno5" />
+                  <label for="yes5"onclick="showDebt('yes', 'debtYes');">Yes</label>
+                  <input type="radio" id="no6" name="yesno5" />
+                  <label for="no6" onclick="showDebt('no', 'debtNo');">No</label>
+                </div>
+              </td>
+            </tr>
+            <tr id="debtYes" style="display: none;">
+              <th>Please provide us details of the agency you obtained advice from:</th>
+              <td>
+                <div class="selector1 selector12">
+                  <input type="radio" id="debtline" />
+                  <label for="debtline" onclick="otherDisplay('notname', 'other')">National Debtline</label>
+                  <input type="radio" id="cab" />
+                  <label for="cab" onclick="otherDisplay('notname', 'other')">Citizens Advice Bureau</label>
+                  <input type="radio" id="StepChange" />
+                  <label for="StepChange" onclick="otherDisplay('notname', 'other')">StepChange</label>
+                  <input type="radio" id="other1" />
+                  <label for="other1" onclick="otherDisplay('name', 'other')">Other</label>
+                </div>
+                <div  class="form-group"id="other" style="display: none;">
+                  <label>Other</label>
+                  <input type="text" class="form-control" id="otherInput" name="other" spellcheck="true">
+                </div>
+              </td>
+            </tr>
+            <tr id="debtNo" style="display: none;">
+              <td colspan="2">Please contact one of the following before submitting this application
+                <br>National Debtline freephone 0808 808 4000
+                <br>StepChange freephone 0800 138 1111
+                <br>Citizens Advice (England) 03444 111 444
+                <br>Citizens Advice (Wales) 03444 77 20 20
+                <br>Citizens Advice (Scotland) 0808 800 9060</td>
+              </tr>
+              <tr>
+                <th>Does the Account Holder receive the Guarantee Credit element of Pension Credit?</th>
+                <td>
+                  <div class="selector1 selector11">
+                    <input type="radio" id="yes6" name="yesno6" />
+                    <label for="yes6">Yes</label>
+                    <input type="radio" id="no7" name="yesno6" />
+                    <label for="no7">No</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>Does the Account Holder receive the Savings Credit element of Pension Credit?</th>
+                <td>
+                  <div class="selector1 selector11">
+                    <input type="radio" id="yes7" name="yesno7" />
+                    <label for="yes7">Yes</label>
+                    <input type="radio" id="no8" name="yesno7" />
+                    <label for="no8">No</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>Is the Account Holder’s total gross household income less than £16,190 per year?</th>
+                <td>
+                  <div class="selector1 selector11">
+                    <input type="radio" id="yes8" name="yesno8" />
+                    <label for="yes8">Yes</label>
+                    <input type="radio" id="no9" name="yesno8" />
+                    <label for="no9">No</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>Does the Account Holder receive any of the following?</th>
+                <td>
+                  <div class="selector1 selector13">
+                    <input type="radio" id="income1" name="benefits" />
+                    <label for="income1">Income Support</label>
+                    <input type="radio" id="income2" name="benefits" />
+                    <label for="income2">Income Related Employment & Support Allowance</label>
+                    <input type="radio" id="income3" name="benefits" />
+                    <label for="income3">Income Based Jobseeker’s Allowance</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>Does the Account Holder have a child under 5 years of age permanently living in the house?</th>
+                <td>
+                  <div class="selector1 selector11">
+                    <input type="radio" id="yes9" name="yesno9" />
+                    <label for="yes9">Yes</label>
+                    <input type="radio" id="no10" name="yesno9" />
+                    <label for="no10">No</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>Does the Account Holder have a child who is entitled to free school meals?</th>
+                <td>
+                  <div class="selector1 selector11">
+                    <input type="radio" id="yes10" name="yesno10" />
+                    <label for="yes10">Yes</label>
+                    <input type="radio" id="no11" name="yesno10" />
+                    <label for="no11">No</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>Does the Account Holder receive Child Tax Credit or Working Tax Credit which includes (1) a disability element, (2) a severe disability element, (3) a disabled child element, (4) a severely disabled child element, or (5) a family element?</th>
+                <td>
+                  <div class="selector1 selector11">
+                    <input type="radio" id="yes11" name="yesno11" />
+                    <label for="yes11">Yes</label>
+                    <input type="radio" id="no12" name="yesno11" />
+                    <label for="no12">No</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>Does the Account Holder receive Income Related Benefit which includes (1) a disabled child premium, (2) a disability premium, (3) a severe disability premium, or (4) an enhanced disability premium?</th>
+                <td>
+                  <div class="selector1 selector11">
+                    <input type="radio" id="yes12" name="yesno12" />
+                    <label for="yes12">Yes</label>
+                    <input type="radio" id="no13" name="yesno12" />
+                    <label for="no13">No</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>Does the Account Holder receive Income Related Benefit which includes a Carers Premium?</th>
+                <td>
+                  <div class="selector1 selector11">
+                    <input type="radio" id="yes13" name="yesno13" />
+                    <label for="yes13">Yes</label>
+                    <input type="radio" id="no14" name="yesno13" />
+                    <label for="no14">No</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>Does the Account Holder receive Employment Support Allowance which includes (1) a Work Related or Activity Component, or (2) a Support Component?</th>
+                <td>
+                  <div class="selector1 selector11">
+                    <input type="radio" id="yes14" name="yesno14" />
+                    <label for="yes14">Yes</label>
+                    <input type="radio" id="no15" name="yesno14" />
+                    <label for="no15">No</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>Does the Account Holder receive (1) Disability Living Allowance, (2) Personal Independence Payments (PIP), (3) Incapacity Benefit, or (4) Attendance Allowance?</th>
+                <td>
+                  <div class="selector1 selector11">
+                    <input type="radio" id="yes15" name="yesno15" />
+                    <label for="yes15">Yes</label>
+                    <input type="radio" id="no16" name="yesno15" />
+                    <label for="no16">No</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>Does the Account Holder receive an exemption from NHS prescription charges? If you live in Scotland or Wales, you do not need to answer this question.</th>
+                <td>
+                 <div class="selector1 selector11">
+                   <input type="radio" id="yes16" name="yesno16" />
+                   <label for="yes16">Yes</label>
+                   <input type="radio" id="no17" name="yesno16" />
+                   <label for="no17">No</label>
                  </div>
                </td>
              </tr>
              <tr>
-               <th>Children living at property</th>
-               <td>
-                <input type="date" name="dob1" class="mb-2">
-                <button onclick="addDOB()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+</button>
-                <div id="content"></div>
+              <th>Where did you hear about the ScottishPower Hardship Fund?</th>
+              <td>
+                <div class="selector1 selector13">
+                  <input type="radio" id="hear1" name="hearAbout" />
+                  <label for="hear1" onclick="otherDisplay('notname', 'otherOne')">ScottishPower Website</label>
+                  <input type="radio" id="hear2" name="hearAbout" />
+                  <label for="hear2" onclick="otherDisplay('notname', 'otherOne')">ScottishPower Call</label>
+                  <input type="radio" id="hear3" name="hearAbout" />
+                  <label for="hear3" onclick="otherDisplay('notname', 'otherOne')">Citizens’ Advice</label>
+                  <input type="radio" id="hear4" name="hearAbout" />
+                  <label for="hear4" onclick="otherDisplay('notname', 'otherOne')">National Debtline</label>
+                  <input type="radio" id="hear5" name="hearAbout" />
+                  <label for="hear5" onclick="otherDisplay('notname', 'otherOne')">Support Worker</label>
+                  <input type="radio" id="hear6" name="hearAbout" />
+                  <label for="hear6" onclick="otherDisplay('notname', 'otherOne')">Housing Association</label>
+                  <input type="radio" id="hear7" name="hearAbout" />
+                  <label for="hear7" onclick="otherDisplay('name1', 'otherOne')">Other</label>
+                </div>
+                <div  class="form-group"id="otherOne" style="display: none;">
+                  <label>Other</label>
+                  <input type="text" class="form-control" id="otherInputOne" name="otherOne" spellcheck="true">
+                </div>
               </td>
             </tr>
           </tbody>
         </table>
       </div>
-      <!-- page two information table-->
-      <div role="tadpanel" class="tab-pane fade" id="pagetwo" aria-labelledby="pagetwo-tab">
-        <table class="table table-striped table-bordered table-sm text-left">
-          <thead>
-            <tr>
-              <th colspan="2" class="bg-primary">Income</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Citzen's yearly income</th>
-              <td class="text-right" contenteditable="true" spellcheck="true">£15000</td>
-            </tr>
-            <tr>
-              <th>Citzen partners's yearly income</th>
-              <td class="text-right" contenteditable="true" spellcheck="true">£10000</td>
-            </tr>
-            <tr>
-              <th>Citzen's total weekly income</th>
-              <td class="text-right" contenteditable="true" spellcheck="true">£480</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <!-- page 3 information table -->
-      <div role="tadpanel" class="tab-pane fade" id="pagethree" aria-labelledby="pagethree-tab">
-        <table class="table table-striped table-bordered table-sm text-left">
-          <thead>
-            <tr>
-              <th colspan="2" class="bg-primary">Fuel Spend</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Citizen's weekly spend on fuel</th>
-              <td class="text-right" contenteditable="true" spellcheck="true">£60</td>
-            </tr>
-            <tr>
-              <th>% on fuel</th>
-              <td class="text-right" contenteditable="true" spellcheck="true">12.5</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <!-- page four information table -->
-      <div role="tadpanel" class="tab-pane fade" id="pagefour" aria-labelledby="pagefour-tab">
-        <table class="table table-striped table-bordered table-sm text-left">
-          <thead>
-            <tr>
-              <th colspan="2" class="bg-primary">Benefits</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Universal Credit</th>
-              <td class="text-right font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-            </tr>
-            <tr>
-              <th>Employment and Support Allowance</th>
-              <td class="text-right font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-            </tr>
-            <tr>
-              <th>Child Benefit</th>
-              <td class="text-right font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <!-- page five information table -->
-      <div role="tadpanel" class="tab-pane fade" id="pagefive" aria-labelledby="pagefive-tab">
-       <table class="table table-striped table-bordered table-sm text-left">
+    </div>
+  </div>
+
+  <div id="module" class="container row mt-3">
+   <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseOther" aria-expanded="false" aria-controls="collapseOther" id="otherButton" onclick="checkData('other', 'otherButton'); showSubmit();" data-text="Complete">Other Relevant Circumstances</a></h5>
+   <div class="collapse col-12" id="collapseOther" aria-labelledby="headingOther">
+     <div class="table-responsive">
+       <table class="table table-bordered table-sm text-left" id="other">
          <thead>
-           <th colspan="2" class="table-primary">Electricity</th>
-         </thead>
-         <tbody>
-           <tr>
-             <th>MPAN</th>
-             <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-           </tr>
-           <tr>
-             <th>Supplier</th>
-             <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-           </tr>
-           <tr>
-             <th>Account Reference</th>
-             <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-           </tr>
-           <tr>
-             <th>Tariff</th>
-             <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-           </tr>
-           <tr>
-             <th>Meter Serial Number</th>
-             <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-           </tr>
-           <tr>
-             <th>Date</th>
-             <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-           </tr>
-           <tr>
-             <th>Present reading</th>
-             <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-           </tr>
-         </tbody>
-       </table>
-       <table class="table table-striped table-bordered table-sm text-left">
-        <thead>
-          <th colspan="2" class="table-primary">Gas</th>
+          <th class="bg-primary text-white"> </th>
         </thead>
         <tbody>
-         <tr>
-           <th>Meter point number</th>
-           <td class="font-italic text-danger" contenteditable="true" spellcheck="true">May be required</td>
-         </tr>
-         <tr>
-           <th>Supplier</th>
-           <td class="font-italic text-danger" contenteditable="true" spellcheck="true">May be required</td>
-         </tr>
-         <tr>
-           <th>Account Reference</th>
-           <td class="font-italic text-danger" contenteditable="true" spellcheck="true">May be required</td>
-         </tr>
-         <tr>
-           <th>Tariff</th>
-           <td class="font-italic text-danger" contenteditable="true" spellcheck="true">May be required</td>
-         </tr>
-         <tr>
-           <th>Meter Serial Number</th>
-           <td class="font-italic text-danger" contenteditable="true" spellcheck="true">May be required</td>
-         </tr>
-         <tr>
-           <th>Date</th>
-           <td class="font-italic text-danger" contenteditable="true" spellcheck="true">May be required</td>
-         </tr>
-         <tr>
-           <th>Present reading</th>
-           <td class="font-italic text-danger" contenteditable="true" spellcheck="true">May be required</td>
-         </tr>        
-       </tbody>
-     </table>
-
-   </div>
+          <tr>
+            <th>Can you please explain the problems which have made it difficult to pay your bills?</th>
+          </tr>
+          <tr>
+            <td contenteditable="true" spellcheck="true"></td>
+          </tr>
+          <tr>
+            <th>Can you please explain if there are any other relevant circumstances within the household? For example, any disabilities, chronic or debilitating illnesses, bereavement.</th>
+          </tr>
+          <tr>
+            <td contenteditable="true" spellcheck="true"></td>
+          </tr>
+          <tr>
+            <th>If you are still supplied by ScottishPower, please tell us how an award from the ScottishPower Hardship Fund will help you get back on track with paying your energy bills.</th>
+          </tr>
+          <tr>
+            <td contenteditable="true" spellcheck="true"></td>
+          </tr>
+          <tr>
+            <th>If you have previously applied to the Hardship Fund please explain why you are re-applying</th>
+          </tr>
+          <tr>
+            <td contenteditable="true" spellcheck="true"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="row">
+ <div class="col-12 mt-4">
+   Send to Energy Advocate to check & send application<br>
+   <button class="btn btn-outline-primary mt-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" onclick="showRef();">Send</button>   
  </div>
+</div>
+
+<div class="row">
+  <div class="container">
+    <nav class="nav nav-tabs active" id="nav-tab" role="tablist">
+      <div class="dropdown">
+        <button class="nav-item nav-link dropdown-toggle btn btn-outline-primary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Choose here</button>
+        <div class="dropdown-menu">
+          <!-- page 1 -->
+          <a class="dropdown-item" id="pageone-tab" href="#pageone" role="tab" data-toggle="tab" aria-controls="pageone">Personal & household</a>
+          <!-- page 2 -->
+          <a class="dropdown-item" id="pagetwo-tab" href="#pagetwo" role="tab" data-toggle="tab" aria-controls="pagetwo">Income</a>
+          <!-- page 3 -->
+          <a class="dropdown-item" id="pagethree-tab" href="#pagethree" role="tab" data-toggle="tab" aria-controls="pagethree">Fuel Spend</a>
+          <!-- page 4 -->
+          <a class="dropdown-item" id="pagefour-tab" href="#pagefour" role="tab" data-toggle="tab" aria-controls="pagefour">Benefits</a>
+          <!-- pafe 5 -->
+          <a class="dropdown-item" id="pagefive-tab" href="#pagefive" role="tab" data-toggle="tab" aria-controls="pagefive">Suppliers</a>
+        </div>   
+      </div>
+    </nav>
+
+    <!-- table content -->
+    <div id="information-nav-content" class="tab-content">
+      <!-- page one informaiton table -->
+      <div role="tadpanel" class="tab-pane fade show active" id="pageone" aria-labelledby="pageone-tab">
+        <table class="table table-striped table-bordered table-sm text-left">
+          <thead>
+            <tr>
+              <th colspan="2" class="bg-primary">Personal and Household</th>
+            </tr>
+          </thead>
+          <tbody>
+           <tr>
+             <th>Title</th>
+             <td contenteditable="true" spellcheck="true">Ms</td>
+           </tr>
+           <tr>
+             <th>Forename</th>
+             <td contenteditable="true" spellcheck="true">Citizen</td>
+           </tr>
+           <tr>
+             <th>Surame</th>
+             <td contenteditable="true" spellcheck="true">Twenty</td>
+           </tr>
+           <tr>
+             <th>Address</th>
+             <td contenteditable="true" spellcheck="true">12 Fake Street<br>FakeTown</td>
+           </tr>
+           <tr>
+             <th>Postcode</th>
+             <td contenteditable="true" spellcheck="true">FA12 3KE</td>
+           </tr>
+           <tr>
+             <th>Telephone</th>
+             <td contenteditable="true" spellcheck="true">012345 678901</td>
+           </tr>
+           <tr>
+             <th>Mobile</th>
+             <td contenteditable="true" spellcheck="true">077123456789</td>
+           </tr>
+           <tr>
+             <th>How many people live in the house?
+               <br>
+               <ul class="m-0">Adults</ul>
+               <ul class="m-0">Chilrden</ul>
+             </th>
+             <td class="font-italic">
+               <br>
+               <div>
+                <form action="#" class="m-0">
+                 <select name="adultOne">
+                   <option value="adultZero">0</option>
+                   <option value="adultOne">1</option>
+                   <option value="adultTwo">2</option>
+                   <option value="adultThree">3</option>
+                   <option value="adultFour">4</option>
+                 </select>
+               </form>
+             </div>
+             <div>
+              <form action="#" class="m-0">
+               <select name="childrenOne">
+                 <option value="childrenZero">0</option>
+                 <option value="childrenOne">1</option>
+                 <option value="childrenTwo">2</option>
+                 <option value="childrenThree">3</option>
+                 <option value="childrenFour">4</option>
+               </select>
+             </form>
+           </div>
+         </td>
+       </tr>
+       <tr>
+         <th>Children living at property</th>
+         <td>
+          <input type="date" name="dob1" class="mb-2">
+          <button onclick="addDOB()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+</button>
+          <div id="content"></div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- page two information table-->
+<div role="tadpanel" class="tab-pane fade" id="pagetwo" aria-labelledby="pagetwo-tab">
+  <table class="table table-striped table-bordered table-sm text-left">
+    <thead>
+      <tr>
+        <th colspan="2" class="bg-primary">Income</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Citzen's yearly income</th>
+        <td class="text-right" contenteditable="true" spellcheck="true">£15000</td>
+      </tr>
+      <tr>
+        <th>Citzen partners's yearly income</th>
+        <td class="text-right" contenteditable="true" spellcheck="true">£10000</td>
+      </tr>
+      <tr>
+        <th>Citzen's total weekly income</th>
+        <td class="text-right" contenteditable="true" spellcheck="true">£480</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- page 3 information table -->
+<div role="tadpanel" class="tab-pane fade" id="pagethree" aria-labelledby="pagethree-tab">
+  <table class="table table-striped table-bordered table-sm text-left">
+    <thead>
+      <tr>
+        <th colspan="2" class="bg-primary">Fuel Spend</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Citizen's weekly spend on fuel</th>
+        <td class="text-right" contenteditable="true" spellcheck="true">£60</td>
+      </tr>
+      <tr>
+        <th>% on fuel</th>
+        <td class="text-right" contenteditable="true" spellcheck="true">12.5</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- page four information table -->
+<div role="tadpanel" class="tab-pane fade" id="pagefour" aria-labelledby="pagefour-tab">
+  <table class="table table-striped table-bordered table-sm text-left">
+    <thead>
+      <tr>
+        <th colspan="2" class="bg-primary">Benefits</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Universal Credit</th>
+        <td class="text-right font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
+      </tr>
+      <tr>
+        <th>Employment and Support Allowance</th>
+        <td class="text-right font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
+      </tr>
+      <tr>
+        <th>Child Benefit</th>
+        <td class="text-right font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- page five information table -->
+<div role="tadpanel" class="tab-pane fade" id="pagefive" aria-labelledby="pagefive-tab">
+ <table class="table table-striped table-bordered table-sm text-left">
+   <thead>
+     <th colspan="2" class="table-primary">Electricity</th>
+   </thead>
+   <tbody>
+     <tr>
+       <th>MPAN</th>
+       <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
+     </tr>
+     <tr>
+       <th>Supplier</th>
+       <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
+     </tr>
+     <tr>
+       <th>Account Reference</th>
+       <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
+     </tr>
+     <tr>
+       <th>Tariff</th>
+       <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
+     </tr>
+     <tr>
+       <th>Meter Serial Number</th>
+       <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
+     </tr>
+     <tr>
+       <th>Date</th>
+       <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
+     </tr>
+     <tr>
+       <th>Present reading</th>
+       <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
+     </tr>
+   </tbody>
+ </table>
+ <table class="table table-striped table-bordered table-sm text-left">
+  <thead>
+    <th colspan="2" class="table-primary">Gas</th>
+  </thead>
+  <tbody>
+   <tr>
+     <th>Meter point number</th>
+     <td class="font-italic text-danger" contenteditable="true" spellcheck="true">May be required</td>
+   </tr>
+   <tr>
+     <th>Supplier</th>
+     <td class="font-italic text-danger" contenteditable="true" spellcheck="true">May be required</td>
+   </tr>
+   <tr>
+     <th>Account Reference</th>
+     <td class="font-italic text-danger" contenteditable="true" spellcheck="true">May be required</td>
+   </tr>
+   <tr>
+     <th>Tariff</th>
+     <td class="font-italic text-danger" contenteditable="true" spellcheck="true">May be required</td>
+   </tr>
+   <tr>
+     <th>Meter Serial Number</th>
+     <td class="font-italic text-danger" contenteditable="true" spellcheck="true">May be required</td>
+   </tr>
+   <tr>
+     <th>Date</th>
+     <td class="font-italic text-danger" contenteditable="true" spellcheck="true">May be required</td>
+   </tr>
+   <tr>
+     <th>Present reading</th>
+     <td class="font-italic text-danger" contenteditable="true" spellcheck="true">May be required</td>
+   </tr>        
+ </tbody>
+</table>
+
+</div>
+</div>
 </div>
 </div>
 </div>
