@@ -891,7 +891,7 @@
             <li>Please include all of your benefit letters; JSA, disability etc.</li>
           </td>
           <td>
-            <label class="btn btn-outline-primary mb-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image0">
+            <label class="btn btn-outline-primary mb-2 mr-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image0">
              <input id="image0" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
              <div id="benLetters"></div>
              <button onclick="addImage('benLetters', 'benLettersNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
@@ -906,7 +906,7 @@
             <li></li>
           </td>
           <td>
-           <label class="btn btn-outline-primary mb-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image1">
+           <label class="btn btn-outline-primary mb-2 mr-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image1">
              <input id="image1" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
              <div id="homeLetters"></div>
              <button onclick="addImage('homeLetters', 'homeLettersNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
@@ -921,7 +921,7 @@
             <li></li>
           </td>
           <td>
-            <label class="btn btn-outline-primary mb-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image2">
+            <label class="btn btn-outline-primary mb-2 mr-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image2">
               <input id="image1" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>              <div id="birthCert"></div>
               <button onclick="addImage('birthCert', 'birthCertNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
             </td>
@@ -935,7 +935,7 @@
               <li style="width: 250px;"></li>
             </td>
             <td>
-             <label class="btn btn-outline-primary mb-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image3">
+             <label class="btn btn-outline-primary mb-2 mr-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image3">
                <input id="image1" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
                <div id="pay"></div>
                <button onclick="addImage('pay', 'paySlipsNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
@@ -1172,7 +1172,7 @@ var imageCounter = 4;
 function addImage(divFile, divName){
   var newDivFile = document.createElement('div');
   newDivFile.innerHTML = 
-  "<label class='btn btn-outline-primary mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);' for='image"+ imageCounter + "'>\
+  "<label class='btn btn-outline-primary mb-2 mr-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);' for='image"+ imageCounter + "'>\
   <input id='image"+ imageCounter + "' type='file' accept='image/*' style='display:none' onchange='$('#upload-file-info').html(this.files[0].name)'> Choose file</label><span class='font-italic' id='upload-file-info'> No file chosen</span>";
   document.getElementById(divFile).appendChild(newDivFile);
   var newDivName = document.createElement('div');
