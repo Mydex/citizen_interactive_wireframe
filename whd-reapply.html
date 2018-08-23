@@ -217,7 +217,7 @@
 <div id="newSupplier"  style="display: none;">
   <p class="mt-2 mb-2">Who is your new electricity supplier?</p>
   <form action="#/">
-    <select name="energySupplier" onchange="showApplciation(this.options[this.selectedIndex].value)" required>
+    <select name="energySupplier" onchange="showAppliciation(this.options[this.selectedIndex].value)" required>
       <option value="default"></option>
       <option value="scottishPower">Scottish Power</option>
       <option value="britishGas">Bulb</option>
@@ -957,17 +957,14 @@
     <button class='btn btn-outline-primary mt-2 mb-4' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Submit</button>
 
   </div>
-
 </div>
-
 </main>
 
 <style >
 #line {
   border-bottom: 2px solid #2E8B57;
 }
-</style>
-<style id="moduleStyleCheck">
+
 #module a.collapsed:after  {
   content: attr(data-text);
   float: right;
@@ -1042,7 +1039,7 @@
 }
 </style>
 
-<script type="text/javascript">
+<script>
   function showForm(name){
     document.getElementById('currentSupplier').style.display = 'block';
     document.getElementById('newSupplier').style.display = 'none';
@@ -1097,7 +1094,7 @@ function submitEON() {
  }
 }
 
-function showApplciation(name){
+function showAppliciation(name){
   if(name == 'scottishPower'){
     document.getElementById('scottishPowerContent').style.display = 'block';
     document.getElementById('britishGasContent').style.display = 'none';
