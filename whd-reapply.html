@@ -217,7 +217,7 @@
 <div id="newSupplier"  style="display: none;">
   <p class="mt-2 mb-2">Who is your new electricity supplier?</p>
   <form action="#/">
-    <select name="energySupplier" onchange="showAppliciation(this.options[this.selectedIndex].value)" required>
+    <select name="energySupplier" onchange="showApplication(this.options[this.selectedIndex].value)" required>
       <option value="default"></option>
       <option value="scottishPower">Scottish Power</option>
       <option value="britishGas">Bulb</option>
@@ -1094,7 +1094,7 @@ function submitEON() {
  }
 }
 
-function showAppliciation(name){
+function showApplication(name){
   if(name == 'scottishPower'){
     document.getElementById('scottishPowerContent').style.display = 'block';
     document.getElementById('britishGasContent').style.display = 'none';
