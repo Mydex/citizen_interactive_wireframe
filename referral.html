@@ -1,252 +1,219 @@
 <!DOCTYPE>
 <html lang="en">  
 <head>
-    <meta http-equiv="Content-type" content="text/html">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8" >
-    <title>Citizen Interactive Wireframe</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="screen" title="master">
-    <link rel="stylesheet" href="css/custom.css" type="text/css" media="screen" title="master">
+  <meta http-equiv="Content-type" content="text/html">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" >
+  <title>Citizen Interactive Wireframe</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="screen" title="master">
+  <link rel="stylesheet" href="css/custom.css" type="text/css" media="screen" title="master">
 </head>
 
 <body style="height:100%;">
-    <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-warning">
-        <a class="navbar-brand mx-auto" href="https://mydex.github.io/citizen_interactive_wireframe/index.html">
-          <img class="rounded" src="https://mydex.github.io/citizen_interactive_wireframe/images/EPCAS-square.jpg" alt="logo" width="40">
-      </a>
-      <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
+  <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-warning">
+    <a class="navbar-brand mx-auto" href="https://mydex.github.io/citizen_interactive_wireframe/index.html">
+      <img class="rounded" src="https://mydex.github.io/citizen_interactive_wireframe/images/EPCAS-square.jpg" alt="logo" width="40">
+    </a>
+    <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="nav-content">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item"><a href="#" class="nav-link text-white font-weight-light">More information</a></li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item"><a href="#" class="nav-link text-white font-weight-light">More information</a></li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
       </form class="navbar-nav mr-auto mt-2 mt-lg-0">
       <ul class="navbar-nav my-2 my-lg-0">
-          <li class="nav-item"><a href="https://mydex.github.io/citizen_interactive_wireframe/home_loggedin.html" class="nav-link text-white font-weight-light">Login</a></li>
+        <li class="nav-item"><a href="https://mydex.github.io/citizen_interactive_wireframe/home_loggedin.html" class="nav-link text-white font-weight-light">Login</a></li>
       </ul>
-  </div>
-</nav>
+    </div>
+  </nav>
 
-<main style=" min-height:75%;">
+  <main style=" min-height:75%;">
     <div class="container">
-        <h3 class="mt-4">Referral form</h3>
-        <p>The information below will be used to contact you if there are any problems. It will also help us contact the citizen that you are referring and to help set up their first home visit with an energy advocate.</p>
-        
-        <form action="/#">
-            <h4>Referrer details</h4>
-            <div class="form-group">
-                <label>Referral from</label>
-                <div>
-                  <select name="referral">
-                    <option value="referral1">Advice works</option>
-                    <option value="referral2">C4R</option>
-                    <option value="referral3">Council</option>
-                    <option value="referral4">Family First</option>
-                    <option value="referral5">Food bank</option>
-                    <option value="referral6">RAMH</option>
-                </select>
-            </div>
-        </div>
+      <h3 class="mt-4">Referral form</h3>
+      <p>The information below will be used to contact you if there are any problems. It will also help us contact the citizen that you are referring and to help set up their first home visit with an energy advocate.</p>
+      <form action="/#">
+        <h4>Referrer details</h4>
         <div class="form-group">
-            <label>Person referring citizen</label>
-            <input type="text" class="form-control" id="referee" name="referee" spellcheck="true">
-        </div>
-        <div class="form-group">
-            <label>Referrer contact</label>
-            <div>
-              <select id="select_opt" class="form-control" onchange="showRefField(this.options[this.selectedIndex].value)" required>
-                <option value="default"></option>
-                <option value="ref1">None</option>
-                <option value="ref2">Mobile</option>
-                <option value="ref3">Email</option>
-                <option value="ref4">Mobile & Email</option>
+          <label>Referral from</label>
+          <div>
+            <select name="referral">
+              <option value="referral1">Advice works</option>
+              <option value="referral2">C4R</option>
+              <option value="referral3">Council</option>
+              <option value="referral4">Family First</option>
+              <option value="referral5">Food bank</option>
+              <option value="referral6">RAMH</option>
             </select>
+          </div>
         </div>
-    </div>
-    <div class="form-group">
-       <div id="input2"></div>
-
-       <div class="update-selector">
-        <label class="form-check-label"> Would you like to be kept updated re this citizen? </label>
-        <input type="radio" id="yes" name="update" /><label for="yes">Yes</label>
-        <input type="radio" id="no" name="update" /><label for="no">No</label>
-    </div>
-</div>
-
-<div class="form-group">
-    <label>Add notes for energy advocates</label>
-    <textarea type="text" class="form-control" spellcheck="true" rows="3"></textarea>
-</div>
-<h4>Citizen details</h4>
-<div class="form-group">
-    <label>Citizen's Title</label>
-    <div>
-      <select name="title">
-        <option value="title0"></option>
-        <option value="title1">Ms</option>
-        <option value="title2">Mr</option>
-        <option value="title3">Mrs</option>
-        <option value="title4">Dr</option>
-    </select>
-</div>
-</div>
-<div class="form-group">
-    <label>Citizen's Forename</label>
-    <input type="text" class="form-control" id="forename" name="forename" spellcheck="true">
-</div>
-<div class="form-group">
-    <label>Citizen's Surname</label>
-    <input type="text" class="form-control" id="surname" name="surname" spellcheck="true">
-</div>
-<div class="form-group">
-    <label>Citizen's preferred contact method</label>
-    <select name="select_opt" id="select_opt" class="form-control" onchange="showField(this.options[this.selectedIndex].value)" required>
-      <option value="default"></option>
-      <option value="cit1">Mobile</option>
-      <option value="cit2">Email</option>
-      <option value="cit3">Mobile & Email</option>
-  </select>
-  <div id="input1"></div>
-</div>
-<div class="form-group">
-    <label>Citizen's Address</label>
-    <input type="text" class="form-control" id="address" name="address" spellcheck="true">
-</div>
-<div class="form-group">
-    <label>Citizen's Postcode</label>
-    <input type="text" class="form-control" id="postcode" name="postcode" spellcheck="true">
-</div>
-<!-- <div class="form-group">
-    <label>How did they find out about the service?</label>
-    <select name="select_found" id="select_found" class="form-control" required>
-      <option value="default"></option>
-      <option value="opt1">I was sent a link</option>
-      <option value="opt2">I was referred</option>
-      <option value="opt3">Came across online</option>
-      <option value="opt4">Leaflet</option>
-      <option value="opt5">Word of mouth</option>
-  </select>
-  <div id="input1"></div>
-</div> -->
-<div class="form-group">
-  <label class="mt-2 mb-2">Citizen's preferred name</label>
-  <div class="name-selector">
-    <input type="radio" id="name1" name="nameChoice"/>
-    <label for="name1" onclick="addNickname('name1')">Title Surname<br><small>E.g. Mrs Smith</small></label>
-    <input type="radio" id="name2" name="nameChoice"/>
-    <label for="name2" onclick="addNickname('name2')">Forename<br><small>E.g. Margaret</small></label>
-    <input type="radio" id="name3" name="nameChoice"/>
-    <label for="name3" onclick="addNickname('name3')">Nickname<br><small>E.g. Maggie</small></label>
-</div>
-<div  class="form-group"id="nickname" style="display: none;">
-    <label>Nickname</label>
-    <input type="text" class="form-control" id="nicknameInput" name="nickname" spellcheck="true">
-</div>
-<label class="mt-4 mb-2">Citizen's contact preferences</label>
-<div class="contact-selector">
-  <input type="checkbox" id="Text"/>
-  <label for="Text">Text</label>
-  <input type="checkbox" id="Message"/>
-  <label for="Message">App Messages</label>
-  <input type="checkbox" id="Phonecall"/>
-  <label for="Phonecall">Phonecall</label>
-</div>
-<label class="mt-4 mb-2">Citizen's Home Visit preferences</label>
-<div class="homeVisit-selector">
-  <input type="checkbox" id="mon" />
-  <label for="mon">M</label>
-  <input type="checkbox" id="tue"/>
-  <label for="tue">T</label>
-  <input type="checkbox" id="wed"/>
-  <label for="wed">W</label>
-  <input type="checkbox" id="thu"/>
-  <label for="thu">T</label>
-  <input type="checkbox" id="fri"/>
-  <label for="fri">F</label>
-</div>
-<div class="homeVisit-selector mt-2">
-  <input type="checkbox" id="am" />
-  <label for="am">AM</label>
-  <input type="checkbox" id="pm"/>
-  <label for="pm">PM</label>
-</div>
-</div>
-</form>
-
-
-</div>
+        <div class="form-group">
+          <label>Person referring citizen</label>
+          <input type="text" class="form-control" id="referee" name="referee" spellcheck="true">
+        </div>
+        <div class="form-group">
+          <label>Referrer contact</label>
+          <div>
+            <select id="select_opt" class="form-control" onchange="showRefField(this.options[this.selectedIndex].value)" required>
+              <option value="default"></option>
+              <option value="ref1">None</option>
+              <option value="ref2">Mobile</option>
+              <option value="ref3">Email</option>
+              <option value="ref4">Mobile & Email</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+         <div id="input2"></div>
+         <div class="update-selector">
+          <label class="form-check-label"> Would you like to be kept updated re this citizen? </label>
+          <input type="radio" id="yes" name="update" /><label for="yes">Yes</label>
+          <input type="radio" id="no" name="update" /><label for="no">No</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Add notes for energy advocates</label>
+        <textarea type="text" class="form-control" spellcheck="true" rows="3"></textarea>
+      </div>
+      <h4>Citizen details</h4>
+      <div class="form-group">
+        <label>Citizen's Title</label>
+        <div>
+          <select name="title">
+            <option value="title0"></option>
+            <option value="title1">Ms</option>
+            <option value="title2">Mr</option>
+            <option value="title3">Mrs</option>
+            <option value="title4">Dr</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Citizen's Forename</label>
+        <input type="text" class="form-control" id="forename" name="forename" spellcheck="true">
+      </div>
+      <div class="form-group">
+        <label>Citizen's Surname</label>
+        <input type="text" class="form-control" id="surname" name="surname" spellcheck="true">
+      </div>
+      <div class="form-group">
+        <label>Citizen's preferred contact method</label>
+        <select name="select_opt" id="select_opt" class="form-control" onchange="showField(this.options[this.selectedIndex].value)" required>
+          <option value="default"></option>
+          <option value="cit1">Mobile</option>
+          <option value="cit2">Email</option>
+          <option value="cit3">Mobile & Email</option>
+        </select>
+        <div id="input1"></div>
+      </div>
+      <div class="form-group">
+        <label>Citizen's Address</label>
+        <input type="text" class="form-control" id="address" name="address" spellcheck="true">
+      </div>
+      <div class="form-group">
+        <label>Citizen's Postcode</label>
+        <input type="text" class="form-control" id="postcode" name="postcode" spellcheck="true">
+      </div>
+      <div class="form-group">
+        <label class="mt-2 mb-2">Citizen's preferred name</label>
+        <div class="name-selector">
+          <input type="radio" id="name1" name="nameChoice"/><label for="name1" onclick="addNickname('name1')">Title Surname<br><small>E.g. Mrs Smith</small></label>
+          <input type="radio" id="name2" name="nameChoice"/><label for="name2" onclick="addNickname('name2')">Forename<br><small>E.g. Margaret</small></label>
+          <input type="radio" id="name3" name="nameChoice"/><label for="name3" onclick="addNickname('name3')">Nickname<br><small>E.g. Maggie</small></label>
+        </div>
+        <div class="form-group"id="nickname" style="display: none;">
+          <label>Nickname</label>
+          <input type="text" class="form-control" id="nicknameInput" name="nickname" spellcheck="true">
+        </div>
+        <label class="mt-4 mb-2">Citizen's contact preferences</label>
+        <div class="contact-selector">
+          <input type="checkbox" id="Text"/><label for="Text">Text</label>
+          <input type="checkbox" id="Message"/><label for="Message">App Messages</label>
+          <input type="checkbox" id="Phonecall"/><label for="Phonecall">Phonecall</label>
+        </div>
+        <label class="mt-4 mb-2">Citizen's Home Visit preferences</label>
+        <div class="homeVisit-selector">
+          <input type="checkbox" id="mon" /><label for="mon">M</label>
+          <input type="checkbox" id="tue"/><label for="tue">T</label>
+          <input type="checkbox" id="wed"/><label for="wed">W</label>
+          <input type="checkbox" id="thu"/><label for="thu">T</label>
+          <input type="checkbox" id="fri"/><label for="fri">F</label>
+        </div>
+        <div class="homeVisit-selector mt-2">
+          <input type="checkbox" id="am" /><label for="am">AM</label>
+          <input type="checkbox" id="pm"/><label for="pm">PM</label>
+        </div>
+      </div>
+    </form>
+  </div>
 </main>
 
 <style>
 .homeVisit-selector input {
-    display: none!important;
+  display: none!important;
 }
 
 .homeVisit-selector input[type=checkbox] + label {
-    display: inline-block;
-    border-radius: 6px;
-    background: #dddddd;
-    height: 45px;
-    width: 40px;
-    margin-right: 3px;
-    line-height: 50px;
-    text-align: center;
-    cursor: pointer;
-    font-weight: bold;
+  display: inline-block;
+  border-radius: 6px;
+  background: #dddddd;
+  height: 45px;
+  width: 40px;
+  margin-right: 3px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .homeVisit-selector input[type=checkbox]:checked + label {
-    background: #2AD705;
-    color: #ffffff;
+  background: #2AD705;
+  color: #ffffff;
 }
 
 .name-selector input {
-    display: none!important;
+  display: none!important;
 }
 
 .name-selector input[type=radio] + label {
-    display: inline-block;
-    border-radius: 6px;
-    background: #dddddd;
-    height: 45px;
-    width: 130px;
-    margin-right: 3px;
-    line-height: 45px;
-    text-align: center;
-    cursor: pointer;
-    font-weight: bold;
+  display: inline-block;
+  border-radius: 6px;
+  background: #dddddd;
+  height: 45px;
+  width: 130px;
+  margin-right: 3px;
+  line-height: 45px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .name-selector input[type=radio]:checked + label {
-    background: #2AD705;
-    color: #ffffff;
+  background: #2AD705;
+  color: #ffffff;
 }
 
 .contact-selector input {
-    display: none!important;
+  display: none!important;
 }
 
 .contact-selector input[type=checkbox] + label {
-    display: inline-block;
-    border-radius: 6px;
-    background: #dddddd;
-    height: 45px;
-    width: 130px;
-    margin-right: 3px;
-    line-height: 45px;
-    text-align: center;
-    cursor: pointer;
-    font-weight: bold;
+  display: inline-block;
+  border-radius: 6px;
+  background: #dddddd;
+  height: 45px;
+  width: 130px;
+  margin-right: 3px;
+  line-height: 45px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .contact-selector input[type=checkbox]:checked + label {
-    background: #2AD705;
-    color: #ffffff;
+  background: #2AD705;
+  color: #ffffff;
 }
 
 .update-selector input {
@@ -276,49 +243,49 @@
   function showField(name){
     if(name == 'cit1') {
       document.getElementById('input1').innerHTML = 'Mobile:<br> <input type="text" class="form-control" id="mobile" name="mobile"/>';
-  } else if (name == 'cit2') {
+    } else if (name == 'cit2') {
       document.getElementById('input1').innerHTML = 'Email:<br> <input type="text" class="form-control" id="email" name="email"/>';
-  } else if (name == 'cit3') {
+    } else if (name == 'cit3') {
       document.getElementById('input1').innerHTML = 'Mobile:<br> <input type="text" class="form-control" id="mobile" name="mobile"/> Email:<br> <input type="text" class="form-control" id="email" name="email"/>';
-  } else {
+    } else {
       document.getElementById('input1').innerHTML='';
-  } 
-}
+    } 
+  }
 
-function showRefField(name){
+  function showRefField(name){
     if (name =='ref1') {
       document.getElementById('input2').innerHTML = 'No contact information will be saved for referrer';
-  } else if(name == 'ref2') {
+    } else if(name == 'ref2') {
       document.getElementById('input2').innerHTML = 'Referrer mobile:<br> <input type="text" class="form-control" id="mobile" name="mobile"/>';
-  } else if (name == 'ref3') {
+    } else if (name == 'ref3') {
       document.getElementById('input2').innerHTML = 'Referrer email:<br> <input type="text" class="form-control" id="email" name="email"/>';
-  } else if (name == 'ref4') {
+    } else if (name == 'ref4') {
       document.getElementById('input2').innerHTML = 'Referrer mobile:<br> <input type="text" class="form-control" id="mobile" name="mobile"/> Referrer email:<br> <input type="text" class="form-control" id="email" name="email"/>';
-  } else {
+    } else {
       document.getElementById('input2').innerHTML='';
-  } 
-}
+    } 
+  }
 
-function showfield(name){
+  function showfield(name){
     if(name == 'ea1') {
       document.getElementById('input').innerHTML = 'Mobile:<br> <input type="text" class="form-control" id="mobile" name="mobile"/>';
-  } else if (name == 'ea2') {
+    } else if (name == 'ea2') {
       document.getElementById('input').innerHTML = 'Email:<br> <input type="text" class="form-control" id="email" name="email"/>';
-  } else if (name == 'ea3') {
+    } else if (name == 'ea3') {
       document.getElementById('input').innerHTML = 'Mobile:<br> <input type="text" class="form-control" id="mobile" name="mobile"/> Email:<br> <input type="text" class="form-control" id="email" name="email"/>';
-  }
-  else {
-      document.getElementById('input').innerHTML='';
-  } 
-}
-
-function addNickname(name){
-    if(name == 'name3') {
-        document.getElementById('nickname').style.display = 'block';
-    } else {
-        document.getElementById('nickname').style.display = 'none';
     }
-}
+    else {
+      document.getElementById('input').innerHTML='';
+    } 
+  }
+
+  function addNickname(name){
+    if(name == 'name3') {
+      document.getElementById('nickname').style.display = 'block';
+    } else {
+      document.getElementById('nickname').style.display = 'none';
+    }
+  }
 
 </script>
 
@@ -327,7 +294,7 @@ function addNickname(name){
     <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
     <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
     <img class="rounded mx-auto" src="https://mydex.github.io/citizen_interactive_wireframe/images/esf.png" alt="logo" width="250">
-</nav>
+  </nav>
 </footer>
 </body>
 
