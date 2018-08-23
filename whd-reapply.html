@@ -16,9 +16,7 @@
     <a class="navbar-brand mx-auto" href="https://mydex.github.io/citizen_interactive_wireframe/home_loggedin.html">
       <img class="rounded" src="https://mydex.github.io/citizen_interactive_wireframe/images/EPCAS-square.jpg" alt="logo" width="40">
     </a>
-    <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="nav-content">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item"><a href="https://mydex.github.io/citizen_interactive_wireframe/home_loggedin.html" class="nav-link text-white font-weight-light">Home</a></li>
@@ -50,19 +48,13 @@
         <h4>Scottish Power</h4>
         <div>Is this your current electricity supplier?</div>
         <div class="row mt-2">
-          <div class="col-3 col-mg-1 col-lg-1">
-            <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" onclick="showForm()">Yes</a>
-          </div>
-          <div class="col-3 col-mg-1 col-lg-1">
-            <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" onclick="showNewForms()">No</a>
-          </div>
+          <div class="col-3 col-mg-1 col-lg-1"><a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" onclick="showForm()">Yes</a></div>
+          <div class="col-3 col-mg-1 col-lg-1"><a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" onclick="showNewForms()">No</a></div>
         </div>
       </div>
-
       <div id="currentSupplier" style="display: none;">
         <h4 class="mt-4">Scottish Power Warm Home Discount Application</h4>
         <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
-
         <div id="module" class="container row mt-4">
           <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonal" aria-expanded="false" aria-controls="collapsePersonal" id="personalButton" onclick="checkData('personal', 'personalButton'); showSubmit();" data-text="Check">Contact Details</a></h5>
           <div class="collapse col-12" id="collapsePersonal" aria-labelledby="headingPersonal">
@@ -114,7 +106,6 @@
             </div>
           </div>
         </div>
-
         <div id="module" class="container row mt-3">
          <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplier" aria-expanded="false" aria-controls="collapseSupplier" id="supplierButton" onclick="checkData('supplier', 'supplierButton'); showSubmit();" data-text="Check">Electricty Account</a></h5>
          <div class="collapse col-12" id="collapseSupplier" aria-labelledby="headingSupplier">
@@ -156,7 +147,6 @@
       </div>
     </div>
   </div>
-
   <div id="module" class="container row mt-3">
     <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncome" aria-expanded="false" aria-controls="collapseIncome" id="incomeButton" onclick="checkData('income', 'incomeButton'); showSubmit();" data-text="Check">Household Income</a></h5>
     <div class="collapse col-12" id="collapseIncome" aria-labelledby="headingIncome">
@@ -176,7 +166,6 @@
     </div>
   </div>
 </div>
-
 <div id="module" class="container row mt-3">
   <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuel" aria-expanded="false" aria-controls="collapseFuel" id="fuelButton" onclick="checkData('fuel', 'fuelButton'); showSubmit();" data-text="Check">Fuel Spend</a></h5>
   <div class="collapse col-12" id="collapseFuel" aria-labelledby="headingFuel">
@@ -205,16 +194,12 @@
 </div>
 </div>
 <div class="row" id="submitToEA" style="display: none;">
-  <div class="col-12 mt-4">
-    Send to Energy Advocate to check & send application<br>
+  <div class="col-12 mt-4">Send to Energy Advocate to check & send application<br>
     <button class="btn btn-outline-primary mt-2 mb-4 " style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" onclick="showEvidence('afterSubmit')">Send</button>   
   </div>
 </div>
 </div>
-
-
-
-<div id="newSupplier"  style="display: none;">
+<div id="newSupplier" style="display: none;">
   <p class="mt-2 mb-2">Who is your new electricity supplier?</p>
   <form action="#/">
     <select name="energySupplier" onchange="showApplication(this.options[this.selectedIndex].value)" required>
@@ -225,7 +210,6 @@
       <option value="eon">E.ON</option>
     </select>
   </form>
-
   <div id="scottishPowerContent" style="display: none;">
     <h4 class="mt-2">Scottish Power Warm Home Discount Application</h4>
     <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
@@ -280,7 +264,6 @@
         </div>
       </div>
     </div>
-
     <div id="module" class="container row mt-3">
       <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplierSP" aria-expanded="false" aria-controls="collapseSupplierSP" id="supplierSPButton" onclick="checkData('supplierSP', 'supplierSPButton'); submitSP();" data-text="Check">Electricity Account</a></h5>
       <div class="collapse col-12" id="collapseSupplierSP" aria-labelledby="headingSupplierSP">
@@ -322,7 +305,6 @@
      </div>
    </div>
  </div>
-
  <div id="module" class="container row mt-3">
   <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncomeSP" aria-expanded="false" aria-controls="collapseIncomeSP" id="incomeSPButton" onclick="checkData('incomeSP', 'incomeSPButton'); submitSP();" data-text="Check">Household Income</a></h5>
   <div class="collapse col-12" id="collapseIncomeSP" aria-labelledby="headingIncomeSP">
@@ -342,7 +324,6 @@
   </div>
 </div>
 </div>
-
 <div id="module" class="container row mt-3">
  <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuelSP" aria-expanded="false" aria-controls="collapseFuelSP" id="fuelSPButton" onclick="checkData('fuelSP', 'fuelSPButton'); submitSP();" data-text="Check">Fuel Spend</a></h5>
  <div class="collapse col-12" id="collapseFuelSP" aria-labelledby="headingFuelSP">
@@ -371,14 +352,11 @@
 </div>
 </div>
 <div class="row" id="submitToEASP" style="display: none;">
-  <div class="col-12 mt-4">
-    Send to Energy Advocate to check & send application<br>
+  <div class="col-12 mt-4">Send to Energy Advocate to check & send application<br>
     <button class="btn btn-outline-primary mt-2 mb-4 " style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" onclick="showEvidence('afterSubmit')">Send</button>   
   </div>
 </div>
 </div>
-
-
 <div id="britishGasContent" style="display:none;">
   <h4 class="mt-2">Bulb Warm Home Discount Application</h4>
   <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
@@ -425,7 +403,6 @@
     </div>
   </div>
 </div>
-
 <div id="module" class="container row mt-3">
   <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplierBG" aria-expanded="false" aria-controls="collapseSupplierBG" id="supplierBGButton" onclick="checkData('supplierBG', 'supplierBGButton'); submitBG();" data-text="Check">Electricity Account</a></h5>
   <div class="collapse col-12" id="collapseSupplierBG" aria-labelledby="headingSupplierBG">
@@ -467,7 +444,6 @@
 </div>
 </div>
 </div>
-
 <div id="module" class="container row mt-3">
  <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncomeBG" aria-expanded="false" aria-controls="collapseIncomeBG" id="incomeBGButton" onclick="checkData('incomeBG', 'incomeBGButton'); submitBG();" data-text="Check">Household Income</a></h5>
  <div class="collapse col-12" id="collapseIncomeBG" aria-labelledby="headingIncomeBG">
@@ -487,7 +463,6 @@
 </div>
 </div>
 </div>
-
 <div id="module" class="container row mt-3">
  <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuelBG" aria-expanded="false" aria-controls="collapseFuelBG" id="fuelBGButton" onclick="checkData('fuelBG', 'fuelBGButton'); submitBG();" data-text="Check">Fuel Spend</a></h5>
  <div class="collapse col-12" id="collapseFuelBG" aria-labelledby="headingFuelBG">
@@ -515,7 +490,6 @@
 </div>
 </div>
 </div>
-
 <div id="module" class="container row mt-3">
  <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseBenefitsBG" aria-expanded="false" aria-controls="collapseBenefitsBG" id="benefitsBGButton" onclick="checkData('benefitsBG', 'benefitsBGButton'); submitBG();" data-text="Check">Benefits</a></h5>
  <div class="collapse col-12" id="collapseBenefitsBG" aria-labelledby="headingBenefitsBG">
@@ -540,14 +514,11 @@
 </div>
 </div>
 <div class="row" id="submitToEABG" style="display: none;">
-  <div class="col-12 mt-4">
-    Send to Energy Advocate to check & send application<br>
+  <div class="col-12 mt-4">Send to Energy Advocate to check & send application<br>
     <button class="btn btn-outline-primary mt-2 mb-4 " style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" onclick="showEvidence('afterSubmit')">Send</button>   
   </div>
 </div>
 </div>
-
-
 <div id="edfEnergyContent" style="display: none;">
   <h4 class="mt-2">EDF Energy Warm Home Discount Application</h4>
   <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
@@ -602,7 +573,6 @@
      </div>
    </div>
  </div>
-
  <div id="module" class="container row mt-3">
    <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplierEDF" aria-expanded="false" aria-controls="collapseSupplierEDF" id="supplierEDFButton" onclick="checkData('supplierEDF', 'supplierEDFButton'); submitEDF();" data-text="Check">Electricity Account</a></h5>
    <div class="collapse col-12" id="collapseSupplierEDF" aria-labelledby="headingSupplierEDF">
@@ -644,7 +614,6 @@
     </div>
   </div>
 </div>
-
 <div id="module" class="container row mt-3">
  <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncomeEDF" aria-expanded="false" aria-controls="collapseIncomeEDF" id="incomeEDFButton" onclick="checkData('incomeEDF', 'incomeEDFButton'); submitEDF();" data-text="Check">Household Income</a></h5>
  <div class="collapse col-12" id="collapseIncomeEDF" aria-labelledby="headingIncomeEDF">
@@ -664,7 +633,6 @@
  </div>
 </div>
 </div>
-
 <div id="module" class="container row mt-3">
  <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuelEDF" aria-expanded="false" aria-controls="collapseFuelEDF" id="fuelEDFButton" onclick="checkData('fuelEDF', 'fuelEDFButton'); submitEDF();" data-text="Check">Fuel Spend</a></h5>
  <div class="collapse col-12" id="collapseFuelEDF" aria-labelledby="headingFuelEDF">
@@ -693,14 +661,11 @@
 </div>
 </div>
 <div class="row" id="submitToEAEDF" style="display: none;">
-  <div class="col-12 mt-4">
-    Send to Energy Advocate to check & send application<br>
+  <div class="col-12 mt-4">Send to Energy Advocate to check & send application<br>
     <button class="btn btn-outline-primary mt-2 mb-4 " style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" onclick="showEvidence('afterSubmit')">Send</button>   
   </div>
 </div>
 </div>
-
-
 <div id="eonContent" style="display: none;">
   <h4 class="mt-2">E.ON Warm Home Discount Application</h4>
   <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
@@ -755,7 +720,6 @@
      </div>
    </div>
  </div>
-
  <div id="module" class="container row mt-3">
    <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplierEON" aria-expanded="false" aria-controls="collapseSupplierEON" id="supplierEONButton" onclick="checkData('supplierEON', 'supplierEONButton'); submitEON();" data-text="Check">Electricity Account</a></h5>
    <div class="collapse col-12" id="collapseSupplierEON" aria-labelledby="headingSupplierEON">
@@ -797,7 +761,6 @@
     </div>
   </div>
 </div>
-
 <div id="module" class="container row mt-3">
  <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncomeEON" aria-expanded="false" aria-controls="collapseIncomeEON" id="incomeEONButton" onclick="checkData('incomeEON', 'incomeEONButton'); submitEON();" data-text="Check">Household Income</a></h5>
  <div class="collapse col-12" id="collapseIncomeEON" aria-labelledby="headingIncomeEON">
@@ -817,7 +780,6 @@
  </div>
 </div>
 </div>
-
 <div id="module" class="container row mt-3">
  <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuelEON" aria-expanded="false" aria-controls="collapseFuelEON" id="fuelEONButton" onclick="checkData('fuelEON', 'fuelEONButton'); submitEON();" data-text="Check">Fuel Spend</a></h5>
  <div class="collapse col-12" id="collapseFuelEON" aria-labelledby="headingFuelEON">
@@ -846,15 +808,12 @@
 </div>
 </div>
 <div class="row" id="submitToEAEON" style="display: none;">
-  <div class="col-12 mt-4">
-    Send to Energy Advocate to check & send application<br>
+  <div class="col-12 mt-4">Send to Energy Advocate to check & send application<br>
     <button class="btn btn-outline-primary mt-2 mb-4 " style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" onclick="showEvidence('afterSubmit')">Send</button>   
   </div>
 </div>
 </div>
-
 </div>
-
 <div id="afterSubmit" style="display: none;">
   <h6 class="mt-4 mb-2">Reference number for application</h6>
   <h6 id="name0" name="name">Unknown</h6>
@@ -870,7 +829,6 @@
   <div>No notes.</div>
   <button class="btn btn-outline-primary mt-4" onclick="showAudit()" style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Audit</button>
 </div>
-
 <div id="audit" style="display: none;">
   <h4 class="mt-4 mb-2">Audit</h4>
   <p>Please add a copy of the audit request letter above for your energy advocate to view.</p>
@@ -890,73 +848,62 @@
           <td>Benefit letters
             <li>Please include all of your benefit letters; JSA, disability etc.</li>
           </td>
-          <td>
-            <label class="btn btn-outline-primary mb-2 mr-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image0">
-             <input id="image0" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
-             <div id="benLetters"></div>
-             <button onclick="addImage('benLetters', 'benLettersNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
-           </td>
-           <td>
-            <input style="width: auto;" type="text" class="form-control" id="picName0" name="picName" value="Display name:"/>
-            <div id="benLettersNames"></div>
-          </td>
-        </tr>
-        <tr>
-          <td>Home Address
-            <li></li>
-          </td>
-          <td>
-           <label class="btn btn-outline-primary mb-2 mr-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image1">
-             <input id="image1" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
-             <div id="homeLetters"></div>
-             <button onclick="addImage('homeLetters', 'homeLettersNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
-           </td>
-           <td>
-            <input style="width: auto;" type="text" class="form-control" id="picName1" name="picName" value="Display name:"/>
-            <div id="homeLettersNames"></div>
-          </td>
-        </tr>
-        <tr>
-          <td>Birth certificate
-            <li></li>
-          </td>
-          <td>
-            <label class="btn btn-outline-primary mb-2 mr-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image2">
-              <input id="image1" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>              <div id="birthCert"></div>
-              <button onclick="addImage('birthCert', 'birthCertNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
-            </td>
-            <td>
-              <input style="width: auto;" type="text" class="form-control" id="picName2" name="picName" value="Display name:"/>
-              <div id="birthCertNames"></div>
-            </td>
-          </tr>
-          <tr>
-            <td>Pay slips
-              <li style="width: 250px;"></li>
-            </td>
-            <td>
-             <label class="btn btn-outline-primary mb-2 mr-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image3">
-               <input id="image1" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
-               <div id="pay"></div>
-               <button onclick="addImage('pay', 'paySlipsNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
-             </td>
-             <td>
-              <input style="width: auto;" type="text" class="form-control" id="picName3" name="picName" value="Display name:"/>
-              <div id="paySlipsNames"></div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h6 class="mt-4 mb-2">Date evidence sent by energy advocate</h6>
-    <div>Not sent yet</div>
-    <h6 class="mt-4 mb-2">Notes regarding WHD audit</h6>
-    <div>No notes.</div>
-
-    <button class='btn btn-outline-primary mt-2 mb-4' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Submit</button>
-
-  </div>
+          <td><label class="btn btn-outline-primary mb-2 mr-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image0">
+           <input id="image0" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
+           <div id="benLetters"></div>
+           <button onclick="addImage('benLetters', 'benLettersNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+         </td>
+         <td><input style="width: auto;" type="text" class="form-control" id="picName0" name="picName" value="Display name:"/>
+          <div id="benLettersNames"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>Home Address
+          <li></li>
+        </td>
+        <td><label class="btn btn-outline-primary mb-2 mr-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image1">
+         <input id="image1" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
+         <div id="homeLetters"></div>
+         <button onclick="addImage('homeLetters', 'homeLettersNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+       </td>
+       <td><input style="width: auto;" type="text" class="form-control" id="picName1" name="picName" value="Display name:"/>
+        <div id="homeLettersNames"></div>
+      </td>
+    </tr>
+    <tr>
+      <td>Birth certificate
+        <li></li>
+      </td>
+      <td><label class="btn btn-outline-primary mb-2 mr-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image2">
+        <input id="image1" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>              <div id="birthCert"></div>
+        <button onclick="addImage('birthCert', 'birthCertNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+      </td>
+      <td><input style="width: auto;" type="text" class="form-control" id="picName2" name="picName" value="Display name:"/>
+        <div id="birthCertNames"></div>
+      </td>
+    </tr>
+    <tr>
+      <td>Pay slips
+        <li style="width: 250px;"></li>
+      </td>
+      <td><label class="btn btn-outline-primary mb-2 mr-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image3">
+       <input id="image1" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
+       <div id="pay"></div>
+       <button onclick="addImage('pay', 'paySlipsNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+     </td>
+     <td><input style="width: auto;" type="text" class="form-control" id="picName3" name="picName" value="Display name:"/>
+      <div id="paySlipsNames"></div>
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+<h6 class="mt-4 mb-2">Date evidence sent by energy advocate</h6>
+<div>Not sent yet</div>
+<h6 class="mt-4 mb-2">Notes regarding WHD audit</h6>
+<div>No notes.</div>
+<button class='btn btn-outline-primary mt-2 mb-4' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Submit</button>
+</div>
 </div>
 </main>
 
@@ -1180,7 +1127,6 @@ function addImage(divFile, divName){
 }
 
 </script>
-
 
 <footer class="mt-2" style="height:30px; margin-top:-30px;">
   <nav class="navbar navbar-expand-sm">  
