@@ -108,7 +108,7 @@
             <h5 id="line" class="col-12 pl-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePreferences" aria-expanded="false" aria-controls="collapsePreferences">Preferences Update</a></h5>
             <div class="collapse col-12" id="collapsePreferences" aria-labelledby="headingPreferences">
               <h6>Preferred name</h6>
-              <div class="mainSelector name-selector">
+              <div class="name-selector">
                <input type="radio" id="name1" name="nameChoice"/>
                <label for="name1" onclick="addNickname('name1')">Title Surname<br><small>E.g. Mrs Smith</small></label>
                <input type="radio" id="name2" name="nameChoice"/>
@@ -210,6 +210,10 @@
   font-weight: bold;
 }
 
+.name-selector input {
+  display: none!important;
+}
+
 .name-selector input[type=radio] + label {
   display: inline-block;
   border-radius: 6px;
@@ -221,6 +225,11 @@
   text-align: center;
   cursor: pointer;
   font-weight: bold;
+}
+
+.name-selector input[type=radio]:checked + label {
+  background: #2AD705;
+  color: #ffffff;
 }
 </style>
 

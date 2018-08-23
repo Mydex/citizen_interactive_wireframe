@@ -155,7 +155,7 @@
          <label for="Phonecall">Phonecall</label>
        </div>
        <h6 class="mt-4 mb-2">Home Visit Preferences</h6>
-       <div class="homeVisit-selector">
+       <div class="mainSelector homeVisit-selector">
          <input type="checkbox" id="mon" checked/>
          <label for="mon">M</label>
          <input type="checkbox" id="tue"/>
@@ -167,7 +167,7 @@
          <input type="checkbox" id="fri" checked/>
          <label for="fri">F</label>
        </div>
-       <div class="homeVisit-selector mt-2">
+       <div class="mainSelector homeVisit-selector mt-2">
          <input type="checkbox" id="am" checked/>
          <label for="am">AM</label>
          <input type="checkbox" id="pm"/>
@@ -198,7 +198,7 @@
   float: right;
   color: black;
 }
-.homeVisit-selector input {
+.mainSelector input {
   display: none!important;
 }
 
@@ -215,10 +215,6 @@
   font-weight: bold;
 }
 
-.homeVisit-selector input[type=checkbox]:checked + label {
-  background: #2AD705;
-  color: #ffffff;
-}
 
 .contact-selector input {
   display: none!important;
