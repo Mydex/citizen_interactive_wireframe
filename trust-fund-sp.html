@@ -120,7 +120,7 @@
                 <tr>
                   <th>Has the Account Holder applied to the ScottishPower Hardship Fund before?</th>
                   <td>
-                    <div class="selector1 selector11">
+                    <div class="mainSelector selectorYesNo">
                       <input type="radio" id="yes1" name="yesno1" />
                       <label for="yes1">Yes</label>
                       <input type="radio" id="no1" name="yesno1" />
@@ -131,7 +131,7 @@
                 <tr>
                   <th>Are you the Account Holder?</th>
                   <td>
-                    <div class="selector1 selector12">
+                    <div class="mainSelector selectorThreeOptions">
                       <input type="radio" id="yes2" name="yesno2" />
                       <label for="yes2" onclick="showMore('noDisplay')">Yes</label>
                       <input type="radio" id="no2" name="yesno2" />
@@ -183,7 +183,7 @@
               <tr>
                 <th>Are you currently supplied by ScottishPower?</th>
                 <td>
-                  <div class="selector1 selector11">
+                  <div class="mainSelector selectorYesNo">
                     <input type="radio" id="yes3" name="yesno3" />
                     <label for="yes3" onclick="showMoreTwo('displayOne');">Yes</label>
                     <input type="radio" id="no4" name="yesno3" />
@@ -194,7 +194,7 @@
               <tr id="currentSP1" style="display: none;">
                 <th>What types of meters do you have?*</th>
                 <td>
-                  <div class="selector1 selector13">
+                  <div class="mainSelector selectorMultiple">
                     <input type="radio" id="standard" name="meters" />
                     <label for="standard">Standard Meters</label>
                     <input type="radio" id="prepayment" name="meters" />
@@ -207,7 +207,7 @@
               <tr id="currentSP2" style="display: none;">
                 <th>Can you please state what services ScottishPower supply to you?</th>
                 <td>
-                  <div class="selector1 selector12">
+                  <div class="mainSelector selectorThreeOptions">
                     <input type="radio" id="gas" name="supply" />
                     <label for="gas">Gas</label>
                     <input type="radio" id="electricity" name="supply" />
@@ -244,7 +244,7 @@
               <tr id="notCurrentSP1" style="display: none;">
                 <th>Were you previously supplied by ScottishPower and you were unable to pay some of your final bill?</th>
                 <td>
-                  <div class="selector1 selector11">
+                  <div class="mainSelector selectorYesNo">
                     <input type="radio" id="yes4" name="yesno4" />
                     <label for="yes4">Yes</label>
                     <input type="radio" id="no5" name="yesno4" />
@@ -279,7 +279,7 @@
             <tr>
               <th>Has the Account Holder obtained money or debt advice within the last 3 months?</th>
               <td>
-                <div class="selector1 selector11">
+                <div class="mainSelector selectorYesNo">
                   <input type="radio" id="yes5" name="yesno5" />
                   <label for="yes5"onclick="showDebt('yes', 'debtYes');">Yes</label>
                   <input type="radio" id="no6" name="yesno5" />
@@ -290,7 +290,7 @@
             <tr id="debtYes" style="display: none;">
               <th>Please provide us details of the agency you obtained advice from:</th>
               <td>
-                <div class="selector1 selector12">
+                <div class="mainSelector selectorThreeOptions">
                   <input type="radio" id="debtline" />
                   <label for="debtline" onclick="otherDisplay('notname', 'other')">National Debtline</label>
                   <input type="radio" id="cab" />
@@ -317,7 +317,7 @@
               <tr>
                 <th>Does the Account Holder receive the Guarantee Credit element of Pension Credit?</th>
                 <td>
-                  <div class="selector1 selector11">
+                  <div class="mainSelector selectorYesNo">
                     <input type="radio" id="yes6" name="yesno6" />
                     <label for="yes6">Yes</label>
                     <input type="radio" id="no7" name="yesno6" />
@@ -328,7 +328,7 @@
               <tr>
                 <th>Does the Account Holder receive the Savings Credit element of Pension Credit?</th>
                 <td>
-                  <div class="selector1 selector11">
+                  <div class="mainSelector selectorYesNo">
                     <input type="radio" id="yes7" name="yesno7" />
                     <label for="yes7">Yes</label>
                     <input type="radio" id="no8" name="yesno7" />
@@ -339,7 +339,7 @@
               <tr>
                 <th>Is the Account Holder’s total gross household income less than £16,190 per year?</th>
                 <td>
-                  <div class="selector1 selector11">
+                  <div class="mainSelector selectorYesNo">
                     <input type="radio" id="yes8" name="yesno8" />
                     <label for="yes8">Yes</label>
                     <input type="radio" id="no9" name="yesno8" />
@@ -350,7 +350,7 @@
               <tr>
                 <th>Does the Account Holder receive any of the following?</th>
                 <td>
-                  <div class="selector1 selector13">
+                  <div class="mainSelector selectorMultiple">
                     <input type="radio" id="income1" name="benefits" />
                     <label for="income1">Income Support</label>
                     <input type="radio" id="income2" name="benefits" />
@@ -363,7 +363,7 @@
               <tr>
                 <th>Does the Account Holder have a child under 5 years of age permanently living in the house?</th>
                 <td>
-                  <div class="selector1 selector11">
+                  <div class="mainSelector selectorYesNo">
                     <input type="radio" id="yes9" name="yesno9" />
                     <label for="yes9">Yes</label>
                     <input type="radio" id="no10" name="yesno9" />
@@ -374,7 +374,7 @@
               <tr>
                 <th>Does the Account Holder have a child who is entitled to free school meals?</th>
                 <td>
-                  <div class="selector1 selector11">
+                  <div class="mainSelector selectorYesNo">
                     <input type="radio" id="yes10" name="yesno10" />
                     <label for="yes10">Yes</label>
                     <input type="radio" id="no11" name="yesno10" />
@@ -385,7 +385,7 @@
               <tr>
                 <th>Does the Account Holder receive Child Tax Credit or Working Tax Credit which includes (1) a disability element, (2) a severe disability element, (3) a disabled child element, (4) a severely disabled child element, or (5) a family element?</th>
                 <td>
-                  <div class="selector1 selector11">
+                  <div class="mainSelector selectorYesNo">
                     <input type="radio" id="yes11" name="yesno11" />
                     <label for="yes11">Yes</label>
                     <input type="radio" id="no12" name="yesno11" />
@@ -396,7 +396,7 @@
               <tr>
                 <th>Does the Account Holder receive Income Related Benefit which includes (1) a disabled child premium, (2) a disability premium, (3) a severe disability premium, or (4) an enhanced disability premium?</th>
                 <td>
-                  <div class="selector1 selector11">
+                  <div class="mainSelector selectorYesNo">
                     <input type="radio" id="yes12" name="yesno12" />
                     <label for="yes12">Yes</label>
                     <input type="radio" id="no13" name="yesno12" />
@@ -407,7 +407,7 @@
               <tr>
                 <th>Does the Account Holder receive Income Related Benefit which includes a Carers Premium?</th>
                 <td>
-                  <div class="selector1 selector11">
+                  <div class="mainSelector selectorYesNo">
                     <input type="radio" id="yes13" name="yesno13" />
                     <label for="yes13">Yes</label>
                     <input type="radio" id="no14" name="yesno13" />
@@ -418,7 +418,7 @@
               <tr>
                 <th>Does the Account Holder receive Employment Support Allowance which includes (1) a Work Related or Activity Component, or (2) a Support Component?</th>
                 <td>
-                  <div class="selector1 selector11">
+                  <div class="mainSelector selectorYesNo">
                     <input type="radio" id="yes14" name="yesno14" />
                     <label for="yes14">Yes</label>
                     <input type="radio" id="no15" name="yesno14" />
@@ -429,7 +429,7 @@
               <tr>
                 <th>Does the Account Holder receive (1) Disability Living Allowance, (2) Personal Independence Payments (PIP), (3) Incapacity Benefit, or (4) Attendance Allowance?</th>
                 <td>
-                  <div class="selector1 selector11">
+                  <div class="mainSelector selectorYesNo">
                     <input type="radio" id="yes15" name="yesno15" />
                     <label for="yes15">Yes</label>
                     <input type="radio" id="no16" name="yesno15" />
@@ -440,7 +440,7 @@
               <tr>
                 <th>Does the Account Holder receive an exemption from NHS prescription charges? If you live in Scotland or Wales, you do not need to answer this question.</th>
                 <td>
-                 <div class="selector1 selector11">
+                 <div class="mainSelector selectorYesNo">
                    <input type="radio" id="yes16" name="yesno16" />
                    <label for="yes16">Yes</label>
                    <input type="radio" id="no17" name="yesno16" />
@@ -451,7 +451,7 @@
              <tr>
               <th>Where did you hear about the ScottishPower Hardship Fund?</th>
               <td>
-                <div class="selector1 selector13">
+                <div class="mainSelector selectorMultiple">
                   <input type="radio" id="hear1" name="hearAbout" />
                   <label for="hear1" onclick="otherDisplay('notname', 'otherOne')">ScottishPower Website</label>
                   <input type="radio" id="hear2" name="hearAbout" />
@@ -716,11 +716,16 @@
             box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
           }
 
-          .selector1 input {
+          .mainSelector input {
             display: none!important;
           }
 
-          .selector11 input[type=radio] + label {
+          .mainSelector input[type=radio]:checked + label {
+            background: #2AD705;
+            color: #ffffff;
+          }
+
+          .selectorYesNo input[type=radio] + label {
             display: inline-block;
             border-radius: 6px;
             background: #dddddd;
@@ -733,13 +738,7 @@
             font-weight: bold;
           }
 
-          .selector1 input[type=radio]:checked + label {
-            background: #2AD705;
-            color: #ffffff;
-          }
-
-
-          .selector12 input[type=radio] + label {
+          .selectorThreeOptions input[type=radio] + label {
             display: inline-block;
             border-radius: 6px;
             background: #dddddd;
@@ -752,7 +751,7 @@
             font-weight: bold;
           }
 
-          .selector13 input[type=radio] + label {
+          .selectorMultiple input[type=radio] + label {
             display: inline-block;
             border-radius: 6px;
             background: #dddddd;
@@ -764,41 +763,9 @@
             cursor: pointer;
             font-weight: bold;
           }
-
-          .selector14 input[type=checkbox] + label {
-            display: inline-block;
-            border-radius: 6px;
-            background: #dddddd;
-            height: 45px;
-            width: 230px;
-            margin-right: 3px;
-            line-height: 45px;
-            text-align: center;
-            cursor: pointer;
-            font-weight: bold;
-          }
-
-          .selector14 input[type=checkbox]:checked + label {
-            background: #2AD705;
-            color: #ffffff;
-          }
         </style>
 
         <script>
-
-          var dobCounter = 2;
-          function addDOB(){
-            var newDiv = document.createElement('div');
-            newDiv.innerHTML =
-            "<input type='date' name='dob" + dobCounter+ "' class='mb-2' >\
-            <input type='button' class='btn btn-outline-primary' value='-' onclick='removeRow(this)' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>";
-            document.getElementById('content').appendChild(newDiv);
-            dobCounter ++;
-          }
-          function removeRow(input){
-            document.getElementById('content').removeChild(input.parentNode);
-          }
-
           function showRef() {
             document.getElementById('refInfo').style.display = "block";
           }
@@ -901,19 +868,6 @@
               document.getElementById('debtYes').style.display = 'none';
             } else {
               document.getElementById(id).style.display = 'none';
-            }
-          }
-
-          function showAudit() {
-            document.getElementById('audit').style.display = "block";
-          }
-
-          function showAuditButton(cb) {
-            var checkBox = document.getElementById(cb);
-            if (checkBox.checked == true){
-              document.getElementById('auditButton').style.display = "block";
-            } else {
-              document.getElementById('auditButton').style.display = "none";
             }
           }
 
