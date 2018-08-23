@@ -146,7 +146,7 @@
          <input type="text" class="form-control" id="nicknameInput" name="nickname" spellcheck="true">
        </div>
        <h6>Contact Preferences</h6>
-       <div class="contact-selector mt-2">
+       <div class="mainSelector contact-selector mt-2">
          <input type="checkbox" id="Text" checked/>
          <label for="Text">Text</label>
          <input type="checkbox" id="Message"/>
@@ -202,6 +202,11 @@
   display: none!important;
 }
 
+.mainSelector input[type=checkbox]:checked + label {
+  background: #2AD705;
+  color: #ffffff;
+}
+
 .homeVisit-selector input[type=checkbox] + label {
   display: inline-block;
   border-radius: 6px;
@@ -215,11 +220,6 @@
   font-weight: bold;
 }
 
-
-.contact-selector input {
-  display: none!important;
-}
-
 .contact-selector input[type=checkbox] + label {
   display: inline-block;
   border-radius: 6px;
@@ -231,11 +231,6 @@
   text-align: center;
   cursor: pointer;
   font-weight: bold;
-}
-
-.contact-selector input[type=checkbox]:checked + label {
-  background: #2AD705;
-  color: #ffffff;
 }
 
 .name-selector input {
